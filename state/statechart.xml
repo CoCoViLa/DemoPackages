@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>statechart</name>
+<description>UML statechart diagram</description>
+<class type="class">
+<name>state</name>
+<description>State</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="76" height="59"/>
+<oval x="0" y="0" width="30" height="29" colour="-16777216" filled="false" fixed="false"/>
+<oval x="46" y="29" width="30" height="29" colour="-16777216" filled="false" fixed="false"/>
+<oval x="46" y="0" width="30" height="29" colour="-16777216" filled="false" fixed="false"/>
+<oval x="0" y="37" width="25" height="21" colour="-16777216" filled="false" fixed="false"/>
+<rect x="15" y="0" width="46" height="59" colour="-1" filled="true" fixed="false"/>
+<rect x="0" y="13" width="77" height="33" colour="-1" filled="true" fixed="false"/>
+<line x1="15" y1="0" x2="60" y2="0" colour="-16777216" fixed="false"/>
+<line x1="15" y1="58" x2="60" y2="58" colour="-16777216" fixed="false"/>
+<line x1="0" y1="12" x2="0" y2="49" colour="-16777216" fixed="false"/>
+<line x1="76" y1="13" x2="76" y2="47" colour="-16777216" fixed="false"/>
+</graphics>
+
+<ports>
+	<port name="any" type="String" x="38" y="0" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-38" y="0" width="76" height="15" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+<port name="any" type="String" x="38" y="59" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-38" y="-15" width="76" height="15" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+<port name="any" type="String" x="0" y="30" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="0" y="-15" width="38" height="30" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+<port name="any" type="String" x="76" y="30" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-38" y="-15" width="38" height="30" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+</ports>
+
+<fields>
+	<field name="in1" type="int">
+	<known>
+		<graphics>
+			<text string="*self" colour="-16777216" x="5" y="30" fontname="Arial" fontstyle="0" fontsize="12"/>
+		</graphics>
+	</known>
+	</field>
+</fields>	
+
+</class>
+
+<class type="class">
+<name>start</name>
+<description>Intitial state</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="23" height="23"/>
+<oval x="-1" y="0" width="25" height="24" colour="-16763956" filled="true" fixed="false"/>
+</graphics>
+
+<ports>
+<port name="any" type="String" x="12" y="12" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-12" y="-12" width="25" height="24" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+</ports>
+
+
+</class>
+
+
+<class type="class">
+<name>end</name>
+<description>Final state</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="35" height="33"/>
+<oval x="5" y="4" width="25" height="25" colour="-13382656" filled="true" fixed="false"/>
+<oval x="0" y="0" width="34" height="32" colour="-16777216" filled="false" fixed="false"/>
+</graphics>
+<ports>
+<port name="any" type="String" x="17" y="16" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-17" y="-16" width="35" height="33" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+</ports>
+
+</class>
+
+<class type="class">
+<name>branch</name>
+<description>branch</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="80" height="60"/>
+<line x1="80" y1="30" x2="40" y2="0" colour="-16777216" fixed="false"/>
+<line x1="40" y1="60" x2="0" y2="30" colour="-16777216" fixed="false"/>
+<line x1="40" y1="0" x2="0" y2="30" colour="-16777216" fixed="false"/>
+<line x1="40" y1="60" x2="80" y2="30" colour="-16777216" fixed="false"/>
+</graphics>
+
+<ports>
+	<port name="any" type="String" x="40" y="0" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-40" y="0" width="80" height="15" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+<port name="any" type="String" x="40" y="60" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-40" y="-15" width="80" height="15" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+<port name="any" type="String" x="0" y="30" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="0" y="-15" width="40" height="30" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+<port name="any" type="String" x="80" y="30" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-40" y="-15" width="40" height="30" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+</ports>
+
+</class>
+
+
+
+<class type="class">
+<name>syncro</name>
+<description>syncro</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="120" height="10"/>
+<rect x="0" y="0" width="120" height="10" colour="-6750157" filled="true" fixed="false"/>
+</graphics>
+<ports>
+	<port name="any" type="String" x="30" y="5" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-5" y="-5" width="10" height="10" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+<port name="any" type="String" x="60" y="5" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-5" y="-5" width="10" height="10" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+<port name="any" type="String" x="90" y="5" portConnection="area" strict="false">
+	<open>
+	<graphics><bounds x="-5" y="-5" width="10" height="10" /></graphics></open>
+	<closed><graphics>
+</graphics></closed></port>
+
+</ports>
+
+
+</class>
+
+
+
+	<class type="relation">
+		<name>AssocClass</name>
+		<description>rel</description>
+		<icon>assoc.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="1"/>
+	<line x1="0" y1="0" x2="50" y2="0" colour="0" />
+	<line x1="43" y1="-10" x2="50" y2="0" colour="0" />
+	<line x1="43" y1="10" x2="50" y2="0" colour="0" />
+</graphics>
+<ports><port name="c"  type="String" x="0" y="0" portConnection="area" strict="false">
+</port>
+<port name="p" type="String"  x="50" y="0" portConnection="area" strict="false">
+</port>
+</ports>
+</class>
+
+</package>

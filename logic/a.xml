@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<class type="class">
+<name>as</name>
+<description>as</description>
+<icon>asd.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="97" height="54"/>
+<text string="asdasdas" colour="-16777216" x="146" y="84" fontname="Arial" fontstyle="0" fontsize="10"/>
+</graphics>
+</class>

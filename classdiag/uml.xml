@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+	<name>UML Class diagram</name>
+	<description>A package for drawing UML class diagrams</description>	
+	<class>
+		<name>UMLClass</name>
+		<description>Class</description>
+		<icon>class.gif</icon>
+<graphics showFields="true">
+<bounds x="0" y="0" width="100" height="100"/>
+<rect x="0" y="0" width="100" height="100" colour="-16777216" filled="false"/>
+<line x1="2" y1="102" x2="102" y2="102" colour="-3407872" fixed="false"/>
+<line x1="102" y1="2" x2="102" y2="102" colour="-3407872" fixed="false"/>
+
+<line x1="0" y1="17" x2="98" y2="17" colour="-16777216" fixed="false"/>
+<line x1="2" y1="19" x2="100" y2="19" colour="-3407872" fixed="false"/>
+
+</graphics>
+<ports>
+<port name="any" type="String" x="50" y="0" portConnection="area" strict="false">
+<open><graphics><bounds x="-50" y="0" width="100" height="30" /></graphics></open>
+<closed><graphics>
+</graphics></closed></port>
+
+<port name="any"  type="String" x="50" y="100" portConnection="area" strict="false">
+<open><graphics>
+<bounds x="-50" y="-30" width="100" height="30" />
+</graphics></open>
+<closed><graphics>
+</graphics></closed>
+</port>
+
+<port name="any"  type="String" x="0" y="50" portConnection="area" strict="false">
+<open><graphics>
+<bounds x="0" y="-20" width="20" height="40" />
+</graphics></open>
+<closed><graphics>
+</graphics></closed>
+</port>
+
+<port name="any"  type="String" x="100" y="50" portConnection="area" strict="false">
+<open><graphics>
+<bounds x="-20" y="-20" width="20" height="40" />
+</graphics></open>
+<closed><graphics>
+</graphics></closed>
+</port>
+
+
+</ports>
+<fields>
+	<field name="name" type="String" />
+	<field name="attrs" type="String[]" />
+	<field name="methods" type="String[]" />
+</fields>
+
+
+</class>
+
+	<class>
+		<name>RelClass</name>
+		<description>rel</description>
+		<icon>generalization.gif</icon>
+<graphics type="relation">
+<bounds x="0" y="0" width="50" height="1"/>
+	<line x1="0" y1="0" x2="40" y2="0" colour="0" />
+	<line x1="40" y1="-10" x2="50" y2="0" colour="0" />
+	<line x1="40" y1="10" x2="50" y2="0" colour="0" />
+	<line x1="40" y1="-10" x2="40" y2="10" colour="0" />
+</graphics>
+<ports><port name="childsParent"  type="String" x="0" y="0" portConnection="area" strict="false">
+</port>
+<port name="parentName"  type="String" x="50" y="0" portConnection="area" strict="false">
+</port>
+</ports>
+</class>
+
+	<class>
+		<name>AssocClass</name>
+		<description>rel</description>
+		<icon>assoc.gif</icon>
+<graphics type="relation">
+<bounds x="0" y="0" width="50" height="1"/>
+	<line x1="0" y1="0" x2="50" y2="0" colour="0" />
+	<line x1="43" y1="-10" x2="50" y2="0" colour="0" />
+	<line x1="43" y1="10" x2="50" y2="0" colour="0" />
+</graphics>
+<ports><port name="c"  type="String" x="0" y="0" portConnection="area" strict="false">
+</port>
+<port name="p" type="String"  x="50" y="0" portConnection="area" strict="false">
+</port>
+</ports>
+</class>
+	<class>
+		<name>AggrClass</name>
+		<description>rel</description>
+		<icon>aggr.gif</icon>
+<graphics type="relation">
+<bounds x="0" y="0" width="50" height="1"/>
+	<line x1="0" y1="0" x2="40" y2="0" colour="0" />
+	<line x1="45" y1="-10" x2="50" y2="0" colour="0" />
+	<line x1="45" y1="10" x2="50" y2="0" colour="0" />
+	<line x1="40" y1="0" x2="45" y2="-10" colour="0" />
+	<line x1="40" y1="0" x2="45" y2="10" colour="0" />
+</graphics>
+<ports><port name="childsParent"  type="String" x="0" y="0" portConnection="area" strict="false">
+</port>
+<port name="parentName"  type="String" x="50" y="0" portConnection="area" strict="false">
+</port>
+</ports>
+
+</class>
+
+
+
+</package>
