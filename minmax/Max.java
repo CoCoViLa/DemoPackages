@@ -3,7 +3,7 @@ class Max
     /*@
 	specification Max {
    		int arg, val, maxval;
-		[arg->val] -> maxval{getMaxVal};
+		[arg->val] -> maxval, (java.lang.Exception){getMaxVal};
       }
 	@*/
     public int getMaxVal(Subtask sbt) throws Exception {
@@ -25,8 +25,10 @@ class Max
                 }
             }
         } catch (Exception ex) {
-            if(ready)
+            if(ready) {				
                 throw new Exception();
+			}
+			System.out.println("Max: " + maxval);
             return maxval;
         }
     }

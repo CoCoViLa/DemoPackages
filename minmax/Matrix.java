@@ -4,10 +4,10 @@ class Matrix
 {
 	/*@
 	specification Matrix {
-		int row, col, element;
-		void m_ready;
+		int row, col, element, result;
+		void m_ready, finish;
 		String[] tm;
-		tm -> m_ready{parseMartix};
+		tm -> m_ready{parseMatrix};
 		row, col, m_ready -> element{getElement};
 	}
 	@*/

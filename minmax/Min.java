@@ -3,7 +3,7 @@ class Min
     /*@
 	specification Min {
    		int arg, val, minval;
-		[arg->val] -> minval{getMinVal};
+		[arg->val] -> minval, (java.lang.Exception){getMinVal};
       }
 	@*/
         public int getMinVal(Subtask sbt) throws Exception {
@@ -26,8 +26,10 @@ class Min
                     }
                 }
             } catch (Exception ex) {
-                if(ready)
+                if(ready) {					
                     throw new Exception();
+				}
+				System.out.println("Min: " + minval);
                 return minval;
             }
         }
