@@ -10,10 +10,10 @@ class UMLClass {
 		[x -> x], name -> x {test};
 	}
 	@*/
-	void test (String name) {
+	void test (String name, String dir) {
 		try {
 			PrintWriter out = new PrintWriter (
-				new BufferedWriter(new FileWriter(name+".java", true)));
+				new BufferedWriter(new FileWriter(dir+ + name+".java", true)));
 			if (parent != null) {
 				out.println("public class "+name +" extends "+parent + " {\n");
 			} else

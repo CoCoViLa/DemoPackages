@@ -21,7 +21,7 @@ class DataWriter {
 			out.println();
 			out.close();
 		} catch (Exception e) {
-			db.p(e);
+
 		}	
 	}
 
@@ -40,7 +40,7 @@ class DataWriter {
 			out.println();
 			out.close();
 		} catch (Exception e) {
-			db.p(e);
+
 		}	
 	}
 

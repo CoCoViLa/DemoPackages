@@ -4,10 +4,15 @@
 <package>
 <name>statechart</name>
 <description>UML statechart diagram</description>
+
+
+
+
+
 <class type="class">
 <name>state</name>
 <description>State</description>
-<icon>a.gif</icon>
+<icon>state.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="76" height="59"/>
 <oval x="0" y="0" width="30" height="29" colour="-16777216" filled="false" fixed="false"/>
@@ -47,7 +52,7 @@
 </ports>
 
 <fields>
-	<field name="in1" type="int">
+	<field name="text" type="int">
 	<known>
 		<graphics>
 			<text string="*self" colour="-16777216" x="5" y="30" fontname="Arial" fontstyle="0" fontsize="12"/>
@@ -61,7 +66,7 @@
 <class type="class">
 <name>start</name>
 <description>Intitial state</description>
-<icon>a.gif</icon>
+<icon>start.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="23" height="23"/>
 <oval x="-1" y="0" width="25" height="24" colour="-16763956" filled="true" fixed="false"/>
@@ -83,7 +88,7 @@
 <class type="class">
 <name>end</name>
 <description>Final state</description>
-<icon>a.gif</icon>
+<icon>finish.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="35" height="33"/>
 <oval x="5" y="4" width="25" height="25" colour="-13382656" filled="true" fixed="false"/>
@@ -103,7 +108,7 @@
 <class type="class">
 <name>branch</name>
 <description>branch</description>
-<icon>a.gif</icon>
+<icon>choice.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="80" height="60"/>
 <line x1="80" y1="30" x2="40" y2="0" colour="-16777216" fixed="false"/>
@@ -144,7 +149,7 @@
 <class type="class">
 <name>syncro</name>
 <description>syncro</description>
-<icon>a.gif</icon>
+<icon>synchro.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="120" height="10"/>
 <rect x="0" y="0" width="120" height="10" colour="-6750157" filled="true" fixed="false"/>
@@ -173,7 +178,6 @@
 </class>
 
 
-
 	<class type="relation">
 		<name>AssocClass</name>
 		<description>rel</description>
@@ -189,6 +193,17 @@
 <port name="p" type="String"  x="50" y="0" portConnection="area" strict="false">
 </port>
 </ports>
+
+<fields>
+	<field name="text" type="int">
+	<known>
+		<graphics>
+			<text string="*self" colour="-16777216" x="6" y="-4" fontname="Arial" fontstyle="0" fontsize="12"/>
+		</graphics>
+	</known>
+	</field>
+</fields>	
 </class>
+
 
 </package>

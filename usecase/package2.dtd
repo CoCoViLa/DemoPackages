@@ -4,9 +4,12 @@
 <!ELEMENT fields 	(field*)>
 <!ELEMENT ports 	(port+)>
 <!ELEMENT port 		(open|closed)*>
+<!ELEMENT field 	(known|default)*>
 <!ELEMENT graphics 	(bounds| (line | rect | oval| arc) | text)*>
 <!ELEMENT open 		(graphics)>
 <!ELEMENT closed 	(graphics)>
+<!ELEMENT known 	(graphics)>
+<!ELEMENT default 	(graphics)>
 <!ELEMENT name 		(#PCDATA)>
 <!ELEMENT description 	(#PCDATA)>
 <!ELEMENT portname 	(#PCDATA)>
@@ -15,7 +18,6 @@
 <!ELEMENT datatype 	(#PCDATA)>
 <!ELEMENT xpos 		(#PCDATA)>
 <!ELEMENT ypos 		(#PCDATA)>
-<!ELEMENT field 	EMPTY>
 <!ELEMENT line 		EMPTY>
 <!ELEMENT arc 		EMPTY>
 <!ELEMENT bounds 	EMPTY>
@@ -24,10 +26,10 @@
 <!ELEMENT strict 	EMPTY>
 <!ELEMENT text 		EMPTY>
 <!ELEMENT portConnection EMPTY>
+<!ATTLIST class
+	type (relation|class) #IMPLIED>
 <!ATTLIST graphics 
-	showFields (true|false) #IMPLIED
-	type (relation|class) #IMPLIED
-	>
+	showFields (true|false) #IMPLIED>
 <!ATTLIST port connection (single|area) #IMPLIED>
 <!ATTLIST line 
         x1		CDATA   #REQUIRED
