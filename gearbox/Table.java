@@ -3,13 +3,14 @@ class Table {
 	specification Table {
 		int x, y, first, step, last;
 		boolean result;
-		first = 1;
-		step = 1;
-		last = 10;
+
 
 		[x ->y], first, step, last -> result {calc};
 	}
 	@*/
+			//first = 100;
+		//step = 200;
+		//last = 10000;
 	boolean calc (Subtask stm, int f, int s, int l) {
 		System.out.println("f " + f + " s " + s + " l " + l);
 		for (int i = f; i < l ; i += s )
