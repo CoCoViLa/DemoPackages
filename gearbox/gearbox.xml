@@ -174,7 +174,7 @@
 <class type="class">
 <name>Table</name>
 <description>Tabulates values</description>
-<icon>and.gif</icon>
+<icon>table.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="68" height="74"/>
 <rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1"  transparency="0"/>
@@ -193,7 +193,7 @@
 <class type="class">
 <name>Selector</name>
 <description>Selects the first value of the argument</description>
-<icon>a.gif</icon>
+<icon>selector.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="21" height="37"/>
 <rect x="0" y="0" width="22" height="37" colour="-6697729" filled="true" fixed="false" stroke="1"  transparency="0"/>

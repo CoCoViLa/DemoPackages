@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE scheme SYSTEM "scheme.dtd">
 <scheme package="Gearbox">
-<object name="Wheel_0" type="Wheel" >
+<object name="wheel_1" type="Wheel" >
   <properties x="241" y="89" width="40" height="70" xsize="1.125" ysize="1.3285711" strict="true" />
   <fields>
     <field name="z" type="int"/>
-    <field name="D" type="int"/>
+    <field name="D" type="int" value="200"/>
     <field name="F" type="double"/>
     <field name="v" type="double"/>
     <field name="T" type="double"/>
@@ -13,22 +13,22 @@
     <field name="m" type="double" value="12"/>
   </fields>
 </object>
-<object name="Table_1" type="Table" >
+<object name="table" type="Table" >
   <properties x="70" y="177" width="68" height="74" xsize="1.0" ysize="1.0" strict="false" />
   <fields>
-    <field name="first" type="int"/>
-    <field name="step" type="int"/>
-    <field name="last" type="int"/>
+    <field name="first" type="int" value="1"/>
+    <field name="step" type="int" value="1"/>
+    <field name="last" type="int" value="8"/>
   </fields>
 </object>
-<object name="Selector_2" type="Selector" >
+<object name="selector" type="Selector" >
   <properties x="197" y="201" width="21" height="37" xsize="1.0" ysize="1.0" strict="false" />
   <fields>
     <field name="fst" type="any"/>
     <field name="snd" type="any"/>
   </fields>
 </object>
-<object name="Motor_5" type="Motor" >
+<object name="motor" type="Motor" >
   <properties x="153" y="39" width="80" height="30" xsize="1.0" ysize="1.0" strict="true" />
   <fields>
     <field name="P" type="double"/>
@@ -36,7 +36,7 @@
     <field name="T" type="double"/>
   </fields>
 </object>
-<object name="Wheel_6" type="Wheel" >
+<object name="wheel_0" type="Wheel" >
   <properties x="243" y="19" width="40" height="70" xsize="1.0" ysize="1.0" strict="true" />
   <fields>
     <field name="z" type="int" value="15"/>
@@ -48,7 +48,7 @@
     <field name="m" type="double"/>
   </fields>
 </object>
-<object name="Wheel_7" type="Wheel" >
+<object name="wheel_2" type="Wheel" >
   <properties x="286" y="100" width="40" height="70" xsize="1.3" ysize="1.0142857" strict="true" />
   <fields>
     <field name="z" type="int"/>
@@ -60,7 +60,7 @@
     <field name="m" type="double"/>
   </fields>
 </object>
-<object name="Wheel_8" type="Wheel" >
+<object name="wheel_3" type="Wheel" >
   <properties x="288" y="171" width="40" height="70" xsize="1.2" ysize="1.4142857" strict="true" />
   <fields>
     <field name="z" type="int"/>
@@ -72,13 +72,13 @@
     <field name="m" type="double" value="3"/>
   </fields>
 </object>
-<connection obj1="Selector_2" port1="fst" obj2="Table_1" port2="y">
+<connection obj1="selector" port1="fst" obj2="table" port2="y">
   <breakpoints>
     <point x="197" y="213"/>
     <point x="138" y="213"/>
   </breakpoints>
 </connection>
-<connection obj1="Table_1" port1="x" obj2="Motor_5" port2="P">
+<connection obj1="table" port1="x" obj2="motor" port2="P">
   <breakpoints>
     <point x="103" y="178"/>
     <point x="103" y="88"/>
@@ -86,23 +86,23 @@
     <point x="193" y="69"/>
   </breakpoints>
 </connection>
-<connection obj1="Wheel_6" port1="3" obj2="Motor_5" port2="axial">
+<connection obj1="wheel_0" port1="3" obj2="motor" port2="axial">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Wheel_0" port1="1" obj2="Wheel_6" port2="2">
+<connection obj1="wheel_1" port1="1" obj2="wheel_0" port2="2">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Wheel_7" port1="3" obj2="Wheel_0" port2="4">
+<connection obj1="wheel_2" port1="3" obj2="wheel_1" port2="4">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Wheel_8" port1="1" obj2="Wheel_7" port2="2">
+<connection obj1="wheel_3" port1="1" obj2="wheel_2" port2="2">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Selector_2" port1="pair" obj2="Wheel_8" port2="3">
+<connection obj1="selector" port1="pair" obj2="wheel_3" port2="3">
   <breakpoints>
     <point x="218" y="220"/>
     <point x="288" y="220"/>
