@@ -4,7 +4,6 @@ class NumGenerator {
 			-> out{gen};
 		}
 	@*/
-
 	int val = 0;
 	int gen() {
 		if (val==0) 

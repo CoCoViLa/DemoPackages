@@ -177,8 +177,8 @@
 <icon>table.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="68" height="74"/>
-<rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1"  transparency="0"/>
-<rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1"  transparency="0"/>
+<rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1"  transparency="255"/>
+<rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1"  transparency="255"/>
 </graphics>
 <ports>
 <port name="x" type="int" x="33" y="1" portConnection="" strict="false" />
@@ -196,8 +196,8 @@
 <icon>selector.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="21" height="37"/>
-<rect x="0" y="0" width="22" height="37" colour="-6697729" filled="true" fixed="false" stroke="1"  transparency="0"/>
-<rect x="0" y="0" width="21" height="37" colour="-16777216" filled="false" fixed="false" stroke="1" transparency="0"/>
+<rect x="0" y="0" width="22" height="37" colour="-6697729" filled="true" fixed="false" stroke="1"  transparency="255"/>
+<rect x="0" y="0" width="21" height="37" colour="-16777216" filled="false" fixed="false" stroke="1" transparency="255"/>
 </graphics>
 <ports>
 <port name="pair" type="alias" x="21" y="19" portConnection="" strict="false" />
