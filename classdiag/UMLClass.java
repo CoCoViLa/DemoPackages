@@ -4,16 +4,19 @@ class UMLClass {
 	specification UMLClass  {
 		String name;
 		String parent;
+
 		String[] attrs;
 		String[] methods;
-		void x;
-		[x -> x], name -> x {test};
+		int done;
+		int a,b;
+		a = b;
+		[a->b],name -> done {writeClass};
 	}
 	@*/
-	void test (String name, String dir) {
+	int writeClass (Subtask st, String name) {
 		try {
 			PrintWriter out = new PrintWriter (
-				new BufferedWriter(new FileWriter(dir+ + name+".java", true)));
+				new BufferedWriter(new FileWriter(name+".java", true)));
 			if (parent != null) {
 				out.println("public class "+name +" extends "+parent + " {\n");
 			} else
@@ -32,8 +35,10 @@ class UMLClass {
 
 			out.println("}");
 			out.close();
+			return 1;
 		} catch (Exception e) {
 			System.out.println(e);
+			return 0;
 		}			
 	}
 };

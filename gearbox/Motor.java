@@ -11,7 +11,7 @@ class Motor {
 			a++;
 		} else
 			a = 1;
-			nT[0] = a*10;
+		nT[0] = a*10;
 		nT[1] = 30;
 		return nT;
 	}

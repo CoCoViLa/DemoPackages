@@ -132,5 +132,6 @@
 <port name="b" type="String" x="50" y="0" portConnection="area" strict="false">
 </port>
 </ports>
+
 </class>
 </package>

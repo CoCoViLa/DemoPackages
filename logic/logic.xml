@@ -161,4 +161,18 @@
                                         <field name="v" type="float" defaultVal="0.0"/>
                                 </fields-->
   </class>
+<class type="class">
+<name>Visualizer</name>
+<description>Visualizes the input</description>
+<icon>delayer.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="91" height="26"/>
+<rect x="0" y="0" width="92" height="26" colour="-16764007" filled="true" fixed="false" stroke="1" transparency="60"/>
+</graphics>
+<ports>
+<port name="in1" type="int" x="16" y="0" portConnection="" strict="false" />
+<port name="in2" type="int" x="48" y="0" portConnection="" strict="false" />
+<port name="in3" type="int" x="79" y="0" portConnection="" strict="false" />
+</ports>
+</class>
 </package>

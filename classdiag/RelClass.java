@@ -2,9 +2,8 @@ import java.io.*;
 class RelClass {
 	/*@ 
 	specification RelClass  {
-		String parentName, childsParent;
-		parentName -> childsParent {id};
-
+		String parent, name;
+		name -> parent {id};
 	}
 	@*/
 	String id (String name) {
