@@ -84,22 +84,39 @@
 </closed>
 </port>
 
+<fields>
+	<field name="text" type="String">
+	<known>
+		<graphics>
+			<text string="*self" colour="-16777216" x="20" y="30" fontname="Arial" fontstyle="1" fontsize="14"/>
+		</graphics>
+	</known>
+	</field>
+</fields>	
+
+
 
 </ports>
 </class>
-
 	<class>
 		<name>Kast</name>
 		<description>Kast</description>
 		<icon>box.gif</icon>
 <graphics>
-<bounds x="0" y="0" width="125" height="250"/>
-<rect x="0" y="0" width="125" height="250" colour="-16777216" filled="false"/>
+<bounds x="0" y="0" width="200" height="150"/>
+<rect x="0" y="0" width="200" height="150" colour="-16777216" filled="false"/>
 </graphics>
+<fields>
+	<field name="text" type="String">
+	<known>
+		<graphics>
+			<text string="*self" colour="-16777216" x="100" y="140" fontname="Arial" fontstyle="0" fontsize="12"/>
+		</graphics>
+	</known>
+	</field>
+</fields>	
 </class>
-
-
-	<class>
+<class>
 		<name>RelClass</name>
 		<description>test</description>
 		<icon>assoc.gif</icon>
@@ -116,7 +133,4 @@
 </port>
 </ports>
 </class>
-
-
-
 </package>

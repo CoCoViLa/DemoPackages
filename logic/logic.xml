@@ -1,135 +1,129 @@
 <?xml version='1.0' encoding='utf-8'?>
-
 <!DOCTYPE package SYSTEM "package2.dtd">
-
-
 <package>
-	<name>Logic</name>
-	<description>Logical circuits builder.</description>
-	<class>
-                <name>And</name>
-                <description>And</description>
-                <icon>and.gif</icon>
-                <graphics>
-                        <bounds x="0" y="0" width="50" height="50"/>
-                        <line x1="0" y1="0" x2="50" y2="25" colour="0"/>
-                        <line x1="0" y1="50" x2="50" y2="25" colour="0"/>
-                        <line x1="0" y1="0" x2="0" y2="50" colour="0"/>
-			<!--text string="", x="", y=""-->
-                </graphics>                  
-                <ports>
-                        <port name="in1" type="int" x="0" y="15" 	portConnection="area" strict="false"/>
-                        <port name="in2" type="int" x="0" y="35" 	portConnection="area" strict="false"/>
-                        <port name="out" type="int" x="50" y="25" 	portConnection="area" strict="false"/>
-                </ports>      
-<fields>
-	<field name="in1" type="int">
-	<known>
-		<graphics>
-			<text string="*self" colour="-16777216" x="0" y="5" fontname="Arial" fontstyle="0" fontsize="10"/>
-		</graphics>
-	</known>
-	</field>
-	<field name="in2" type="int">
-	<known>
-		<graphics>
-			<text string="*self" colour="-16777216" x="0" y="45" fontname="Arial" fontstyle="0" fontsize="10"/>
-		</graphics>
-	</known>
-	</field>
-	<field name="out" type="int">
-	<known>
-		<graphics>
-			<text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="0" fontsize="10"/>
-		</graphics>
-	</known>
-	</field>
-</fields>		
-       </class>
-        <class>
-                <name>Not</name>
-                <description>Not</description>
-                <icon>not.gif</icon>
-                <graphics>
-                        <bounds x="0" y="0" width="50" height="50"/>
-                        <oval x="38" y="18" width="14" height="14" colour="0"	filled="true"/>
-                        <line x1="0" y1="0" x2="45" y2="22" colour="0"/>
-                        <line x1="0" y1="50" x2="45" y2="28" colour="0"/>
-                        <line x1="0" y1="0" x2="0" y2="50" colour="0"/>
-			<!--text string="", x="", y=""-->
-                </graphics>                  
-                <ports>
-                        <port name="in" type="int" x="0" y="25" 	portConnection="area" strict="false"/>
-                        <port name="out" type="int" x="45" y="25" 	portConnection="area" strict="false"/>
-                </ports>       
-<fields>
-	<field name="in" type="int" />
-	<field name="out" type="int" />
-</fields>
-	</class>
-		
-
-        <class>
-                <name>Or</name>
-                <description>Or</description>
-                <icon>or.gif</icon>
-                <graphics>
-                        <bounds x="0" y="0" width="50" height="50"/>
-                        <arc x="-50" y="0" width="100" height="50" startAngle="270" arcAngle="180" colour="0" filled="false"/>
-                        <line x1="0" y1="0" x2="0" y2="50" colour="0"/>
-                </graphics>                  
-                <ports>
-                        <port name="in1" type="int" x="0" y="15" 	portConnection="area" strict="false"/>
-                        <port name="in2" type="int" x="0" y="35" 	portConnection="area" strict="false"/>
-                        <port name="out" type="int" x="50" y="25" 	portConnection="area" strict="false"/>
-                </ports>       
-<fields>
-	<field name="in1" type="int" />
-	<field name="in2" type="int" />
-	<field name="out" type="int" />
-</fields>		
-        
-        </class>
-
-        <class>
-                <name>NumGenerator</name>
-                <description>Number Generator</description>
-                <icon>numgenerator.gif</icon>
-                <graphics>
-                        <bounds x="0" y="0" width="30" height="30"/>
-                        <line x1="0" y1="0" x2="0" y2="30" colour="0" />
-                        <line x1="0" y1="30" x2="30" y2="30" colour="0" />
-                        <line x1="0" y1="0" x2="30" y2="0" colour="0" />
-                        <line x1="30" y1="0" x2="30" y2="30" colour="0" />						
-			<!--text string="", x="", y=""-->
-                </graphics>                  
-                <ports>
-                       <port name="out" type="int" x="30" y="15" 	portConnection="area" strict="false"/>
-                </ports>       
-				<!--fields>
-					<field name="u" type="int" defaultVal="5"/>
-					<field name="v" type="float" defaultVal="0.0"/>
-				</fields-->
-         
-        </class>
-        <class>
-                <name>Delayer</name>
-                <description>Delayer</description>
-                <icon>delayer.gif</icon>
-                <graphics>
-                        <bounds x="0" y="0" width="30" height="30"/>
-                        <rect x="0" y="0" width="30" height="30" colour="0" filled ="false"/>
-			<!--text string="", x="", y=""-->
-                </graphics>                  
-                <ports>
-                        <port name="in" type="int" x="0" y="15" 	portConnection="area" strict="false"/>
-                        <port name="out" type="int" x="30" y="15" 	portConnection="area" strict="false"/>
-                </ports>       
-				<!--fields>
-					<field name="u" type="int" defaultVal="5"/>
-					<field name="v" type="float" defaultVal="0.0"/>
-				</fields-->
-         
-        </class>
-		
+  <name>Logic</name>
+  <description>Logical circuits builder.</description>
+  <class>
+    <name>And</name>
+    <description>And</description>
+    <icon>and.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="50" height="50" />
+      <line x1="0" y1="0" x2="50" y2="25" colour="0" />
+      <line x1="0" y1="50" x2="50" y2="25" colour="0" />
+      <line x1="0" y1="0" x2="0" y2="50" colour="0" />
+      <!--text string="", x="", y=""-->
+    </graphics>
+    <ports>
+      <port name="in1" type="int" x="0" y="15" portConnection="area" strict="false" />
+      <port name="in2" type="int" x="0" y="35" portConnection="area" strict="false" />
+      <port name="out" type="int" x="50" y="25" portConnection="area" strict="false" />
+    </ports>
+    <fields>
+      <field name="in1" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="0" y="5" fontname="Arial" fontstyle="0"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
+      <field name="in2" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="0" y="45" fontname="Arial" fontstyle="0"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
+      <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="0"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
+    </fields>
+  </class>
+  <class>
+    <name>Not</name>
+    <description>Not</description>
+    <icon>not.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="50" height="50" />
+      <oval x="38" y="18" width="14" height="14" colour="0" filled="true" />
+      <line x1="0" y1="0" x2="45" y2="22" colour="0" />
+      <line x1="0" y1="50" x2="45" y2="28" colour="0" />
+      <line x1="0" y1="0" x2="0" y2="50" colour="0" />
+      <!--text string="", x="", y=""-->
+    </graphics>
+    <ports>
+      <port name="in" type="int" x="0" y="25" portConnection="area" strict="false" />
+      <port name="out" type="int" x="45" y="25" portConnection="area" strict="false" />
+    </ports>
+    <fields>
+      <field name="in" type="int" />
+      <field name="out" type="int" />
+    </fields>
+  </class>
+  <class>
+    <name>Or</name>
+    <description>Or</description>
+    <icon>or.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="50" height="50" />
+      <arc x="-50" y="0" width="100" height="50" startAngle="270" arcAngle="180" colour="0"
+      filled="false" />
+      <line x1="0" y1="0" x2="0" y2="50" colour="0" />
+    </graphics>
+    <ports>
+      <port name="in1" type="int" x="0" y="15" portConnection="area" strict="false" />
+      <port name="in2" type="int" x="0" y="35" portConnection="area" strict="false" />
+      <port name="out" type="int" x="50" y="25" portConnection="area" strict="false" />
+    </ports>
+    <fields>
+      <field name="in1" type="int" />
+      <field name="in2" type="int" />
+      <field name="out" type="int" />
+    </fields>
+  </class>
+  <class>
+    <name>NumGenerator</name>
+    <description>Number Generator</description>
+    <icon>numgenerator.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="30" height="30" />
+      <line x1="0" y1="0" x2="0" y2="30" colour="0" />
+      <line x1="0" y1="30" x2="30" y2="30" colour="0" />
+      <line x1="0" y1="0" x2="30" y2="0" colour="0" />
+      <line x1="30" y1="0" x2="30" y2="30" colour="0" />
+      <!--text string="", x="", y=""-->
+    </graphics>
+    <ports>
+      <port name="out" type="int" x="30" y="15" portConnection="area" strict="false" />
+    </ports>
+    <!--fields>
+                                        <field name="u" type="int" defaultVal="5"/>
+                                        <field name="v" type="float" defaultVal="0.0"/>
+                                </fields-->
+  </class>
+  <class>
+    <name>Delayer</name>
+    <description>Delayer</description>
+    <icon>delayer.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="30" height="30" />
+      <rect x="0" y="0" width="30" height="30" colour="0" filled="false" />
+      <!--text string="", x="", y=""-->
+    </graphics>
+    <ports>
+      <port name="in" type="int" x="0" y="15" portConnection="area" strict="false" />
+      <port name="out" type="int" x="30" y="15" portConnection="area" strict="false" />
+    </ports>
+    <!--fields>
+                                        <field name="u" type="int" defaultVal="5"/>
+                                        <field name="v" type="float" defaultVal="0.0"/>
+                                </fields-->
+  </class>
 </package>
