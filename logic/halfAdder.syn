@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Logic">
+<object name="Midpoint_1" type="Midpoint" >
+  <properties x="85" y="53" width="10" height="10" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</object>
+<object name="Midpoint_2" type="Midpoint" >
+  <properties x="78" y="138" width="10" height="10" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</object>
+<object name="Not_3" type="Not" >
+  <properties x="230" y="180" width="50" height="50" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="in" type="int"/>
+    <field name="out" type="int"/>
+  </fields>
+</object>
+<object name="Not_4" type="Not" >
+  <properties x="166" y="119" width="50" height="50" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="in" type="int"/>
+    <field name="out" type="int"/>
+  </fields>
+</object>
+<object name="And_5" type="And" >
+  <properties x="322" y="42" width="50" height="50" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="in1" type="int"/>
+    <field name="in2" type="int"/>
+    <field name="out" type="int"/>
+  </fields>
+</object>
+<object name="Midpoint_6" type="Midpoint" >
+  <properties x="601" y="332" width="10" height="10" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</object>
+<object name="And_7" type="And" >
+  <properties x="315" y="213" width="50" height="50" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="in1" type="int"/>
+    <field name="in2" type="int"/>
+    <field name="out" type="int"/>
+  </fields>
+</object>
+<object name="And_8" type="And" >
+  <properties x="319" y="311" width="50" height="50" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="in1" type="int"/>
+    <field name="in2" type="int"/>
+    <field name="out" type="int"/>
+  </fields>
+</object>
+<object name="Or_9" type="Or" >
+  <properties x="491" y="107" width="50" height="50" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="in1" type="int"/>
+    <field name="in2" type="int"/>
+    <field name="out" type="int"/>
+  </fields>
+</object>
+<object name="Midpoint_10" type="Midpoint" >
+  <properties x="595" y="127" width="10" height="10" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</object>
+<object name="NumGenerator_0" type="NumGenerator" >
+  <properties x="17" y="43" width="30" height="30" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</object>
+<object name="Delayer_1" type="Delayer" >
+  <properties x="29" y="127" width="30" height="30" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</object>
+<connection obj1="Midpoint_1" port1="in1" obj2="And_5" port2="in1">
+  <breakpoints>
+    <point x="90" y="58"/>
+    <point x="322" y="57"/>
+  </breakpoints>
+</connection>
+<connection obj1="Not_4" port1="in" obj2="Midpoint_2" port2="in1">
+  <breakpoints>
+    <point x="166" y="144"/>
+    <point x="83" y="143"/>
+  </breakpoints>
+</connection>
+<connection obj1="And_7" port1="in2" obj2="Midpoint_2" port2="in1">
+  <breakpoints>
+    <point x="315" y="248"/>
+    <point x="130" y="249"/>
+    <point x="130" y="143"/>
+    <point x="83" y="143"/>
+  </breakpoints>
+</connection>
+<connection obj1="Midpoint_1" port1="in1" obj2="And_8" port2="in1">
+  <breakpoints>
+    <point x="90" y="58"/>
+    <point x="144" y="57"/>
+    <point x="144" y="327"/>
+    <point x="319" y="326"/>
+  </breakpoints>
+</connection>
+<connection obj1="Midpoint_2" port1="in1" obj2="And_8" port2="in2">
+  <breakpoints>
+    <point x="83" y="143"/>
+    <point x="131" y="143"/>
+    <point x="132" y="347"/>
+    <point x="319" y="346"/>
+  </breakpoints>
+</connection>
+<connection obj1="Not_3" port1="in" obj2="Midpoint_2" port2="in1">
+  <breakpoints>
+    <point x="230" y="205"/>
+    <point x="131" y="205"/>
+    <point x="130" y="143"/>
+    <point x="83" y="143"/>
+  </breakpoints>
+</connection>
+<connection obj1="And_8" port1="out" obj2="Midpoint_6" port2="in1">
+  <breakpoints>
+    <point x="369" y="336"/>
+    <point x="606" y="337"/>
+  </breakpoints>
+</connection>
+<connection obj1="Or_9" port1="out" obj2="Midpoint_10" port2="in1">
+  <breakpoints>
+    <point x="541" y="132"/>
+    <point x="600" y="132"/>
+  </breakpoints>
+</connection>
+<connection obj1="And_5" port1="out" obj2="Or_9" port2="in1">
+  <breakpoints>
+    <point x="372" y="67"/>
+    <point x="424" y="67"/>
+    <point x="425" y="121"/>
+    <point x="491" y="122"/>
+  </breakpoints>
+</connection>
+<connection obj1="Or_9" port1="in2" obj2="And_7" port2="out">
+  <breakpoints>
+    <point x="491" y="142"/>
+    <point x="425" y="143"/>
+    <point x="424" y="239"/>
+    <point x="365" y="238"/>
+  </breakpoints>
+</connection>
+<connection obj1="Not_4" port1="out" obj2="And_5" port2="in2">
+  <breakpoints>
+    <point x="211" y="144"/>
+    <point x="267" y="145"/>
+    <point x="266" y="77"/>
+    <point x="322" y="77"/>
+  </breakpoints>
+</connection>
+<connection obj1="Not_3" port1="out" obj2="And_7" port2="in1">
+  <breakpoints>
+    <point x="275" y="205"/>
+    <point x="297" y="205"/>
+    <point x="297" y="227"/>
+    <point x="315" y="228"/>
+  </breakpoints>
+</connection>
+<connection obj1="NumGenerator_0" port1="out" obj2="Midpoint_1" port2="in1">
+  <breakpoints>
+    <point x="47" y="58"/>
+    <point x="90" y="58"/>
+  </breakpoints>
+</connection>
+<connection obj1="NumGenerator_0" port1="out" obj2="Delayer_1" port2="in">
+  <breakpoints>
+    <point x="47" y="58"/>
+    <point x="73" y="59"/>
+    <point x="73" y="117"/>
+    <point x="11" y="117"/>
+    <point x="11" y="141"/>
+    <point x="29" y="142"/>
+  </breakpoints>
+</connection>
+<connection obj1="Delayer_1" port1="out" obj2="Midpoint_2" port2="in1">
+  <breakpoints>
+    <point x="59" y="142"/>
+    <point x="83" y="143"/>
+  </breakpoints>
+</connection>
+</scheme>
