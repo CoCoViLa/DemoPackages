@@ -236,4 +236,15 @@
       </field>
     </fields>
   </class>
+<class>
+<name>a</name>
+<description>a</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="348" height="274"/>
+<line x1="59" y1="52" x2="351" y2="210" colour="1694433331" fixed="false" stroke="5" linetype="10" transparency="100.0"/>
+<rect x="109" y="19" width="124" height="234" colour="-65485" filled="false" fixed="false" stroke="5" transparency="50"/>
+<rect x="121" y="4" width="137" height="270" colour="-65485" filled="false" fixed="false" stroke="5" linetype="10" transparency="50"/>
+</graphics>
+</class>
 </package>

@@ -9,6 +9,7 @@
     <icon>class.gif</icon>
     <graphics>
       <bounds x="0" y="0" width="100" height="100" />
+      <rect x="0" y="0" width="100" height="100" colour="16777215" filled="true" />
       <rect x="0" y="0" width="100" height="100" colour="-16777216" filled="false" />
       <line x1="2" y1="102" x2="102" y2="102" colour="-3407872" fixed="false" />
       <line x1="102" y1="2" x2="102" y2="102" colour="-3407872" fixed="false" />
@@ -115,10 +116,10 @@
     <icon>generalization.gif</icon>
     <graphics>
       <bounds x="0" y="0" width="50" height="1" />
-      <line x1="0" y1="0" x2="40" y2="0" colour="0" />
-      <line x1="40" y1="-10" x2="50" y2="0" colour="0" />
-      <line x1="40" y1="10" x2="50" y2="0" colour="0" />
-      <line x1="40" y1="-10" x2="40" y2="10" colour="0" />
+      <line x1="0" y1="0" x2="30rf" y2="0" colour="0" />
+      <line x1="30rf" y1="-10" x2="50rf" y2="0" colour="0" />
+      <line x1="30rf" y1="10" x2="50rf" y2="0" colour="0" />
+      <line x1="30rf" y1="-10" x2="30rf" y2="10" colour="0" />
     </graphics>
     <ports>
       <port name="parent" type="String" x="0" y="0" portConnection="area" strict="false"></port>
@@ -131,9 +132,9 @@
     <icon>assoc.gif</icon>
     <graphics>
       <bounds x="0" y="0" width="50" height="1" />
-      <line x1="0" y1="0" x2="50" y2="0" colour="0" />
-      <line x1="43" y1="-10" x2="50" y2="0" colour="0" />
-      <line x1="43" y1="10" x2="50" y2="0" colour="0" />
+      <line x1="0" y1="0" x2="50" y2="0" colour="0" linetype="7"/>
+      <line x1="30rf" y1="-10" x2="50" y2="0" colour="0" />
+      <line x1="30rf" y1="10" x2="50" y2="0" colour="0" />
     </graphics>
     <ports>
       <port name="c" type="String" x="0" y="0" portConnection="area" strict="false"></port>
