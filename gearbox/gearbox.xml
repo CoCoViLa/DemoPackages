@@ -14,7 +14,7 @@
       <rect x="11" y="1" width="18" height="68" colour="12632256" filled="true" />
     </graphics>
     <ports>
-      <port name="tang" type="alias" x="20" y="0" portConnection="area" strict="true">
+      <port id="1" name="tang" type="alias" x="20" y="0" portConnection="area" strict="true">
         <open>
           <graphics>
             <bounds x="-5" y="-5" width="10" height="10" />
@@ -26,7 +26,7 @@
           </graphics>
         </closed>
       </port>
-      <port name="tang" type="alias" x="20" y="70" portConnection="area" strict="true">
+      <port  id="2" name="tang" type="alias" x="20" y="70" portConnection="area" strict="true">
         <open>
           <graphics>
             <bounds x="-5" y="-5" width="10" height="10" />
@@ -38,7 +38,7 @@
           </graphics>
         </closed>
       </port>
-      <port name="axial" type="alias" x="0" y="35" portConnection="area" strict="true">
+      <port  id="3" name="axial" type="alias" x="0" y="35" portConnection="area" strict="true">
         <open>
           <graphics>
             <bounds x="-5" y="-5" width="10" height="10" />
@@ -50,7 +50,7 @@
           </graphics>
         </closed>
       </port>
-      <port name="axial" type="alias" x="40" y="35" portConnection="area" strict="true">
+      <port  id="4" name="axial" type="alias" x="40" y="35" portConnection="area" strict="true">
         <open>
           <graphics>
             <bounds x="-5" y="-5" width="10" height="10" />
