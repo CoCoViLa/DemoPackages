@@ -152,17 +152,7 @@
           </graphics>
         </closed>
       </port>
-      <port name="P" type="int" x="40" y="30" portConnection="area" strict="true">
-        <open>
-          <graphics>
-            <bounds x="-5" y="-5" width="10" height="10" />
-          </graphics>
-        </open>
-        <closed>
-          <graphics>
-            <oval x="-3" y="-3" width="6" height="6" colour="0" filled="true" />
-          </graphics>
-        </closed>
+      <port name="Pn" type="alias" x="40" y="30" portConnection="area" strict="true">
 	</port>
     </ports>
     <fields>
@@ -181,7 +171,7 @@
 <rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1"  transparency="255"/>
 </graphics>
 <ports>
-<port name="x" type="int" x="33" y="1" portConnection="" strict="false" />
+<port name="x" type="alias" x="33" y="1" portConnection="" strict="false" />
 <port name="y" type="int" x="68" y="36" portConnection="" strict="false" />
 </ports>
 <fields>
@@ -190,6 +180,8 @@
 <field name="last" type="int" />
 </fields>
 </class>
+
+
 <class type="class">
 <name>Selector</name>
 <description>Selects the first value of the argument</description>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Gearbox">
+<object name="Motor_0" type="Motor" >
+  <properties x="180" y="90" width="80" height="30" xsize="1.0" ysize="1.0" strict="true" />
+  <fields>
+    <field name="P" type="double"/>
+    <field name="n" type="double" value="8"/>
+    <field name="T" type="double"/>
+  </fields>
+</object>
+<object name="Wheel_1" type="Wheel" >
+  <properties x="270" y="70" width="40" height="70" xsize="1.0" ysize="1.0" strict="true" />
+  <fields>
+    <field name="z" type="int" value="77"/>
+    <field name="D" type="int"/>
+    <field name="F" type="double"/>
+    <field name="v" type="double"/>
+    <field name="T" type="double"/>
+    <field name="n" type="double"/>
+    <field name="m" type="double" value="3"/>
+  </fields>
+</object>
+<object name="Table_2" type="Table" >
+  <properties x="170" y="213" width="68" height="74" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="first" type="int" value="100"/>
+    <field name="step" type="int" value="100"/>
+    <field name="last" type="int" value="10000"/>
+  </fields>
+</object>
+<object name="Selector_3" type="Selector" >
+  <properties x="335" y="154" width="21" height="37" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="fst" type="any"/>
+    <field name="snd" type="any"/>
+  </fields>
+</object>
+<connection obj1="Wheel_1" port1="3" obj2="Motor_0" port2="axial">
+  <breakpoints>
+  </breakpoints>
+</connection>
+<connection obj1="Wheel_1" port1="4" obj2="Selector_3" port2="pair">
+  <breakpoints>
+    <point x="310" y="105"/>
+    <point x="356" y="173"/>
+  </breakpoints>
+</connection>
+<connection obj1="Motor_0" port1="Pn" obj2="Table_2" port2="x">
+  <breakpoints>
+    <point x="220" y="120"/>
+    <point x="203" y="214"/>
+  </breakpoints>
+</connection>
+<connection obj1="Table_2" port1="y" obj2="Selector_3" port2="snd">
+  <breakpoints>
+    <point x="238" y="249"/>
+    <point x="335" y="179"/>
+  </breakpoints>
+</connection>
+</scheme>

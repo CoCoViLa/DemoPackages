@@ -3,13 +3,19 @@ class Motor {
 		double P, n, T;
 		P = n * T;
 		alias axial = (n, T);
+		alias Pn = (P, n);
 	}
 	@*/
+
+
+//		double P, n, T;
+//		P = n * T;
+//		alias axial = (n, T);
 
 //		double[] axial;
 //		-> axial {calc};
 
-/*	int a;
+	int a;
 	double[] calc() {
 		double[] nT = new double[2];
 		if (a < 30) {
@@ -17,8 +23,10 @@ class Motor {
 		} else
 			a = 1;
 		nT[0] = a*10;
-		nT[1] = 30;
+		nT[1] = a * 30;
 		return nT;
 	}
-	*/
+	
 };
+
+
