@@ -6,7 +6,7 @@
   <class>
     <name>And</name>
     <description>And</description>
-    <icon>or.gif</icon>
+    <icon>and.gif</icon>
     
     <graphics>
       <bounds x="0" y="0" width="50" height="50" />
@@ -97,7 +97,7 @@
   <class>
     <name>Or</name>
     <description>Or</description>
-    <icon>and.gif</icon>
+    <icon>or.gif</icon>
     <graphics>
       <bounds x="0" y="0" width="50" height="50" />
       <polygon colour="16777215" filled="true" transparency="255">
@@ -212,66 +212,5 @@
 <ports>
 <port name="in1" type="int" x="5" y="5" portConnection="" strict="false" />
 </ports>
-</class>
-
-<class type="class">
-<name>And</name>
-<description>And gate</description>
-<icon>and.gif</icon>
-<graphics>
-<bounds x="0" y="0" width="49" height="46"/>
-<line x1="1" y1="2" x2="1" y2="46" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-<line x1="1" y1="46" x2="49" y2="24" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-<line x1="49" y1="24" x2="1" y2="2" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-</graphics>
-<ports>
-<port name="out" type="int" x="47" y="23" portConnection="" strict="false" />
-<port name="in1" type="int" x="0" y="15" portConnection="" strict="false" />
-<port name="in2" type="int" x="0" y="31" portConnection="" strict="false" />
-</ports><fields>
-<field name="in1" type="int"/>
-<field name="in2" type="int"/>
-<field name="out" type="int"/>
-</fields>
-</class>
-<class type="class">
-<name>And</name>
-<description>And gate</description>
-<icon>and.gif</icon>
-<graphics>
-<bounds x="0" y="0" width="49" height="46"/>
-<line x1="1" y1="2" x2="1" y2="46" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-<line x1="1" y1="46" x2="49" y2="24" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-<line x1="49" y1="24" x2="1" y2="2" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-</graphics>
-<ports>
-<port name="out" type="int" x="47" y="23" portConnection="" strict="false" />
-<port name="in1" type="int" x="0" y="15" portConnection="" strict="false" />
-<port name="in2" type="int" x="0" y="31" portConnection="" strict="false" />
-</ports><fields>
-<field name="in1" type="int"/>
-<field name="in2" type="int"/>
-<field name="out" type="int"/>
-</fields>
-</class>
-<class type="class">
-<name>And2</name>
-<description>And gate</description>
-<icon>and.gif</icon>
-<graphics>
-<bounds x="0" y="0" width="49" height="46"/>
-<line x1="1" y1="2" x2="1" y2="46" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-<line x1="1" y1="46" x2="49" y2="24" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-<line x1="49" y1="24" x2="1" y2="2" colour="-16777216" fixed="false" stroke="1" lineType="0" transparency="255"/>
-</graphics>
-<ports>
-<port name="out" type="int" x="47" y="23" portConnection="" strict="false" />
-<port name="in1" type="int" x="0" y="15" portConnection="" strict="false" />
-<port name="in2" type="int" x="0" y="31" portConnection="" strict="false" />
-</ports><fields>
-<field name="in1" type="int"/>
-<field name="in2" type="int"/>
-<field name="out" type="int"/>
-</fields>
 </class>
 </package>
