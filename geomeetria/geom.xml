@@ -54,8 +54,9 @@
 <rect x="0" y="0" width="138" height="138" colour="12386260" filled="true" fixed="false" stroke="2" linetype="0" transparency="255"/>
 <rect x="0" y="0" width="138" height="138" colour="0" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
 </graphics>
+
 <fields>
-<field name="a" type="double">
+<field name="a" type="double" value="10">
         <known>
           <graphics>
              <text string="a =" colour="-16777216" x="145" y="60" fontname="Arial" fontstyle="1"  fontsize="12" />
