@@ -1,0 +1,4 @@
+boolean print (double vastus) {
+  System.out.println("Vastus: "+ vastus);
+  return true;
+}

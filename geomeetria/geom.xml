@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>geom</name>
+<description>Geomeetria</description>
+<class type="class">
+<name>Ring</name>
+<description>Ring</description>
+<icon>ring.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="142" height="137"/>
+<oval x="0" y="0" width="138" height="138" colour="16777215" filled="true" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<oval x="0" y="0" width="138" height="138" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+
+</graphics>
+<fields>
+<field name="r" type="double">
+        <known>
+          <graphics>
+             <text string="r =" colour="-16777216" x="90" y="85" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="110" y="85" fontname="Arial" fontstyle="1"  fontsize="12" />
+	      <line x1="69" y1="69" x2="117" y2="117" colour="0" />
+          </graphics>
+        </known>
+</field>
+<field name="d" type="double">
+        <known>
+          <graphics>
+             <text string="d =" colour="-16777216" x="40" y="60" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="60" y="60" fontname="Arial" fontstyle="1"  fontsize="12" />
+	      <line x1="0" y1="69" x2="138" y2="69" colour="0" />
+          </graphics>
+        </known>
+</field>
+<field name="S" type="double">
+        <known>
+          <graphics>
+             <text string="S =" colour="-16777216" x="45" y="25" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="65" y="25" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+<field name="p" type="double"/>
+</fields> 
+
+</class>
+<class type="class">
+<name>Ruut</name>
+<description>Ruut</description>
+<icon>ruut.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="142" height="137"/>
+<rect x="0" y="0" width="138" height="138" colour="12386260" filled="true" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<rect x="0" y="0" width="138" height="138" colour="0" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+</graphics>
+<fields>
+<field name="a" type="double">
+        <known>
+          <graphics>
+             <text string="a =" colour="-16777216" x="145" y="60" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="165" y="60" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+<field name="d" type="double">
+        <known>
+          <graphics>
+             <text string="d =" colour="-16777216" x="45" y="110" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="65" y="110" fontname="Arial" fontstyle="1"  fontsize="12" />
+	      <line x1="0" y1="138" x2="138" y2="0" colour="0" />
+          </graphics>
+        </known>
+</field>
+<field name="S" type="double">
+        <known>
+          <graphics>
+             <text string="S =" colour="-16777216" x="40" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="60" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+<field name="p" type="double"/>
+</fields>
+</class>
+
+<class type="class">
+<name>Result</name>
+<description>Result</description>
+<icon>result.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="110" height="30"/>
+<rect x="0" y="0" width="110" height="30" colour="16772822" filled="true" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<rect x="0" y="0" width="110" height="30" colour="0" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+</graphics>
+<fields>
+<field name="value" type="double">
+        <known>
+          <graphics>
+             <text string="Result =" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="60" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+</fields>
+</class>
+
+</package>
