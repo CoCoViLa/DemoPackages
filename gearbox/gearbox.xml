@@ -154,4 +154,35 @@
       </port>
     </ports>
   </class>
+<class type="class">
+<name>Table</name>
+<description>Tabulates values</description>
+<icon>and.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="68" height="74"/>
+<rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1" lineType="0" transparency="0"/>
+<rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1" lineType="0" transparency="0"/>
+</graphics>
+<ports>
+<port name="x" type="int" x="33" y="1" portConnection="" strict="false" />
+<port name="y" type="int" x="68" y="36" portConnection="" strict="false" />
+</ports><fields>
+<field name="first" type="int" value="" />
+<field name="step" type="int" value="" />
+<field name="last" type="int" value="" />
+</fields>
+</class>
+<class type="class">
+<name>Selector</name>
+<description>Selects the first value of the argument</description>
+<icon>a.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="21" height="37"/>
+<rect x="0" y="0" width="22" height="37" colour="-6697729" filled="true" fixed="false" stroke="1" lineType="0" transparency="0"/>
+<rect x="0" y="0" width="21" height="37" colour="-16777216" filled="false" fixed="false" stroke="1" lineType="0" transparency="0"/>
+</graphics>
+<ports>
+<port name="in" type="alias" x="21" y="19" portConnection="" strict="false" />
+<port name="out" type="int" x="0" y="18" portConnection="" strict="false" />
+</ports></class>
 </package>

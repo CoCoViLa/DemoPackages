@@ -4,7 +4,6 @@ class UMLClass {
 	specification UMLClass  {
 		String name;
 		String parent;
-
 		String[] attrs;
 		String[] methods;
 		int done;
