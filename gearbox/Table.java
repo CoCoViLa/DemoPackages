@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 class Table {
 	/*@
 	specification Table {
@@ -39,10 +40,12 @@ class Table {
 			System.out.println("dd "+ d);
 		}
 		JTable table = new JTable(tableData, colNames);
+        table.setPreferredScrollableViewportSize(new Dimension(500, 170));
 		JScrollPane scrollPane = new JScrollPane(table);
-		JPanel jp = new JPanel();
+		JPanel jp = new JPanel(new GridLayout(1,0));
 		jp.add(scrollPane);
-		JFrame jf = new JFrame();
+		jp.setOpaque(true);
+		JFrame jf = new JFrame("Result table");
 		jf.setContentPane(jp);
 		jf.pack();
 		jf.setVisible(true);

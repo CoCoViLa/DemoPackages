@@ -64,7 +64,7 @@
       </port>
     </ports>
     <fields>
-      <field name="z" type="int" value="77"/>
+      <field name="z" type="int"/>
       <field name="D" type="int" />
       <field name="F" type="double" />
       <field name="v" type="double" />
@@ -172,8 +172,8 @@
 <icon>table.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="68" height="74"/>
-<rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1"  transparency="255"/>
-<rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1"  transparency="255"/>
+<rect x="0" y="0" width="68" height="74" colour="1627282" filled="true" fixed="false" stroke="1"  transparency="255"/>
+<rect x="0" y="0" width="68" height="74" colour="0" filled="false" fixed="false" stroke="1"  transparency="255"/>
 </graphics>
 <ports>
 <port name="x" type="alias" x="33" y="1" portConnection="" strict="false" />

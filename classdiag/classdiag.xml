@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+  <name>UML Class diagram</name>
+  <description>A package for drawing UML class diagrams</description>
+  <class>
+    <name>UMLClass</name>
+    <description>Class</description>
+    <icon>class.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="100" height="100" />
+      <rect x="0" y="0" width="100" height="100" colour="16777215" filled="true"/>
+      <rect x="0" y="0" width="100" height="100" colour="-16777215" filled="false"/>
+      <line x1="2" y1="102rf" x2="102" y2="102rf" colour="-3407872" fixed="false" />
+      <line x1="102rf" y1="2" x2="102rf" y2="102" colour="-3407872" fixed="false" />
+      <line x1="0" y1="17f" x2="100" y2="17f" colour="-16777216" fixed="false" />
+      <line x1="2" y1="19f" x2="100" y2="19f" colour="-3407872" fixed="false" />
+      <line x1="5" y1="55" x2="95rf" y2="55" colour="-3407872" fixed="false" />
+    </graphics>
+    <ports>
+      <port name="any" type="String" x="50" y="50" portConnection="area" strict="false">
+        <open>
+          <graphics>
+            <bounds x="-50" y="-50" width="100" height="100" />
+          </graphics>
+        </open>
+        <closed>
+          <graphics></graphics>
+        </closed>
+      </port>
+    </ports>
+    <fields>
+      <field name="name" type="String">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6f" y="13f" fontname="Arial" fontstyle="0"
+            fontsize="12" fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>  
+
+      <field name="attrs" type="String[]">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6f" y="35f" fontname="Arial" fontstyle="0"
+            fontsize="12" fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>  
+      <field name="methods" type="String[]">
+         <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6f" y="70" fontname="Arial" fontstyle="0"
+            fontsize="12" fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>  
+
+    </fields>
+  </class>
+
+  
+  <class>
+    <name>UMLInterface</name>
+    <description>Interface</description>
+    <icon>interface.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="100" height="100" />
+      <rect x="0" y="0" width="100" height="100" colour="16777215" filled="true"/>
+      <rect x="0" y="0" width="100" height="100" colour="-16777215" filled="false"/>
+      <line x1="2" y1="102rf" x2="102" y2="102rf" colour="-3407872" fixed="false" />
+      <line x1="102rf" y1="2" x2="102rf" y2="102" colour="-3407872" fixed="false" />
+      <line x1="0" y1="45f" x2="100" y2="45f" colour="-16777216" fixed="false" />
+      <line x1="2" y1="47f" x2="100" y2="47f" colour="-3407872" fixed="false" />
+      <text string="&lt;&lt;Interface&gt;&gt;" colour="-16777216" x="10f" y="15f" fontname="Arial" fontstyle="0"
+            fontsize="12" fixedsize="true"/>
+    </graphics>
+    <ports>
+      <port name="any" type="String" x="50" y="50" portConnection="area" strict="false">
+        <open>
+          <graphics>
+            <bounds x="-50" y="-50" width="100" height="100" />
+          </graphics>
+        </open>
+        <closed>
+          <graphics></graphics>
+        </closed>
+      </port>
+    </ports>
+    <fields>
+      <field name="name" type="String">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6f" y="35f" fontname="Arial" fontstyle="0"
+            fontsize="12" fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>  
+
+      <field name="methods" type="String[]">
+         <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6f" y="60" fontname="Arial" fontstyle="0"
+            fontsize="12" fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>  
+
+    </fields>
+  </class>
+
+  
+  <class>
+    <name>UMLPackage</name>
+    <description>UML package</description>
+    <icon>package.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="129" height="135" />
+      <rect x="0" y="24" width="129" height="111" colour="16777215" filled="true"
+      fixed="false" />
+            <rect x="0" y="24" width="129" height="111" colour="0" filled="false"
+      fixed="false" />
+            <rect x="0" y="3" width="55" height="21" colour="16777215" filled="true"
+      fixed="false" />
+            <rect x="0" y="3" width="55" height="21" colour="0" filled="false"
+      fixed="false" />
+    </graphics>
+    <fields>
+      <field name="name" type="String">
+              <known>
+         <graphics>
+            <text string="*self" colour="0" x="6f" y="17f" fontname="Arial" fontstyle="1"
+            fontsize="16" fixedsize="true"/>
+         </graphics>
+       </known>
+      </field>
+    </fields>
+  </class>
+
+  <class type="class">
+    <name>Note</name>
+    <description>Note</description>
+    <icon>note.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="120" height="80" />
+
+      <polygon colour="16777215" filled="true" transparency="255">
+	<point x="80" y="0"/>
+	<point x="0" y="0"/>
+	<point x="0" y="80"/>
+	<point x="120" y="80"/>
+	<point x="120" y="25"/>
+      </polygon>            
+      <polygon colour="0" filled="false" transparency="255">
+	<point x="80" y="0"/>
+	<point x="0" y="0"/>
+	<point x="0" y="80"/>
+	<point x="120" y="80"/>
+	<point x="120" y="25"/>
+      </polygon>      
+	<line x1="80" y1="0" x2="80" y2="25" colour="0" />
+	<line x1="80" y1="25" x2="120" y2="25" colour="0" />
+    </graphics>
+    <fields>
+      <field name="note" type="String">
+      <known>
+        <graphics>
+          <text string="*self" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="0"
+          fontsize="12" />
+        </graphics>
+      </known>
+     </field>
+    </fields>
+  </class>
+  
+  <class type="relation">
+    <name>RelClass</name>
+    <description>rel</description>
+    <icon>generalization.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="50" height="1" />
+      <line x1="0" y1="0" x2="30rf" y2="0" colour="0" />
+      <polygon colour="16777215" filled="true" transparency="255">
+	<point x="30rf" y="10"/>
+	<point x="50" y="0"/>
+	<point x="30rf" y="-10"/>
+      </polygon>
+
+      <line x1="30rf" y1="-10" x2="50rf" y2="0" colour="0" />
+      <line x1="30rf" y1="10" x2="50rf" y2="0" colour="0" />
+      <line x1="30rf" y1="-10" x2="30rf" y2="10" colour="0" />
+    </graphics>
+    <ports>
+      <port name="parent" type="String" x="0" y="0" portConnection="area" strict="false"></port>
+      <port name="name" type="String" x="50" y="0" portConnection="area" strict="false"></port>
+    </ports>
+  </class>
+  <class type="relation">
+    <name>AssocClass</name>
+    <description>rel</description>
+    <icon>assoc.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="50" height="1" />
+      <line x1="0" y1="0" x2="50" y2="0" colour="0" linetype="7"/>
+      <line x1="30rf" y1="-10" x2="50" y2="0" colour="0" />
+      <line x1="30rf" y1="10" x2="50" y2="0" colour="0" />
+    </graphics>
+    <ports>
+      <port name="c" type="String" x="0" y="0" portConnection="area" strict="false"></port>
+      <port name="p" type="String" x="50" y="0" portConnection="area" strict="false"></port>
+    </ports>
+  </class>
+
+  <class type="relation">
+    <name>AggrClass</name>
+    <description>Aggregation</description>
+    <icon>aggr.gif</icon>
+    <graphics>
+      <bounds x="0" y="0" width="50" height="1" />
+      <polygon colour="16777215" filled="true" transparency="255">
+	<point x="35rf" y="-10"/>
+	<point x="50" y="0"/>
+	<point x="35rf" y="10"/>
+	<point x="20rf" y="0"/>
+      </polygon>
+      <line x1="0" y1="0" x2="20rf" y2="0" colour="0" />
+      <line x1="35rf" y1="-10" x2="50" y2="0" colour="0" />
+      <line x1="35rf" y1="10" x2="50" y2="0" colour="0" />
+      <line x1="20rf" y1="0" x2="35rf" y2="-10" colour="0" />
+      <line x1="20rf" y1="0" x2="35rf" y2="10" colour="0" />
+    </graphics>
+    <ports>
+      <port name="parent" type="String" x="0" y="0" portConnection="area" strict="false"></port>
+      <port name="name" type="String" x="50" y="0" portConnection="area" strict="false"></port>
+    </ports>
+    <fields>
+      <field name="start" type="String">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="5f" y="-12f" fontname="Arial" fontstyle="0"
+            fontsize="12"  fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>
+      <field name="end" type="String">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="35" y="-12f" fontname="Arial" fontstyle="0"
+            fontsize="12"  fixedsize="true"/>
+          </graphics>
+        </known>
+      </field>
+    </fields>
+  </class>
+</package>
