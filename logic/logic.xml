@@ -23,7 +23,7 @@
       <field name="in1" type="int">
         <known>
           <graphics>
-            <text string="*self" colour="-16777216" x="0" y="5" fontname="Arial" fontstyle="0"
+            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1"
             fontsize="10" />
           </graphics>
         </known>
@@ -31,7 +31,7 @@
       <field name="in2" type="int">
         <known>
           <graphics>
-            <text string="*self" colour="-16777216" x="0" y="45" fontname="Arial" fontstyle="0"
+            <text string="*self" colour="-16777216" x="-10" y="50" fontname="Arial" fontstyle="1"
             fontsize="10" />
           </graphics>
         </known>
@@ -39,7 +39,7 @@
       <field name="out" type="int">
         <known>
           <graphics>
-            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="0"
+            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1"
             fontsize="10" />
           </graphics>
         </known>
@@ -63,8 +63,22 @@
       <port name="out" type="int" x="45" y="25" portConnection="area" strict="false" />
     </ports>
     <fields>
-      <field name="in" type="int" />
-      <field name="out" type="int" />
+      <field name="in" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
+      <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
     </fields>
   </class>
   <class>
@@ -83,9 +97,30 @@
       <port name="out" type="int" x="50" y="25" portConnection="area" strict="false" />
     </ports>
     <fields>
-      <field name="in1" type="int" />
-      <field name="in2" type="int" />
-      <field name="out" type="int" />
+      <field name="in1" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
+      <field name="in2" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="-10" y="50" fontname="Arial" fontstyle="1"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
+      <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1"
+            fontsize="10" />
+          </graphics>
+        </known>
+      </field>
     </fields>
   </class>
   <class>

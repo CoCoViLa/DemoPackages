@@ -7,7 +7,7 @@
     <name>UMLClass</name>
     <description>Class</description>
     <icon>class.gif</icon>
-    <graphics showFields="true">
+    <graphics>
       <bounds x="0" y="0" width="100" height="100" />
       <rect x="0" y="0" width="100" height="100" colour="-16777216" filled="false" />
       <line x1="2" y1="102" x2="102" y2="102" colour="-3407872" fixed="false" />
@@ -58,9 +58,32 @@
       </port>
     </ports>
     <fields>
-      <field name="name" type="String" />
-      <field name="attrs" type="String[]" />
-      <field name="methods" type="String[]" />
+      <field name="name" type="String">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6" y="13" fontname="Arial" fontstyle="0"
+            fontsize="12" />
+          </graphics>
+        </known>
+      </field>  
+
+      <field name="attrs" type="String[]">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6" y="35" fontname="Arial" fontstyle="0"
+            fontsize="12" />
+          </graphics>
+        </known>
+      </field>  
+      <field name="methods" type="String[]">
+         <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="6" y="70" fontname="Arial" fontstyle="0"
+            fontsize="12" />
+          </graphics>
+        </known>
+      </field>  
+
     </fields>
   </class>
   <class>
@@ -77,13 +100,15 @@
     </graphics>
     <fields>
       <field name="name" type="String" />
-      <field name="attrs" type="String[]" />
-      <known>
-        <graphics>
-          <text string="*self" colour="-16777216" x="20" y="170" fontname="Arial" fontstyle="0"
-          fontsize="12" />
-        </graphics>
-      </known>
+      <field name="attrs" type="String[]">
+        <known>
+         <graphics>
+           <text string="*self" colour="-16777216" x="20" y="170" fontname="Arial" fontstyle="0"
+           fontsize="12" />
+         </graphics>
+       </known>
+      </field>
+ 
       <field name="methods" type="String[]" />
     </fields>
   </class>
@@ -104,13 +129,14 @@
       <line x1="0" y1="0" x2="78" y2="0" colour="-16777216" fixed="false" />
     </graphics>
     <fields>
-      <field name="note" type="String" />
+      <field name="note" type="String">
       <known>
         <graphics>
           <text string="*self" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="0"
           fontsize="12" />
         </graphics>
       </known>
+     </field>
     </fields>
   </class>
   <class type="relation">
