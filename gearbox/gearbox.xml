@@ -152,7 +152,24 @@
           </graphics>
         </closed>
       </port>
+      <port name="P" type="int" x="40" y="30" portConnection="area" strict="true">
+        <open>
+          <graphics>
+            <bounds x="-5" y="-5" width="10" height="10" />
+          </graphics>
+        </open>
+        <closed>
+          <graphics>
+            <oval x="-3" y="-3" width="6" height="6" colour="0" filled="true" />
+          </graphics>
+        </closed>
+	</port>
     </ports>
+    <fields>
+	<field name="P" type="double" />
+	<field name="n" type="double" />
+	<field name="T" type="double" />
+    </fields>
   </class>
 <class type="class">
 <name>Table</name>
@@ -160,16 +177,17 @@
 <icon>and.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="68" height="74"/>
-<rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1" lineType="0" transparency="0"/>
-<rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1" lineType="0" transparency="0"/>
+<rect x="0" y="0" width="68" height="74" colour="-3355444" filled="true" fixed="false" stroke="1"  transparency="0"/>
+<rect x="0" y="0" width="68" height="74" colour="-16777216" filled="false" fixed="false" stroke="1"  transparency="0"/>
 </graphics>
 <ports>
 <port name="x" type="int" x="33" y="1" portConnection="" strict="false" />
 <port name="y" type="int" x="68" y="36" portConnection="" strict="false" />
-</ports><fields>
-<field name="first" type="int" value="" />
-<field name="step" type="int" value="" />
-<field name="last" type="int" value="" />
+</ports>
+<fields>
+<field name="first" type="int" />
+<field name="step" type="int" />
+<field name="last" type="int" />
 </fields>
 </class>
 <class type="class">
@@ -178,11 +196,20 @@
 <icon>a.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="21" height="37"/>
-<rect x="0" y="0" width="22" height="37" colour="-6697729" filled="true" fixed="false" stroke="1" lineType="0" transparency="0"/>
-<rect x="0" y="0" width="21" height="37" colour="-16777216" filled="false" fixed="false" stroke="1" lineType="0" transparency="0"/>
+<rect x="0" y="0" width="22" height="37" colour="-6697729" filled="true" fixed="false" stroke="1"  transparency="0"/>
+<rect x="0" y="0" width="21" height="37" colour="-16777216" filled="false" fixed="false" stroke="1" transparency="0"/>
 </graphics>
 <ports>
-<port name="in" type="alias" x="21" y="19" portConnection="" strict="false" />
-<port name="out" type="int" x="0" y="18" portConnection="" strict="false" />
-</ports></class>
+<port name="pair" type="alias" x="21" y="19" portConnection="" strict="false" />
+<port name="fst" type="int" x="0" y="12" portConnection="" strict="false" />
+<port name="snd" type="int" x="0" y="25" portConnection="" strict="false" />
+</ports>
+
+<fields>
+<field name="fst" type="any" />
+<field name="snd" type="any" />
+</fields>
+
+
+</class>
 </package>
