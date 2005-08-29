@@ -1,0 +1,62 @@
+//----------------------------------------------------------------------------
+public double[] inc (double[] state) {
+//	Object[] outval = new Object[] {( (Object) state[0])};
+//	System.out.println("inc returns" + outval);	
+	return state;
+}
+
+//----------------------------------------------------------------------------
+public double[] next (double[] state, double step) {
+	double[]  nextstate = new double[state.length];
+	
+	for (int i = 0; i < state.length; i++) {
+		nextstate[i] = state[i] + step;
+	}	
+	return nextstate;
+}
+
+//----------------------------------------------------------------------------
+public int print_state (String state_name, double[] st) {		
+	System.out.print(state_name + ":");
+	for (int i = 0; i < st.length;  i++ ){
+		System.out.print("\t" + st[i]);	
+	}
+	System.out.println();
+	return 1;				
+}
+
+//----------------------------------------------------------------------------
+
+//public int proc_run ( double[] initst, int time) {
+//public int proc_run (Subtask st, double[] initst, int time) {
+public double[] proc_run (Subtask st, double[] initst, int time) {
+	double[]  state, finalst;
+	double 	  pr_step = 2.5;
+	int done = 1;
+  double t1= System.currentTimeMillis();
+	System.out.println("time value is: " + time);
+	print_state ("initstate", initst);
+
+	Object[] in = new Object[1];
+	in[0] = initst;
+	try {		 
+		for (int i = 1; i < time;  i++ ){
+			//Object[] in = new Object[1];
+			//in[0] = initstate;
+			state = (double[])in[0];
+			System.out.println("current time: " + i);
+		     	print_state ("    state", state);	
+			Object[] out = st.run(in);
+			in = out;
+		}		
+	}
+	catch (Exception e) {
+	e.printStackTrace();
+	done = 0;
+	}
+	finalst = (double[])in[0];	
+	print_state ("finalstate", finalst);
+   double t2= System.currentTimeMillis();
+   System.out.println("process computation time " + (t2-t1)/1000 + " sec");
+        return finalst;		 	
+}

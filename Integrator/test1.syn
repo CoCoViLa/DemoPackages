@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Integrator">
+<object name="Integrator_0" type="Integrator" >
+  <properties x="249" y="113" width="160" height="105" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="T" type="double" value="5"/>
+    <field name="in" type="double"/>
+    <field name="out" type="double"/>
+    <field name="initstate" type="double" value="0"/>
+    <field name="state" type="double"/>
+    <field name="nextstate" type="double"/>
+    <field name="finalstate" type="double"/>
+  </fields>
+</object>
+<object name="Clock_1" type="Clock" >
+  <properties x="99" y="323" width="98" height="103" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="initstate" type="double"/>
+    <field name="state" type="double"/>
+    <field name="nextstate" type="double"/>
+    <field name="finalstate" type="double"/>
+    <field name="out" type="double"/>
+  </fields>
+</object>
+<object name="Adder_2" type="Adder" >
+  <properties x="493" y="186" width="72" height="98" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="k1" type="double" value="-2"/>
+    <field name="k2" type="double" value="-5"/>
+    <field name="in1" type="double"/>
+    <field name="in2" type="double"/>
+    <field name="out" type="double"/>
+  </fields>
+</object>
+<object name="Graph_3" type="Graph" >
+  <properties x="106" y="192" width="96" height="99" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="x" type="double"/>
+    <field name="y" type="double"/>
+  </fields>
+</object>
+<object name="Integrator_4" type="Integrator" >
+  <properties x="249" y="262" width="160" height="105" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="T" type="double" value="5"/>
+    <field name="in" type="double"/>
+    <field name="out" type="double"/>
+    <field name="initstate" type="double" value="0"/>
+    <field name="state" type="double"/>
+    <field name="nextstate" type="double"/>
+    <field name="finalstate" type="double"/>
+  </fields>
+</object>
+<connection obj1="Integrator_0" port1="out" obj2="Adder_2" port2="in1">
+  <breakpoints>
+    <point x="374" y="121"/>
+    <point x="374" y="95"/>
+    <point x="434" y="95"/>
+    <point x="434" y="243"/>
+    <point x="500" y="243"/>
+  </breakpoints>
+</connection>
+<connection obj1="Integrator_4" port1="out" obj2="Adder_2" port2="in2">
+  <breakpoints>
+    <point x="374" y="270"/>
+    <point x="375" y="258"/>
+    <point x="500" y="258"/>
+  </breakpoints>
+</connection>
+<connection obj1="Integrator_4" port1="out" obj2="Graph_3" port2="x">
+  <breakpoints>
+    <point x="374" y="270"/>
+    <point x="374" y="241"/>
+    <point x="113" y="241"/>
+  </breakpoints>
+</connection>
+<connection obj1="Clock_1" port1="out" obj2="Graph_3" port2="y">
+  <breakpoints>
+    <point x="149" y="329"/>
+    <point x="149" y="275"/>
+  </breakpoints>
+</connection>
+<connection obj1="Integrator_0" port1="out" obj2="Integrator_4" port2="in">
+  <breakpoints>
+    <point x="374" y="121"/>
+    <point x="374" y="79"/>
+    <point x="232" y="79"/>
+    <point x="232" y="228"/>
+    <point x="328" y="228"/>
+    <point x="328" y="270"/>
+  </breakpoints>
+</connection>
+<connection obj1="Adder_2" port1="out" obj2="Integrator_0" port2="in">
+  <breakpoints>
+    <point x="559" y="236"/>
+    <point x="593" y="236"/>
+    <point x="593" y="51"/>
+    <point x="328" y="51"/>
+    <point x="328" y="121"/>
+  </breakpoints>
+</connection>
+</scheme>
