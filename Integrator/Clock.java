@@ -7,7 +7,9 @@ class Clock {
 		nextstate = state + 1;
 		out = state;
 	
-		initstate = 0; 	
+//		initstate = 0; 	
 	}
 	@*/
 }
+
+

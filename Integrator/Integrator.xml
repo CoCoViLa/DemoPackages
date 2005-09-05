@@ -7,7 +7,7 @@
 <class type="class">
 <name>Clock</name>
 <description>clock</description>
-<icon>default.gif</icon>
+<icon>clock.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="98" height="103"/>
 <oval x="20" y="21" width="59" height="58" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
@@ -25,35 +25,34 @@
 <oval x="132" y="81" width="0" height="0" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
 </graphics>
 <ports>
-<port name="initstate" type="double" x="28" y="95" portConnection="" strict="false" />
-<port name="state" type="double" x="43" y="95" portConnection="" strict="false" />
-<port name="nextstate" type="double" x="58" y="95" portConnection="" strict="false" />
-<port name="finalstate" type="double" x="73" y="95" portConnection="" strict="false" />
 <port name="out" type="double" x="50" y="6" portConnection="" strict="false" />
 </ports><fields>
-<field name="initstate" type="double"/>
+<!--field name="initstate" type="double"/>
 <field name="state" type="double"/>
 <field name="nextstate" type="double"/>
-<field name="finalstate" type="double"/>
+<field name="finalstate" type="double"/-->
 <field name="out" type="double"/>
+<field name="initstate" type="double"/>
 </fields>
 </class>
 <class type="class">
 <name>Adder</name>
 <description>adder</description>
-<icon>default.gif</icon>
+<icon>adder.gif</icon>
 <graphics>
-<bounds x="0" y="0" width="72" height="98"/>
-<rect x="6" y="5" width="60" height="89" colour="-6710785" filled="true" fixed="false" stroke="1" linetype="0" transparency="255"/>
-<rect x="6" y="4" width="60" height="90" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
-<text string="ADD" colour="-16777216" x="10" y="19" fontname="Arial" fontstyle="1" fontsize="14" transparency="1"/>
+<bounds x="0" y="0" width="87" height="84"/>
+<rect x="7" y="5" width="75" height="75" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="59" y1="20" x2="22" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="22" y1="20" x2="39" y2="38" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="40" y1="39" x2="23" y2="61" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="23" y1="62" x2="60" y2="62" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="60" y1="20" x2="60" y2="25" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="61" y1="62" x2="61" y2="56" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
 </graphics>
 <ports>
-<port name="k1" type="double" x="7" y="27" portConnection="" strict="false" />
-<port name="k2" type="double" x="7" y="42" portConnection="" strict="false" />
-<port name="in1" type="double" x="7" y="57" portConnection="" strict="false" />
-<port name="in2" type="double" x="7" y="72" portConnection="" strict="false" />
-<port name="out" type="double" x="66" y="50" portConnection="" strict="false" />
+<port name="in1" type="double" x="7" y="28" portConnection="" strict="false" />
+<port name="in2" type="double" x="7" y="58" portConnection="" strict="false" />
+<port name="out" type="double" x="82" y="43" portConnection="" strict="false" />
 </ports><fields>
 <field name="k1" type="double"/>
 <field name="k2" type="double"/>
@@ -65,7 +64,7 @@
 <class type="class">
 <name>Graph</name>
 <description>graph</description>
-<icon>default.gif</icon>
+<icon>graph.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="96" height="99"/>
 <line x1="7" y1="13" x2="7" y2="87" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
@@ -78,8 +77,8 @@
 <text string="y" colour="-16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="1"/>
 </graphics>
 <ports>
-<port name="x" type="double" x="7" y="49" portConnection="" strict="false" />
-<port name="y" type="double" x="43" y="83" portConnection="" strict="false" />
+<port name="y" type="double" x="7" y="49" portConnection="" strict="false" />
+<port name="x" type="double" x="43" y="83" portConnection="" strict="false" />
 </ports><fields>
 <field name="x" type="double"/>
 <field name="y" type="double"/>
@@ -88,31 +87,48 @@
 <class type="class">
 <name>Integrator</name>
 <description>integrator</description>
-<icon>default.gif</icon>
+<icon>integrator.gif</icon>
 <graphics>
-<bounds x="0" y="0" width="160" height="105"/>
-<rect x="6" y="8" width="149" height="89" colour="-13395457" filled="true" fixed="false" stroke="2" linetype="0" transparency="255"/>
-<text string="T" colour="-10092442" x="29" y="32" fontname="Arial" fontstyle="1" fontsize="20" transparency="1"/>
-<text string="Integrator" colour="-16777216" x="27" y="60" fontname="Arial" fontstyle="1" fontsize="24" transparency="1"/>
-<text string="Out" colour="-10092442" x="107" y="31" fontname="Arial" fontstyle="1" fontsize="20" transparency="1"/>
-<text string="In" colour="-10092442" x="69" y="31" fontname="Arial" fontstyle="1" fontsize="20" transparency="1"/>
+<bounds x="0" y="0" width="89" height="80"/>
+<rect x="7" y="2" width="75" height="75" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="44" y1="26" x2="44" y2="57" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="26" x2="44" y2="27" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="25" x2="44" y2="26" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="24" x2="44" y2="25" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="23" x2="44" y2="24" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="22" x2="44" y2="23" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="21" x2="44" y2="22" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="45" y1="21" x2="44" y2="21" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="45" y1="20" x2="45" y2="21" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="46" y1="20" x2="45" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="47" y1="20" x2="46" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="48" y1="20" x2="47" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="49" y1="20" x2="48" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="49" y1="21" x2="49" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="49" y1="22" x2="49" y2="21" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="49" y1="23" x2="49" y2="22" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="57" x2="44" y2="56" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="58" x2="44" y2="57" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="59" x2="44" y2="58" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="60" x2="44" y2="59" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="44" y1="61" x2="44" y2="60" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="43" y1="61" x2="44" y2="61" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="42" y1="61" x2="43" y2="61" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="41" y1="61" x2="42" y2="61" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="40" y1="61" x2="41" y2="61" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="40" y1="60" x2="40" y2="61" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="39" y1="60" x2="40" y2="60" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="39" y1="59" x2="39" y2="60" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="39" y1="58" x2="39" y2="59" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
 </graphics>
 <ports>
-<port name="T" type="double" x="35" y="8" portConnection="" strict="false" />
-<port name="in" type="double" x="79" y="8" portConnection="" strict="false" />
-<port name="out" type="double" x="125" y="8" portConnection="" strict="false" />
-<port name="initstate" type="double" x="36" y="97" portConnection="" strict="false" />
-<port name="state" type="double" x="65" y="97" portConnection="" strict="false" />
-<port name="nextstate" type="double" x="96" y="97" portConnection="" strict="false" />
-<port name="finalstate" type="double" x="126" y="97" portConnection="" strict="false" />
+<port name="in" type="double" x="7" y="40" portConnection="" strict="false" />
+<port name="out" type="double" x="83" y="40" portConnection="" strict="false" />
 </ports><fields>
 <field name="T" type="double"/>
 <field name="in" type="double"/>
 <field name="out" type="double"/>
 <field name="initstate" type="double"/>
-<field name="state" type="double"/>
-<field name="nextstate" type="double"/>
-<field name="finalstate" type="double"/>
 </fields>
 </class>
 </package>
