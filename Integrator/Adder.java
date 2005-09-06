@@ -6,4 +6,4 @@ class Adder {
 	}
 	@*/
 }		
-//out = k1 * in1 + k2 * in2;
+

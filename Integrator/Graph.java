@@ -26,13 +26,9 @@ class Graph extends JFrame {
 
 	public static void draw( double x, double y )
         {
-		double xx = x*10;
-		double yy = y*10;
-		System.err.println( " xx " + xx + " yy " + yy );
-		//Point p = new Point( ( int ) x*100, ( int ) y*100 );
 		Point p = new Point( Math.round( (float)x*100), Math.round( (float)y*100) );
         	values.add( p );
-		System.err.println( p + " x " + x + " y " + y );
+		//System.err.println( p + " x " + x + " y " + y );
         	instance.setTitle("Graph");
         	instance.setSize(500, 300);
         	instance.setVisible(true);
@@ -90,6 +86,7 @@ class Graph extends JFrame {
         }
     }
 }
+
 
 
 

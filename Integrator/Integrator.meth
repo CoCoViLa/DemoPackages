@@ -1,32 +1,22 @@
 
-//----------------------------------------------------------------------------
-public int print_state (String state_name, double[] st) {		
+public void print_state (String state_name, double[] st) {		
 	System.out.print(state_name + ":");
 	for (int i = 0; i < st.length;  i++ ){
 		System.out.print("\t" + st[i]);	
 	}
-	System.out.println();
-	return 1;				
+	System.out.println();			
 }
 
-//----------------------------------------------------------------------------
-
-//public int proc_run ( double[] initst, int time) {
-//public int proc_run (Subtask st, double[] initst, int time) {
 public double[] proc_run (Subtask st, double[] initst, int time) {
 	double[]  state, finalst;
-	double 	  pr_step = 2.5;
+
 	int done = 1;
-  double t1= System.currentTimeMillis();
 	System.out.println("time value is: " + time);
-	print_state ("initstate", initst);
 
 	Object[] in = new Object[1];
 	in[0] = initst;
 	try {		 
-		for (int i = 1; i < time;  i++ ){
-			//Object[] in = new Object[1];
-			//in[0] = initstate;
+		for (int i = 1; i <= time;  i++ ){
 			state = (double[])in[0];
 			System.out.println("current time: " + i);
 		     	print_state ("    state", state);	
@@ -35,13 +25,10 @@ public double[] proc_run (Subtask st, double[] initst, int time) {
 		}		
 	}
 	catch (Exception e) {
-	e.printStackTrace();
-	done = 0;
+		e.printStackTrace();
+		done = 0;
 	}
 	finalst = (double[])in[0];	
-	print_state ("finalstate", finalst);
-   double t2= System.currentTimeMillis();
-   System.out.println("process computation time " + (t2-t1)/1000 + " sec");
         return finalst;		 	
 }
 

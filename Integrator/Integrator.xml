@@ -131,4 +131,41 @@
 <field name="initstate" type="double"/>
 </fields>
 </class>
+<class type="class">
+<name>Mult</name>
+<description>mult</description>
+<icon>mult.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="85" height="76"/>
+<rect x="4" y="0" width="75" height="75" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="20" y1="16" x2="63" y2="59" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="20" y1="61" x2="63" y2="17" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+</graphics>
+<ports>
+<port name="in1" type="double" x="5" y="23" portConnection="" strict="false" />
+<port name="in2" type="double" x="4" y="53" portConnection="" strict="false" />
+<port name="out" type="double" x="80" y="38" portConnection="" strict="false" />
+</ports><fields>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</class>
+<class type="class">
+<name>Inverter</name>
+<description>inverter</description>
+<icon>inverter.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="85" height="76"/>
+<rect x="4" y="2" width="75" height="75" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<text string="-1" colour="-16777216" x="15" y="51" fontname="Courier" fontstyle="1" fontsize="40" transparency="1"/>
+</graphics>
+<ports>
+<port name="in" type="double" x="4" y="40" portConnection="" strict="false" />
+<port name="out" type="double" x="80" y="40" portConnection="" strict="false" />
+</ports><fields>
+<field name="in" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</class>
 </package>
