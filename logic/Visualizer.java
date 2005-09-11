@@ -12,11 +12,11 @@ class Visualizer extends JFrame {
 
 	
 	int offset = 30;
-	public static _Visualizer_ test = new _Visualizer_();
+	public static Visualizer test = new Visualizer();
 	public static ArrayList a = new ArrayList();
 	JPanel mainPanel;
 
-	_Visualizer_() {
+	Visualizer() {
 		super();
 		mainPanel = new Drawing();
 		getContentPane().add(mainPanel);
@@ -75,10 +75,12 @@ class Visualizer extends JFrame {
 		a.add(new Integer(in1));
 		a.add(new Integer(in2));
 		a.add(new Integer(in3));
-		test.setTitle("a");
+		test.setTitle("Visualizer");
 		test.setSize(Math.max(400, a.size()*15), 300);
 		test.setVisible(true);
 		test.repaint();
 		//Graphcs g = new Graphics();
 	}
 }
+
+

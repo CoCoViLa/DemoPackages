@@ -15,9 +15,9 @@ class Graph extends JFrame {
 	@*/
 
 	public static ArrayList values = new ArrayList();
-    	public static _Graph_ instance = new _Graph_();
+    	public static Graph instance = new Graph();
 
-	public _Graph_()
+	public Graph()
         {
         	getContentPane().setLayout( new BorderLayout() );
         	JScrollPane scrPane = new JScrollPane( new Drawing() );
@@ -52,10 +52,10 @@ class Graph extends JFrame {
             Graphics2D g = ( Graphics2D ) g1;
             
             area.setSize( getSize() );
-            zero.move( area.width / 5, area.height / 2 );
+            zero.move( area.width / 20, area.height / 2 );
             
             g.setColor( Color.white );
-            g.fillRect( 0, 0, 1024, 768 );
+            g.fillRect( 0, 0, 1280, 800 );
             g.setColor( Color.black );
             g.setStroke( new BasicStroke( 2 ) );
             g.drawLine( zero.x, 0, zero.x, area.height );
@@ -86,6 +86,10 @@ class Graph extends JFrame {
         }
     }
 }
+
+
+
+
 
 
 

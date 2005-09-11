@@ -2,11 +2,11 @@
 
 <!DOCTYPE package SYSTEM "package2.dtd">
 <package>
-<name>geom</name>
-<description>Geomeetria</description>
+<name>geometry</name>
+<description>Geometry</description>
 <class type="class">
-<name>Ring</name>
-<description>Ring</description>
+<name>Circle</name>
+<description>Circle</description>
 <icon>ring.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="142" height="137"/>
@@ -46,8 +46,8 @@
 
 </class>
 <class type="class">
-<name>Ruut</name>
-<description>Ruut</description>
+<name>Rect</name>
+<description>Rect</description>
 <icon>ruut.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="142" height="137"/>

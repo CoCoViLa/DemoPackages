@@ -1,6 +1,5 @@
-class Ring {
-	/*@ specification Ring {
-		Ruut rt;
+class Circle {
+	/*@ specification Circle {
 			double r, d, S, p, pi;
 			pi = 3.14;
 			S = pi * r ^ 2;

@@ -1,0 +1,4 @@
+boolean print (double result) {
+  System.out.println("Result: "+ result);
+  return true;
+}
