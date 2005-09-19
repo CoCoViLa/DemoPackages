@@ -2,7 +2,7 @@
 	void done_print_initstate, done_print_finalstate;
 	String initstate_name, finalstate_name;
 
-	time = 25;
+	time = 50;
 
 	initstate_name = "initstate";
 	finalstate_name = "finalstate";
@@ -17,4 +17,5 @@
     	[ state ->  nextstate], initstate, time -> finalstate {proc_run};
 	
     	finalstate_name, finalstate -> done_print_finalstate  {print_state};	
+
 

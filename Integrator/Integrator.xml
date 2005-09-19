@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<!DOCTYPE package SYSTEM "package.dtd">
+<!DOCTYPE package SYSTEM "package2.dtd">
 <package>
 <name>Integrator</name>
 <description>-</description>
@@ -82,6 +82,7 @@
 </ports><fields>
 <field name="x" type="double"/>
 <field name="y" type="double"/>
+<field name="seriesName" type="String"/>
 </fields>
 </class>
 <class type="class">

@@ -38,6 +38,7 @@
   <fields>
     <field name="x" type="double"/>
     <field name="y" type="double"/>
+	<field name="seriesName" type="String" value="Dif"/>
   </fields>
 </object>
 <object name="Integrator_1" type="Integrator" >
