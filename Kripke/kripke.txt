@@ -1,0 +1,79 @@
+public class Kripke implements IComputable {
+    
+        public int A;
+    public int B;
+    public int X;
+    public int Y;
+    public void compute() {
+               
+;
+                class Subtask_4 implements Subtask {
+                        public Object[] run(Object[] in) throws Exception {
+                                Y = ((Integer)in[0]).intValue();
+                                class Subtask_5 implements Subtask {
+                                        public Object[] run(Object[] in) throws Exception {
+                                                A = ((Integer)in[0]).intValue();
+                                             
+;
+                                                class Subtask_8 implements Subtask {
+                                                        public Object[] run(Object[] in) throws Exception {
+                                                                Y = ((Integer)in[0]).intValue();
+                                                                return new Object[]{ new Integer( A )};
+                                                        }
+                                                }
+                                                Subtask_8 subtask_8 = new Subtask_8();
+                                                B = sum(subtask_8);
+
+                                                return new Object[]{ new Integer( B )};
+                                        }
+                                }
+                                Subtask_5 subtask_5 = new Subtask_5();
+                                X = sum(subtask_5);
+
+                                A = calc(Y, X);
+;
+                                return new Object[]{ new Integer( A )};
+                        }
+                }
+                Subtask_4 subtask_4 = new Subtask_4();
+                B = sum(subtask_4);
+;
+    }
+	public int sum(Subtask sub) {
+	Object[] in = new Object[1];
+	
+	int b = 0;
+	try {		 
+		for (int i = 1; i < 4;  i++ ){
+			in[0] = new Integer(i);
+			Object[] out = sub.run(in);
+			
+			b += ((Integer)out[0]).intValue();
+		}		
+	}
+	catch (Exception e) {
+		e.printStackTrace();
+	}
+	System.out.println( "b: " + b );
+	return b;
+}
+
+public int calc( int y, int x ) {
+	return y * x;
+}
+
+}
+
+b: 3
+b: 6
+b: 9
+b: 18
+b: 3
+b: 6
+b: 9
+b: 18
+b: 3
+b: 6
+b: 9
+b: 18
+b: 162
