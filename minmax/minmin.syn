@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="minmax">
+<object name="Matrix_0" type="Matrix" >
+  <properties x="74" y="90" width="173" height="108" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="row" type="int"/>
+    <field name="col" type="int"/>
+    <field name="element" type="int"/>
+    <field name="tm" type="String[]" value="1,2,3%%4,5,6%%7,8,9%%7,3,9%%1,1,1%%"/>
+  </fields>
+</object>
+<object name="Min_1" type="Min" >
+  <properties x="401" y="36" width="148" height="104" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="arg" type="int"/>
+    <field name="val" type="int"/>
+    <field name="minval" type="int"/>
+  </fields>
+</object>
+<object name="Result_1" type="Result" >
+  <properties x="480" y="210" width="110" height="30" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="value" type="int"/>
+  </fields>
+</object>
+<object name="Min_0" type="Min" >
+  <properties x="255" y="287" width="148" height="104" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="arg" type="int"/>
+    <field name="val" type="int"/>
+    <field name="minval" type="int"/>
+  </fields>
+</object>
+<connection obj1="Min_1" port1="arg" obj2="Matrix_0" port2="row">
+  <breakpoints>
+    <point x="414" y="73"/>
+    <point x="74" y="73"/>
+    <point x="74" y="126"/>
+    <point x="91" y="126"/>
+  </breakpoints>
+</connection>
+<connection obj1="Min_1" port1="minval" obj2="Result_1" port2="value">
+  <breakpoints>
+    <point x="537" y="86"/>
+    <point x="554" y="86"/>
+    <point x="554" y="179"/>
+    <point x="465" y="179"/>
+    <point x="465" y="225"/>
+    <point x="480" y="225"/>
+  </breakpoints>
+</connection>
+<connection obj1="Min_1" port1="val" obj2="Min_0" port2="minval">
+  <breakpoints>
+    <point x="414" y="103"/>
+    <point x="401" y="102"/>
+    <point x="408" y="337"/>
+    <point x="391" y="337"/>
+  </breakpoints>
+</connection>
+<connection obj1="Matrix_0" port1="col" obj2="Min_0" port2="arg">
+  <breakpoints>
+    <point x="90" y="156"/>
+    <point x="69" y="155"/>
+    <point x="78" y="325"/>
+    <point x="268" y="324"/>
+  </breakpoints>
+</connection>
+<connection obj1="Matrix_0" port1="element" obj2="Min_0" port2="val">
+  <breakpoints>
+    <point x="235" y="141"/>
+    <point x="250" y="140"/>
+    <point x="250" y="355"/>
+    <point x="268" y="354"/>
+  </breakpoints>
+</connection>
+</scheme>
