@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>Factorial</name>
+<description>-</description>
+<class type="class">
+	<name>Factorial</name>
+	<description>n!</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="170" height="92"/>
+<rect x="2" y="2" width="166" height="91" colour="-6684775" filled="true" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<rect x="2" y="2" width="166" height="89" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+</graphics>
+<fields>
+<field name="n" type="long">
+	<known>
+          <graphics>
+             <text string="n =" colour="-16777216" x="10" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="30" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+    </known>
+</field>	
+<field name="f" type="long">
+	<known>
+          <graphics>
+             <text string="n! =" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+	     <text string="*self" colour="-16777216" x="30" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+    </known>
+</field>	
+</fields>
+</class>
+</package>
