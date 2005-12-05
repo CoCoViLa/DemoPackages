@@ -1,9 +1,8 @@
 class Factorial {
     /*@ specification Factorial {
-	long n, nn, f;
-	[nn->f],n->f,(java.lang.Exception){fact};
-	nn=f;
-	->f;
+	long n, f;
+	[f->f],n->f,(java.lang.Exception){fact};
+	->n,f;
     }@*/
 
 	long fact( Subtask s, long n ) throws Exception {
