@@ -2,7 +2,7 @@ class Factorial {
     /*@ specification Factorial {
 	long n, f;
 	[f->f],n->f,(java.lang.Exception){fact};
-	->n,f;
+	n->f;
     }@*/
 
 	long fact( Subtask s, long n ) throws Exception {
@@ -21,4 +21,5 @@ class Factorial {
 	}
 	
 }
+
 
