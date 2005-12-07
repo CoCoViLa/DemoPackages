@@ -9,10 +9,12 @@ class Oscillator {
 	ser.x2 = L;
 	par.x1 = ser;
 	par.x2 = C;
+	int f;
 	
 	//values;
-	ser.f = 50;
-	par.f = 50;
+	f = 50;
+	ser.f = f;
+	par.f = f;
 	R.r = 1;
 	C.C = 0.001;
 	L.L = 0.001;
