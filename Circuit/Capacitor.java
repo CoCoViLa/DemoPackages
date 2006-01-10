@@ -1,4 +1,4 @@
-class Capacitor {
+class Capacitor super Port {
     /*@ specification Capacitor super Port {
 	
 	//Capacitor;

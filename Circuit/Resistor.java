@@ -1,4 +1,4 @@
-class Resistor {
+class Resistor extends Port {
     /*@ specification Resistor super Port {
 	
 	//Resistor;	
