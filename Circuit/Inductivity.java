@@ -1,4 +1,4 @@
-class Inductivity super Port {
+class Inductivity extends Port {
     /*@ specification Inductivity super Port {
 	
 	//Inductivity;

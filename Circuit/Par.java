@@ -1,4 +1,4 @@
-class Par super Port {
+class Par extends Port {
     /*@ specification Par super Port {
 	
 	//Par

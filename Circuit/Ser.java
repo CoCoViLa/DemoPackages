@@ -1,4 +1,4 @@
-class Ser super Port {
+class Ser extends Port {
     /*@ specification Ser super Port {
 	
 	//Ser
