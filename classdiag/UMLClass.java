@@ -16,7 +16,7 @@ class UMLClass {
 		try {
 			PrintWriter out = new PrintWriter (
 				new BufferedWriter(new FileWriter(name+".java", true)));
-			if (parent != null) {
+			if (parent != null && parent.length() > 0) {
 				out.println("public class "+name +" extends "+parent + " {\n");
 			} else
 				out.println("public class "+name + " {\n");
@@ -41,3 +41,4 @@ class UMLClass {
 		}			
 	}
 };
+
