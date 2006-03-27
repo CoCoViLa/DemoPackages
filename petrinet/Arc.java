@@ -1,0 +1,5 @@
+class Arc {
+    /*@ specification Arc {
+    }@*/
+ 
+}

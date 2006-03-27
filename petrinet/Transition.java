@@ -1,0 +1,5 @@
+class Transition {
+    /*@ specification Transition {
+    }@*/
+ 
+}

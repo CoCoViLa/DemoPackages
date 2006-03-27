@@ -1,0 +1,5 @@
+class Place {
+    /*@ specification Place {
+    }@*/
+ 
+}

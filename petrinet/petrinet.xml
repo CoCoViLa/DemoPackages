@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>petrinet</name>
+<description>Petri Net</description>
+<class type="class">
+	<name>Token</name>
+	<description>Token</description>
+	<icon>token.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="10" height="10"/>
+<oval x="0" y="0" width="10" height="10" colour="-16777216" filled="true" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+</class>
+<class type="class">
+	<name>Transition</name>
+	<description>Transition</description>
+	<icon>transition.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="10" height="50"/>
+<rect x="0" y="0" width="10" height="50" colour="-16777216" filled="true" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+        <port name="port" type="int" x="5" y="25" portConnection="area" strict="false">
+            <open><graphics><bounds x="-5" y="-25" width="10" height="50"/></graphics></open>
+            <closed><graphics/></closed>
+        </port>
+	</ports>
+</class>
+<class type="relation">
+	<name>Arc</name>
+	<description>Arc</description>
+	<icon>arc.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="1"/>
+<line x1="0" y1="0" x2="50" y2="0" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="50rf" y1="0" x2="40rf" y2="-5" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="50rf" y1="0" x2="40rf" y2="5" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="from" type="int" x="0" y="0" portConnection="area" strict="false" />
+		<port name="to" type="int" x="50" y="0" portConnection="area" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>Place</name>
+	<description>Place</description>
+	<icon>place.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="50"/>
+<oval x="0" y="0" width="50" height="50" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+        <port name="port" type="int" x="25" y="25" portConnection="area" strict="false">
+            <open><graphics><bounds x="-25" y="-25" width="50" height="50" /></graphics></open>
+            <closed><graphics /></closed>
+        </port>
+	</ports>
+</class>
+</package>
