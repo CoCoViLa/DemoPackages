@@ -31,60 +31,60 @@
   <fields>
   </fields>
 </object>
-<relobject name="Arc_7" type="Arc" >
-  <relproperties x="170" y="205" endX="240" endY="205" angle="0.0" width="50" height="1" xsize="1.4" ysize="1.0" strict="false" />
-  <fields>
-  </fields>
-</relobject>
-<relobject name="Arc_8" type="Arc" >
-  <relproperties x="250" y="205" endX="315" endY="205" angle="0.0" width="50" height="1" xsize="1.3" ysize="1.0" strict="false" />
-  <fields>
-  </fields>
-</relobject>
 <object name="Transition_10" type="Transition" >
   <properties x="240" y="270" width="10" height="50" xsize="1.0" ysize="1.0" strict="false" />
   <fields>
   </fields>
 </object>
-<relobject name="Arc_11" type="Arc" >
+<relobject name="ArcFrom_0" type="ArcFrom" >
+  <relproperties x="170" y="205" endX="240" endY="205" angle="0.0" width="50" height="1" xsize="1.4" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</relobject>
+<relobject name="ArcFrom_1" type="ArcFrom" >
   <relproperties x="315" y="230" endX="250" endY="270" angle="2.589937671061246" width="50" height="1" xsize="1.5264337" ysize="1.0" strict="false" />
   <fields>
   </fields>
 </relobject>
-<relobject name="Arc_12" type="Arc" >
+<relobject name="ArcTo_3" type="ArcTo" >
+  <relproperties x="250" y="205" endX="315" endY="205" angle="0.0" width="50" height="1" xsize="1.3" ysize="1.0" strict="false" />
+  <fields>
+  </fields>
+</relobject>
+<relobject name="ArcTo_4" type="ArcTo" >
   <relproperties x="240" y="270" endX="170" endY="230" angle="3.660738767836316" width="50" height="1" xsize="1.6124514" ysize="1.0" strict="false" />
   <fields>
   </fields>
 </relobject>
-<connection obj1="Place_3" port1="port" obj2="Arc_7" port2="from">
+<connection obj1="Place_3" port1="port" obj2="ArcFrom_0" port2="from">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Arc_7" port1="to" obj2="Transition_1" port2="port">
+<connection obj1="ArcFrom_0" port1="to" obj2="Transition_1" port2="port">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Transition_1" port1="port" obj2="Arc_8" port2="from">
+<connection obj1="Place_4" port1="port" obj2="ArcFrom_1" port2="from">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Arc_8" port1="to" obj2="Place_4" port2="port">
+<connection obj1="ArcFrom_1" port1="to" obj2="Transition_10" port2="port">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Place_4" port1="port" obj2="Arc_11" port2="from">
+<connection obj1="Transition_1" port1="port" obj2="ArcTo_3" port2="from">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Arc_11" port1="to" obj2="Transition_10" port2="port">
+<connection obj1="ArcTo_3" port1="to" obj2="Place_4" port2="port">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Transition_10" port1="port" obj2="Arc_12" port2="from">
+<connection obj1="Transition_10" port1="port" obj2="ArcTo_4" port2="from">
   <breakpoints>
   </breakpoints>
 </connection>
-<connection obj1="Arc_12" port1="to" obj2="Place_3" port2="port">
+<connection obj1="ArcTo_4" port1="to" obj2="Place_3" port2="port">
   <breakpoints>
   </breakpoints>
 </connection>
