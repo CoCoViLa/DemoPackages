@@ -6,8 +6,9 @@ class Wheel {
 		F=1000*T/(0.5*D);
 		D=m*z;
 		v=3.14*n*D/1000;
-		alias axial = (n, T);
-		alias tang = (v, m, F);
+		alias (double) axial = (n, T);
+		alias (double) tang = (v, m, F);
 	}
 	@*/
 }
+

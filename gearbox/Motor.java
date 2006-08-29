@@ -10,7 +10,7 @@ class Motor {
 
 //		double P, n, T;
 //		P = n * T;
-//		alias axial = (n, T);
+//		alias (double) axial = (n, T);
 
 //		double[] axial;
 //		-> axial {calc};
@@ -28,5 +28,6 @@ class Motor {
 	}
 	
 };
+
 
 

@@ -6,7 +6,7 @@ class Table {
 		int first, step, last;
 		double P, n, y;
 		boolean result;
-		alias x = (P, n);
+		alias (double) x = (P, n);
 		[x ->y], first, step, last -> result {calc};
 	}
 	@*/
@@ -15,7 +15,7 @@ class Table {
 		double[] in2 = new double[2];
 		Object[] out = new Object[1];
 
-        Object[][] tableData = new Object[(int)(l/s)][(int)(l/s)];
+        		Object[][] tableData = new Object[(int)(l/s)][(int)(l/s)];
 		Object[]   colNames = new Object[(int)(l/s)-1];
 		for (int i = f; i < l ; i += s ) {
 			for (int j = f; j < l ; j += s ) {
@@ -26,18 +26,20 @@ class Table {
 					out = stm.run(in);
 				}
 				catch (Exception e)	{
+				e.printStackTrace();
 				}
                 
 				Double d_out = (Double)(out[0]);
 				tableData[(int)(j/s)-1][(int)(i/s)-1] = d_out;
 				colNames[(int)(j/s)-1] = new Double(j);
+				//System.out.println("d_out: " + d_out + " j: " + j );
 			
 			}
 		}
 
 		for (int i = 0; i< colNames.length ; i++) {
 			Double d = (Double)colNames[i];
-			System.out.println("dd "+ d);
+			//System.out.println("dd "+ d);
 		}
 		JTable table = new JTable(tableData, colNames);
         table.setPreferredScrollableViewportSize(new Dimension(500, 170));
@@ -53,3 +55,8 @@ class Table {
 		return true;
 	}
 }
+
+
+
+
+
