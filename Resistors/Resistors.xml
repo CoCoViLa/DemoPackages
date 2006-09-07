@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>Resistors</name>
+<description>-</description>
+<class type="class">
+	<name>Resistor</name>
+	<description>simple resistor</description>
+	<icon>Resistor.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="37" height="105"/>
+<rect x="3" y="22" width="30" height="60" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="18" y1="7" x2="18" y2="22" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="18" y1="82" x2="18" y2="97" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="p1" type="alias" x="18" y="7" portConnection="" strict="true" />
+		<port name="p2" type="alias" x="18" y="98" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="u" type="double">
+			<known>
+				<graphics>
+					<text string="u=" colour="-16777216" x="10" y="40" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="35" y="40" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="u1" type="double"/>
+		<field name="u2" type="double"/>
+		<field name="r" type="double">
+			<known>
+				<graphics>
+					<text string="r=" colour="-16777216" x="10" y="50" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="35" y="50" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="i" type="double">
+			<known>
+				<graphics>
+					<text string="i=" colour="-16777216" x="10" y="60" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="35" y="60" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+	</fields>
+</class>
+<class type="class">
+	<name>Resistor_h</name>
+	<description>simple resistor</description>
+	<icon>Resistor_h.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="108" height="35"/>
+<rect x="24" y="3" width="60" height="29" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="84" y1="17" x2="99" y2="17" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="9" y1="17" x2="24" y2="17" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="p1" type="alias" x="8" y="17" portConnection="" strict="true" />
+		<port name="p2" type="alias" x="100" y="17" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="u" type="double"/>
+		<field name="u1" type="double"/>
+		<field name="u2" type="double"/>
+		<field name="r" type="double"/>
+		<field name="i" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Parallel</name>
+	<description>Parallel connection</description>
+	<icon>Parallel.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="120" height="134"/>
+<line x1="8" y1="6" x2="113" y2="6" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="8" y1="126" x2="113" y2="126" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="113" y1="6" x2="113" y2="21" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="113" y1="111" x2="113" y2="126" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="68" y1="6" x2="68" y2="21" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="68" y1="111" x2="68" y2="126" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="p1" type="alias" x="8" y="7" portConnection="" strict="true" />
+		<port name="p2" type="alias" x="8" y="126" portConnection="" strict="true" />
+		<port name="p3" type="alias" x="68" y="21" portConnection="" strict="true" />
+		<port name="p4" type="alias" x="113" y="21" portConnection="" strict="true" />
+		<port name="p5" type="alias" x="68" y="112" portConnection="" strict="true" />
+		<port name="p6" type="alias" x="113" y="112" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="u" type="double">
+			<known>
+				<graphics>
+					<text string="u=" colour="-16777216" x="20" y="135" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="35" y="135" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="u1" type="double"/>
+		<field name="u2" type="double"/>
+		<field name="i" type="double">
+			<known>
+				<graphics>
+					<text string="i=" colour="-16777216" x="20" y="145" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="35" y="145" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="i1" type="double"/>
+		<field name="i2" type="double"/>
+		<field name="r" type="double">
+			<known>
+				<graphics>
+					<text string="r=" colour="-16777216" x="20" y="155" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="35" y="155" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="r1" type="double"/>
+		<field name="r2" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Series</name>
+	<description>Series connection</description>
+	<icon>Series.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="62" height="257"/>
+<line x1="53" y1="9" x2="53" y2="24" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="53" y1="114" x2="53" y2="129" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="53" y1="233" x2="53" y2="248" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="53" y1="128" x2="53" y2="143" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="53" y1="8" x2="8" y2="8" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<line x1="53" y1="248" x2="9" y2="248" colour="-16777216" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="p1" type="alias" x="8" y="9" portConnection="" strict="true" />
+		<port name="p2" type="alias" x="8" y="248" portConnection="" strict="true" />
+		<port name="p3" type="alias" x="53" y="23" portConnection="" strict="true" />
+		<port name="p4" type="alias" x="53" y="114" portConnection="" strict="true" />
+		<port name="p5" type="alias" x="53" y="142" portConnection="" strict="true" />
+		<port name="p6" type="alias" x="53" y="233" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="u" type="double">
+			<known>
+				<graphics>
+					<text string="u=" colour="-16777216" x="15" y="260" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="30" y="260" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="u1" type="double"/>
+		<field name="u2" type="double"/>
+		<field name="u3" type="double"/>
+		<field name="i" type="double">
+			<known>
+				<graphics>
+					<text string="i=" colour="-16777216" x="15" y="270" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="30" y="270" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="r" type="double">
+			<known>
+				<graphics>
+					<text string="r=" colour="-16777216" x="15" y="280" fontname="Courier New" fontstyle="1"  fontsize="10" />
+					<text string="*self" colour="-16777216" x="30" y="280" fontname="Courier New" fontstyle="1"  fontsize="10" />
+				</graphics>
+			</known>
+		</field>
+		<field name="r1" type="double"/>
+		<field name="r2" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Midpoint</name>
+	<description>-</description>
+	<icon>Midpoint.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="12" height="13"/>
+</graphics>
+	<ports>
+		<port name="p" type="alias" x="7" y="7" portConnection="" strict="false" />
+	</ports>
+</class>
+</package>
