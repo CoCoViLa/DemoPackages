@@ -11,6 +11,7 @@
 <graphics>
 <bounds x="0" y="0" width="50" height="50"/>
 <oval x="0" y="0" width="50" height="50" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<painter>PlacePainter</painter>
 </graphics>
 	<ports>
         <port name="port" type="Place" x="25" y="25" portConnection="area" strict="false">
@@ -18,6 +19,9 @@
             <closed><graphics /></closed>
         </port>
 	</ports>
+	<fields>
+		<field name="tokens" type="int" value="0" description="The number of tokens in this place"/>
+	</fields>
 </class>
 <class type="class">
 	<name>Transition</name>
