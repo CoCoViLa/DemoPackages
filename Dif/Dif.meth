@@ -18,8 +18,8 @@ public double[] proc_run (Subtask st, double[] initst, int time) {
 	try {		 
 		for (int i = 1; i <= time;  i++ ){
 			state = (double[])in[0];
-			System.out.println("current time: " + i);
-		     	print_state ("    state", state);	
+//			System.out.println("current time: " + i);
+//		     	print_state ("    state", state);	
 			Object[] out = st.run(in);
 			in = out;
 		}		
@@ -31,4 +31,5 @@ public double[] proc_run (Subtask st, double[] initst, int time) {
 	finalst = (double[])in[0];	
         return finalst;		 	
 }
+
 

@@ -2,13 +2,13 @@
 	void done_print_initstate, done_print_finalstate;
 	String initstate_name, finalstate_name;
 
-	time = 50;
+	time = 100;
 
 	initstate_name = "initstate";
 	finalstate_name = "finalstate";
 	
-	alias (double) initstate = (*.initstate);
-	alias (double) state 	 = (*.state);	
+	alias (double) initstate  = (*.initstate);
+	alias (double) state      = (*.state);	
 	alias (double) nextstate  = (*.nextstate);
 	alias (double) finalstate = (*.finalstate);
 	
@@ -17,6 +17,13 @@
     	[ state ->  nextstate], initstate, time -> finalstate {proc_run};
 	
     	finalstate_name, finalstate -> done_print_finalstate  {print_state};	
+
+
+
+
+
+
+
 
 
 

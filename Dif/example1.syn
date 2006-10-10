@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE scheme SYSTEM "scheme.dtd">
-<scheme package="Integrator">
+<scheme package="Dif">
 <object name="Integrator_2" type="Integrator" >
   <properties x="203" y="88" width="160" height="105" xsize="1.0" ysize="1.0" strict="false" />
   <fields>
@@ -11,16 +11,6 @@
     <field name="state" type="double"/>
     <field name="nextstate" type="double"/>
     <field name="finalstate" type="double"/>
-  </fields>
-</object>
-<object name="Clock_0" type="Clock" >
-  <properties x="467" y="300" width="98" height="103" xsize="1.0" ysize="1.0" strict="false" />
-  <fields>
-    <field name="initstate" type="double" value="0"/>
-    <field name="state" type="double"/>
-    <field name="nextstate" type="double"/>
-    <field name="finalstate" type="double"/>
-    <field name="out" type="double"/>
   </fields>
 </object>
 <object name="Adder_2" type="Adder" >
@@ -38,7 +28,7 @@
   <fields>
     <field name="x" type="double"/>
     <field name="y" type="double"/>
-	<field name="seriesName" type="String" value="Dif"/>
+    <field name="seriesName" type="String" value="Dif"/>
   </fields>
 </object>
 <object name="Integrator_1" type="Integrator" >
@@ -53,12 +43,14 @@
     <field name="finalstate" type="double"/>
   </fields>
 </object>
-<connection obj1="Clock_0" port1="out" obj2="Graph_3" port2="x">
-  <breakpoints>
-    <point x="517" y="306"/>
-    <point x="517" y="254"/>
-  </breakpoints>
-</connection>
+<object name="Clock_3" type="Clock" >
+  <properties x="467" y="314" width="98" height="103" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="T" type="double" value="5"/>
+    <field name="out" type="double"/>
+    <field name="initstate" type="double" value="0"/>
+  </fields>
+</object>
 <connection obj1="Adder_2" port1="out" obj2="Integrator_2" port2="in">
   <breakpoints>
     <point x="150" y="128"/>
@@ -97,6 +89,12 @@
     <point x="466" y="128"/>
     <point x="466" y="220"/>
     <point x="481" y="220"/>
+  </breakpoints>
+</connection>
+<connection obj1="Graph_3" port1="x" obj2="Clock_3" port2="out">
+  <breakpoints>
+    <point x="517" y="254"/>
+    <point x="517" y="320"/>
   </breakpoints>
 </connection>
 </scheme>

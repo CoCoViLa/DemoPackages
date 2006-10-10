@@ -51,9 +51,13 @@ public class Graph //extends JFrame
 		instance = new Graph();
     		instance.init();
 	}
+	try {
+		Thread.sleep(50);
+	} catch(Exception e ) {}
 	instance.xys.add( x, y );
     }
     
 }
+
 
 

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Dif">
+<object name="Adder" type="Adder" >
+  <properties x="62" y="36" width="87" height="84" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="k1" type="double" value="-0.001"/>
+    <field name="k2" type="double" value="-0.1"/>
+    <field name="in1" type="double"/>
+    <field name="in2" type="double"/>
+    <field name="out" type="double"/>
+  </fields>
+</object>
+<object name="Graph_1" type="Graph" >
+  <properties x="485" y="200" width="96" height="99" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="x" type="double"/>
+    <field name="y" type="double"/>
+    <field name="seriesName" type="String"/>
+  </fields>
+</object>
+<object name="Integrator_1" type="Integrator" >
+  <properties x="94" y="166" width="89" height="80" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="T" type="double" value="5"/>
+    <field name="in" type="double"/>
+    <field name="out" type="double"/>
+    <field name="initstate" type="double" value="10"/>
+  </fields>
+</object>
+<object name="Integrator_2" type="Integrator" >
+  <properties x="251" y="166" width="89" height="80" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="T" type="double" value="5"/>
+    <field name="in" type="double"/>
+    <field name="out" type="double"/>
+    <field name="initstate" type="double" value="0"/>
+  </fields>
+</object>
+<object name="Clock_4" type="Clock" >
+  <properties x="414" y="36" width="98" height="103" xsize="1.0" ysize="1.0" strict="false" />
+  <fields>
+    <field name="T" type="double" value="5"/>
+    <field name="out" type="double"/>
+    <field name="initstate" type="double" value="0"/>
+  </fields>
+</object>
+<connection obj1="Integrator_1" port1="out" obj2="Integrator_2" port2="in">
+  <breakpoints>
+    <point x="177" y="206"/>
+    <point x="258" y="206"/>
+  </breakpoints>
+</connection>
+<connection obj1="Adder" port1="in1" obj2="Integrator_2" port2="in">
+  <breakpoints>
+    <point x="69" y="64"/>
+    <point x="43" y="56"/>
+    <point x="45" y="23"/>
+    <point x="243" y="28"/>
+    <point x="218" y="152"/>
+    <point x="258" y="206"/>
+  </breakpoints>
+</connection>
+<connection obj1="Adder" port1="in2" obj2="Graph_1" port2="y">
+  <breakpoints>
+    <point x="69" y="94"/>
+    <point x="20" y="98"/>
+    <point x="37" y="343"/>
+    <point x="367" y="346"/>
+    <point x="407" y="282"/>
+    <point x="492" y="249"/>
+  </breakpoints>
+</connection>
+<connection obj1="Integrator_2" port1="in" obj2="Graph_1" port2="x">
+  <breakpoints>
+    <point x="258" y="206"/>
+    <point x="227" y="269"/>
+    <point x="520" y="329"/>
+    <point x="528" y="283"/>
+  </breakpoints>
+</connection>
+<connection obj1="Integrator_2" port1="out" obj2="Graph_1" port2="y">
+  <breakpoints>
+    <point x="334" y="206"/>
+    <point x="371" y="206"/>
+    <point x="366" y="240"/>
+    <point x="492" y="249"/>
+  </breakpoints>
+</connection>
+<connection obj1="Adder" port1="out" obj2="Integrator_1" port2="in">
+  <breakpoints>
+    <point x="144" y="79"/>
+    <point x="181" y="76"/>
+    <point x="172" y="136"/>
+    <point x="55" y="131"/>
+    <point x="58" y="208"/>
+    <point x="101" y="206"/>
+  </breakpoints>
+</connection>
+</scheme>
