@@ -1,25 +1,28 @@
 class Factorial {
     /*@ specification Factorial {
-	long n, f;
-	[f->f],n->f,(java.lang.Exception){fact};
+	double n, f, val;
+	[val->f],n->f,(java.lang.Exception){fact};
+	f = val - 1;
 	n->f;
     }@*/
 
-	long fact( Subtask s, long n ) throws Exception {
+	double fact( Subtask s, double n ) throws Exception {
 
 		if( n == 0 ) {
 			return 1;
 		} 
-		Object[] in = new Object[1];
-   		in[0] = n - 1;
+		Object[] in = new Object[]{ n };
+   		//in[0] = n - 1;
     		Object[] out = s.run(in);
 	
-		long f = n * fact( s, ( (Long) out[0]).longValue() );
+		double f = n * fact( s, ( (Double) out[0]).doubleValue() );
 	
 		System.out.println( "n: " + n + " f: " + f );
 		return f;
 	}
 	
 }
+
+
 
 

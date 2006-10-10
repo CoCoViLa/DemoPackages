@@ -14,19 +14,19 @@
 <rect x="2" y="2" width="166" height="89" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
 </graphics>
 <fields>
-<field name="n" type="long">
+<field name="n" type="double">
 	<known>
           <graphics>
-             <text string="n =" colour="-16777216" x="10" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
-	     <text string="*self" colour="-16777216" x="30" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
+            <text string="n =" colour="-16777216" x="10" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
+			<text string="*self" colour="-16777216" x="30" y="20" fontname="Arial" fontstyle="1"  fontsize="12" />
           </graphics>
     </known>
 </field>	
-<field name="f" type="long">
+<field name="f" type="double">
 	<known>
           <graphics>
-             <text string="n! =" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
-	     <text string="*self" colour="-16777216" x="30" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+            <text string="n! =" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+			<text string="*self" colour="-16777216" x="30" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
           </graphics>
     </known>
 </field>	
