@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>Charts</name>
+<description>Collection of charts</description>
+<class type="class">
+	<name>SingleSeriesGraph</name>
+	<description>Single Series Graph</description>
+	<icon>SingleSeriesGraph.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="96" height="99"/>
+<line x1="7" y1="13" x2="7" y2="87" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="1" y1="83" x2="82" y2="83" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="7" y1="12" x2="4" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="7" y1="12" x2="10" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="83" y1="83" x2="79" y2="86" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="83" y1="82" x2="78" y2="80" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<text string="x" colour="16777216" x="86" y="95" fontname="Arial" fontstyle="1" fontsize="13" transparency="1"/>
+<text string="y" colour="16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="1"/>
+</graphics>
+	<ports>
+		<port name="y" type="double" x="7" y="49" portConnection="" strict="false" />
+		<port name="x" type="double" x="43" y="83" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="x" type="double"/>
+		<field name="y" type="double"/>
+		<field name="seriesName" type="String"/>
+	</fields>
+</class>
+<class type="class">
+	<name>DoubleSeriesGraph</name>
+	<description>Double Series Graph</description>
+	<icon>DoubleSeriesGraph.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="119" height="112"/>
+<line x1="15" y1="7" x2="15" y2="107" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="5" y1="97" x2="112" y2="97" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="15" y1="6" x2="12" y2="16" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="15" y1="6" x2="18" y2="16" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="113" y1="97" x2="106" y2="100" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="113" y1="97" x2="106" y2="94" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<text string="y1" colour="-16777216" x="26" y="39" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="y2" colour="-16777216" x="26" y="70" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="x1" colour="-16777216" x="41" y="86" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="x2" colour="-16777216" x="70" y="86" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="y1" type="double" x="15" y="37" portConnection="" strict="false" />
+		<port name="y2" type="double" x="15" y="68" portConnection="" strict="false" />
+		<port name="x1" type="double" x="45" y="97" portConnection="" strict="false" />
+		<port name="x2" type="double" x="75" y="97" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="x1" type="double"/>
+		<field name="y1" type="double"/>
+		<field name="seriesName1" type="String"/>
+		<field name="x2" type="double"/>
+		<field name="y2" type="double"/>
+		<field name="seriesName2" type="String"/>
+	</fields>
+</class>
+</package>
