@@ -8,9 +8,6 @@
     <field name="in" type="double"/>
     <field name="out" type="double"/>
     <field name="initstate" type="double" value="1"/>
-    <field name="state" type="double"/>
-    <field name="nextstate" type="double"/>
-    <field name="finalstate" type="double"/>
   </fields>
 </object>
 <object name="Adder_2" type="Adder" >
@@ -38,9 +35,6 @@
     <field name="in" type="double"/>
     <field name="out" type="double"/>
     <field name="initstate" type="double" value="0"/>
-    <field name="state" type="double"/>
-    <field name="nextstate" type="double"/>
-    <field name="finalstate" type="double"/>
   </fields>
 </object>
 <object name="Clock_3" type="Clock" >
