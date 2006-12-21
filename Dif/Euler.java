@@ -1,7 +1,7 @@
 
-public class RungeKutta {
+public class Euler {
 
-	/*@ specification RungeKutta {
+	/*@ specification Euler {
 		int time;
 		void done_print_initstate, done_print_finalstate;
 		String initstate_name, finalstate_name;

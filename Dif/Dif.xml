@@ -264,15 +264,15 @@
 		</fields>
 	</class>
 	<class type="class">
-		<name>RungeKutta</name>
-		<description>Simulation engine for Runge-Kutta method</description>
+		<name>Euler</name>
+		<description>Simulation engine for Euler method</description>
 		<icon>default.gif</icon>
 		<graphics>
 			<bounds x="0" y="0" width="50" height="50"/>
 			<rect x="0" y="0" width="50" height="50" colour="-16777216"
 				filled="false" fixed="false" stroke="1" linetype="0"
 				transparency="255"/>
-			<text string="RK" colour="-16777216" x="15" y="30"
+			<text string="E" colour="-16777216" x="15" y="30"
 				fontname="Courier" fontstyle="1" fontsize="20" transparency="1"/>
 		</graphics>
 		<fields>
