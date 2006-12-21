@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE scheme SYSTEM "scheme.dtd">
-<scheme package="Dif">
+<scheme package="Dif" superclass="RungeKutta_0">
 <object name="Adder" type="Adder" >
   <properties x="62" y="36" width="87" height="84" xsize="1.0" ysize="1.0" strict="false" />
   <fields>
@@ -43,6 +43,12 @@
     <field name="T" type="double" value="5"/>
     <field name="out" type="double"/>
     <field name="initstate" type="double" value="0"/>
+  </fields>
+</object>
+<object name="RungeKutta_0" type="RungeKutta">
+  <properties x="60" y="330" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+  <fields>
+    <field name="time" type="int" value="200"/>
   </fields>
 </object>
 <connection obj1="Integrator_1" port1="out" obj2="Integrator_2" port2="in">
