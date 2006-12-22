@@ -16,8 +16,8 @@
 <line x1="7" y1="12" x2="10" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
 <line x1="83" y1="83" x2="79" y2="86" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
 <line x1="83" y1="82" x2="78" y2="80" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-<text string="x" colour="16777216" x="86" y="95" fontname="Arial" fontstyle="1" fontsize="13" transparency="1"/>
-<text string="y" colour="16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="1"/>
+<text string="x" colour="16777216" x="86" y="95" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
+<text string="y" colour="16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="y" type="double" x="7" y="49" portConnection="" strict="false" />

@@ -115,9 +115,9 @@
 			<line x1="83" y1="82" x2="78" y2="80" colour="-16777216"
 				fixed="false" stroke="2" linetype="0" transparency="255" />
 			<text string="x" colour="-16777216" x="86" y="95"
-				fontname="Arial" fontstyle="1" fontsize="13" transparency="1" />
+				fontname="Arial" fontstyle="1" fontsize="13" transparency="255" />
 			<text string="y" colour="-16777216" x="12" y="11"
-				fontname="Arial" fontstyle="1" fontsize="13" transparency="1" />
+				fontname="Arial" fontstyle="1" fontsize="13" transparency="255" />
 		</graphics>
 		<ports>
 			<port name="y" type="double" x="7" y="49" portConnection=""
@@ -250,7 +250,7 @@
 				filled="false" fixed="false" stroke="1" linetype="0"
 				transparency="255" />
 			<text string="-1" colour="-16777216" x="15" y="51"
-				fontname="Courier" fontstyle="1" fontsize="40" transparency="1" />
+				fontname="Courier" fontstyle="1" fontsize="40" transparency="255" />
 		</graphics>
 		<ports>
 			<port name="in" type="double" x="4" y="40" portConnection=""
@@ -273,7 +273,7 @@
 				filled="false" fixed="false" stroke="1" linetype="0"
 				transparency="255"/>
 			<text string="E" colour="-16777216" x="15" y="30"
-				fontname="Courier" fontstyle="1" fontsize="20" transparency="1"/>
+				fontname="Courier" fontstyle="1" fontsize="20" transparency="255"/>
 		</graphics>
 		<fields>
 			<field name="time" type="int" value="200"/>

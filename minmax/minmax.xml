@@ -12,9 +12,9 @@
 <bounds x="0" y="0" width="148" height="104"/>
 <rect x="15" y="15" width="119" height="75" colour="-6684775" filled="true" fixed="false" stroke="1" linetype="0" transparency="255"/>
 <rect x="13" y="13" width="123" height="77" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
-<text string="Min" colour="-16777216" x="57" y="58" fontname="Arial" fontstyle="1" fontsize="16" transparency="1"/>
-<text string="val" colour="-16777216" x="21" y="70" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
-<text string="arg" colour="-16777216" x="20" y="39" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
+<text string="Min" colour="-16777216" x="57" y="58" fontname="Arial" fontstyle="1" fontsize="16" transparency="255"/>
+<text string="val" colour="-16777216" x="21" y="70" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="arg" colour="-16777216" x="20" y="39" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
 </graphics>
 <ports>
 <port name="arg" type="int" x="13" y="37" portConnection="" strict="false" />
@@ -34,9 +34,9 @@
 <bounds x="0" y="0" width="148" height="104"/>
 <rect x="15" y="16" width="119" height="75" colour="-103" filled="true" fixed="false" stroke="1" linetype="0" transparency="255"/>
 <rect x="14" y="16" width="120" height="75" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
-<text string="val" colour="-16777216" x="21" y="71" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
-<text string="arg" colour="-16777216" x="20" y="40" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
-<text string="Max" colour="-16777216" x="57" y="58" fontname="Arial" fontstyle="1" fontsize="16" transparency="1"/>
+<text string="val" colour="-16777216" x="21" y="71" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="arg" colour="-16777216" x="20" y="40" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="Max" colour="-16777216" x="57" y="58" fontname="Arial" fontstyle="1" fontsize="16" transparency="255"/>
 </graphics>
 <ports>
 <port name="arg" type="int" x="13" y="38" portConnection="" strict="false" />
@@ -58,10 +58,10 @@
 <rect x="15" y="10" width="146" height="84" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
 <rect x="66" y="45" width="0" height="0" colour="-16777216" filled="false" fixed="true" stroke="1" linetype="0" transparency="255"/>
 <!--text string="Matrix" colour="16777216" x="24" y="33" fontname="Arial" fontstyle="1" fontsize="16" transparency="3"/-->
-<text string="Matrix" colour="-16777216" x="64" y="57" fontname="Arial" fontstyle="1" fontsize="16" transparency="1"/>
-<text string="element" colour="-16777216" x="120" y="64" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
-<text string="col" colour="-16777216" x="24" y="69" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
-<text string="row" colour="-16777216" x="24" y="39" fontname="Arial" fontstyle="0" fontsize="10" transparency="1"/>
+<text string="Matrix" colour="-16777216" x="64" y="57" fontname="Arial" fontstyle="1" fontsize="16" transparency="255"/>
+<text string="element" colour="-16777216" x="120" y="64" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="col" colour="-16777216" x="24" y="69" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="row" colour="-16777216" x="24" y="39" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
 </graphics>
 <ports>
 <port name="row" type="int" x="17" y="36" portConnection="" strict="false" />
