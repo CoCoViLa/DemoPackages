@@ -28,14 +28,14 @@ class DoubleSeriesGraph {
 	
 	TreeMap<Double, Double> data1 = new TreeMap<Double, Double>();
 	TreeMap<Double, Double> data2 = new TreeMap<Double, Double>();
-
+	boolean isInitialized;
 	DoubleSeriesGraph() {
-		init();
 	}
 
 	private void init() {
 		frame.pack();
 		frame.setVisible(true);
+		isInitialized = true;
 	}
 
 	public void setSeries1Name( String name ) {
@@ -47,7 +47,9 @@ class DoubleSeriesGraph {
 	}
 
 public void draw1( double x, double y ) {
-    	
+    	if( !isInitialized ) {
+		init();
+	}
     	try {
     		//Thread.sleep(25);
     	} catch(Exception e ) {}
@@ -62,7 +64,9 @@ public void draw1( double x, double y ) {
 }
 
 public void draw2( double x, double y ) {
-    	
+    	if( !isInitialized ) {
+		init();
+	}
     	try {
     		//Thread.sleep(25);
     	} catch(Exception e ) {}
@@ -87,5 +91,6 @@ public void draw2( double x, double y ) {
 		return ret;
 	}
 }
+
 
 

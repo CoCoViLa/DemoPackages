@@ -1,44 +1,36 @@
-import java.util.*;
-
 class Matrix
 {
 	/*@
 	specification Matrix {
-		int row, col, element, result;
-		void m_ready, finish;
+		int row, col, element;
 		String[] tm;
-		tm -> m_ready{parseMatrix};
-		row, col, m_ready -> element{getElement};
+		int[][] matrix;
+		tm -> matrix{parseMatrix};
+		matrix, row, col -> element{getElement};
 	}
 	@*/
-	public int[][] matrix;
 
-	public int getElement(int i, int j) throws ArrayIndexOutOfBoundsException
+	public int getElement(int[][] m, int i, int j) throws ArrayIndexOutOfBoundsException
 	{
-		return matrix[i][j];
+		return m[i][j];
 	}
-    public void parseMatrix(String[] tm) throws ArrayIndexOutOfBoundsException
-    {
-        int mrows = tm.length;
-        int mcols = 0;
-        ArrayList[] ar = new ArrayList[mrows];
-        for(int i = 0; i < mrows; i++)
-        {
-            String[] temp = tm[i].split(",");
-            ar[i] = new ArrayList();
-            for(int j = 0; j < temp.length; j++)
-            {                
-                ar[i].add(temp[j].trim());
-            } 
-            mcols = ar[i].size();
-        }
-        matrix = new int[mrows][mcols];
-        for(int i = 0; i < mrows; i++)
-        {
-            for (int j = 0; j < mcols; j++)
-            {                
-                matrix[i][j] = Integer.parseInt((String)ar[i].get(j));
-            }
-        }
-    }
+
+	public int[][] parseMatrix(String[] tm) throws ArrayIndexOutOfBoundsException
+	{
+		int[][] matrix = new int[tm.length][];
+
+		for( int i = 0; i < tm.length; i++ )
+		{
+			String[] temp = tm[i].split(",");
+			int[] cols = new int[temp.length];
+
+			for( int j = 0; j < temp.length; j++ )
+			{     
+				cols[j] = Integer.parseInt( temp[j].trim() );
+			} 
+			matrix[i] = cols;
+		}
+		return matrix;
+	}
 }
+

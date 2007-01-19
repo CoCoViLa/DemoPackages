@@ -16,13 +16,13 @@ public class SingleSeriesGraph
 	@*/
 	
 	SingleSeriesGraph() {
-		init();
 	}
 	
 	XYSeries xys;
 	ChartFrame frame;
 	DefaultTableXYDataset dataset;
 	JFreeChart chart;
+	boolean isInitialized;
 
 	private void init() {
 
@@ -37,14 +37,20 @@ public class SingleSeriesGraph
 
 		frame.pack();
 		frame.setVisible(true);
+		isInitialized = true;
 	}
 
-	public void setSeriesName( String name ) {
-		xys.setKey( name );
+    public void setSeriesName( String name ) {
+	if( !isInitialized ) {
+		init();
 	}
+	xys.setKey( name );
+    }
 	
     public void draw( double x, double y ) {
-    	
+    	if( !isInitialized ) {
+		init();
+	}
     	try {
     		Thread.sleep(50);
     	} catch(Exception e ) {}
@@ -52,6 +58,7 @@ public class SingleSeriesGraph
     }
     
 }
+
 
 
 
