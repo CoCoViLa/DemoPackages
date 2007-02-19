@@ -2,62 +2,62 @@ import org.jfree.chart.*;
 import org.jfree.chart.plot.*;
 import org.jfree.data.xy.*;
 
-public class Graph //extends JFrame 
+public class Graph
 {
 	/*@ 
 	specification Graph {
 		double x, y;		
 		void init_ready, drawing_ready;
 		String seriesName;
-		seriesName -> init_ready{init};
+		seriesName -> init_ready{setSeriesName};
 		x, y -> drawing_ready{draw};
-		
 	}
 	@*/
-
+	
+	Graph() {
+	}
+	
 	XYSeries xys;
 	ChartFrame frame;
 	DefaultTableXYDataset dataset;
 	JFreeChart chart;
-    	private static Graph instance = null;
+	boolean isInitialized;
 
-    public Graph() {
-    	
-    }
-    
-	void init( String seriesName ) {
-		if( instance == null ) {
-			instance = new Graph();			
-		}
-		instance.dataset = new DefaultTableXYDataset();
-		instance.xys = new XYSeries(seriesName, true, false);
-		instance.dataset.addSeries(instance.xys);
-		instance.chart = ChartFactory.createXYLineChart(
+	private void init() {
+
+		dataset = new DefaultTableXYDataset();
+		xys = new XYSeries("Legend", true, false);
+		dataset.addSeries(xys);
+		chart = ChartFactory.createXYLineChart(
 				"",
-				"x", "y", instance.dataset, PlotOrientation.VERTICAL, true, true, false );
+				"x", "y", dataset, PlotOrientation.VERTICAL, true, true, false );
 		
-		instance.frame = new ChartFrame("Graph", instance.chart );
+		frame = new ChartFrame("Graph", chart );
 
-		instance.frame.pack();
-		instance.frame.setVisible(true);
+		frame.pack();
+		frame.setVisible(true);
+		isInitialized = true;
 	}
 
-	void init() {
-		init("Legend");
+    public void setSeriesName( String name ) {
+	if( !isInitialized ) {
+		init();
 	}
-
-    public static void draw( double x, double y ) {
-	if( instance == null ) {		
-		instance = new Graph();
-    		instance.init();
+	xys.setKey( name );
+    }
+	
+    public void draw( double x, double y ) {
+    	if( !isInitialized ) {
+		init();
 	}
-	try {
-		Thread.sleep(50);
-	} catch(Exception e ) {}
-	instance.xys.add( x, y );
+    	try {
+    		Thread.sleep(50);
+    	} catch(Exception e ) {}
+    	xys.add( x, y );
     }
     
 }
+
 
 
 
