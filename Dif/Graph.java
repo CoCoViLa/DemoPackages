@@ -14,9 +14,6 @@ public class Graph
 	}
 	@*/
 	
-	Graph() {
-	}
-	
 	XYSeries xys;
 	ChartFrame frame;
 	DefaultTableXYDataset dataset;
