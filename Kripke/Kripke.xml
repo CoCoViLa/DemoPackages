@@ -2,6 +2,51 @@
 
 <!DOCTYPE package SYSTEM "package2.dtd">
 <package>
-<name>Kripke</name>
-<description>-</description>
-</package>
+  <name>Kripke</name>
+  <description>-</description>
+<class type="class">
+	<name>Simple</name>
+	<description>Kripke's simple</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="164" height="103"/>
+<rect x="8" y="7" width="149" height="88" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<text string="Kripke: simple" colour="-16777216" x="16" y="24" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+</graphics>
+	<fields>
+		<field name="A" type="int"/>
+		<field name="B" type="int"/>
+		<field name="X" type="int"/>
+		<field name="Y" type="int"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Complex</name>
+	<description>Kripke's complex</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="164" height="103"/>
+<rect x="6" y="7" width="149" height="88" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<text string="W" colour="-16777216" x="39" y="27" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="B" colour="-16777216" x="117" y="27" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="U" colour="-16777216" x="41" y="85" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="V" colour="-16777216" x="116" y="86" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="W" type="int" x="44" y="8" portConnection="" strict="false" />
+		<port name="B" type="int" x="120" y="7" portConnection="" strict="false" />
+		<port name="U" type="int" x="44" y="96" portConnection="" strict="false" />
+		<port name="V" type="int" x="120" y="95" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="A" type="int"/>
+		<field name="B" type="int"/>
+		<field name="X" type="int"/>
+		<field name="Y" type="int"/>
+		<field name="W" type="int"/>
+		<field name="U" type="int"/>
+		<field name="V" type="int"/>
+	</fields>
+</class>
+  </package>
+
