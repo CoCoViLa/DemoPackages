@@ -40,7 +40,8 @@
 <object name="Euler_0" type="Euler" static="false">
 <properties x="60" y="330" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="time" type="int" value="200"/>
+<field name="time" type="int" nature="input" value="80"/>
+<field name="debug" type="int" nature="input" value="1"/>
 </fields>
 </object>
 <object name="Graph_0" type="Graph" static="true">

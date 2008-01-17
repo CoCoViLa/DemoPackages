@@ -276,7 +276,9 @@
 				fontname="Courier" fontstyle="1" fontsize="20" transparency="255"/>
 		</graphics>
 		<fields>
-			<field name="time" type="int" value="200"/>
+			<field name="time" type="int" value="200" description="The number of simulation steps"/>
+			<!-- TODO: the next field should be of type boolean but ObjectPropertiesEditor does not support it yet -->
+			<field name="debug" type="int" value="0" description="Print debug information to System.out (0 == false, 1 == true)?"/>
 		</fields>
 	</class>
 </package>
