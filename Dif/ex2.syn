@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Dif" superclass="Euler_0">
+<object name="Adder_0" type="Adder" static="false">
+<properties x="105" y="249" width="87" height="84" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="k1" type="double" value="1"/>
+<field name="k2" type="double" value="1"/>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="Integrator_0" type="Integrator" static="false">
+<properties x="242" y="252" width="89" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="initstate" type="double" value="1"/>
+<field name="T" type="double"/>
+<field name="in" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="Integrator_1" type="Integrator" static="false">
+<properties x="378" y="252" width="89" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="initstate" type="double" value="1"/>
+<field name="T" type="double"/>
+<field name="in" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="Mult_0" type="Mult" static="false">
+<properties x="245" y="132" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="double"/>
+<field name="in2" type="double" value="0.5"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="Inverter_0" type="Inverter" static="false">
+<properties x="248" y="25" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="Euler_0" type="Euler" static="false">
+<properties x="51" y="376" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="time" type="int" value="2000"/>
+<field name="T" type="double" value="5"/>
+<field name="delay" type="long" value="50"/>
+<field name="debug" type="boolean" value="false"/>
+</fields>
+</object>
+<object name="Graph_0" type="Graph" static="false">
+<properties x="329" y="346" width="96" height="99" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="seriesName" type="String"/>
+</fields>
+</object>
+<object name="Clock_1" type="Clock" static="false">
+<properties x="319" y="470" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="initstate" type="double" value="0"/>
+<field name="T" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="Graph_1" type="Graph" static="false">
+<properties x="492" y="345" width="96" height="99" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="seriesName" type="String"/>
+</fields>
+</object>
+<object name="Graph_2" type="Graph" static="false">
+<properties x="171" y="346" width="96" height="99" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="seriesName" type="String"/>
+</fields>
+</object>
+<connection obj1="Adder_0" port1="out" obj2="Integrator_0" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Integrator_0" port1="out" obj2="Integrator_1" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Integrator_1" port1="out" obj2="Inverter_0" port2="out">
+<breakpoints>
+<point x="496" y="292"/>
+<point x="496" y="65"/>
+</breakpoints>
+</connection>
+<connection obj1="Inverter_0" port1="in" obj2="Adder_0" port2="in2">
+<breakpoints>
+<point x="59" y="65"/>
+<point x="59" y="307"/>
+</breakpoints>
+</connection>
+<connection obj1="Mult_0" port1="out" obj2="Adder_0" port2="in1">
+<breakpoints>
+<point x="345" y="170"/>
+<point x="345" y="223"/>
+<point x="85" y="223"/>
+<point x="85" y="277"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator_0" port1="out" obj2="Mult_0" port2="in1">
+<breakpoints>
+<point x="354" y="292"/>
+<point x="354" y="119"/>
+<point x="205" y="119"/>
+<point x="205" y="155"/>
+</breakpoints>
+</connection>
+<connection obj1="Clock_1" port1="out" obj2="Graph_1" port2="x">
+<breakpoints>
+<point x="369" y="454"/>
+<point x="535" y="454"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator_1" port1="out" obj2="Graph_1" port2="y">
+<breakpoints>
+<point x="484" y="292"/>
+<point x="484" y="394"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator_0" port1="out" obj2="Graph_2" port2="y">
+<breakpoints>
+<point x="338" y="292"/>
+<point x="338" y="347"/>
+<point x="204" y="347"/>
+<point x="204" y="395"/>
+</breakpoints>
+</connection>
+<connection obj1="Clock_1" port1="out" obj2="Graph_2" port2="x">
+<breakpoints>
+<point x="369" y="461"/>
+<point x="214" y="461"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator_0" port1="out" obj2="Graph_0" port2="y">
+<breakpoints>
+<point x="358" y="292"/>
+<point x="358" y="395"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator_1" port1="out" obj2="Graph_0" port2="x">
+<breakpoints>
+<point x="474" y="292"/>
+<point x="474" y="407"/>
+<point x="372" y="407"/>
+</breakpoints>
+</connection>
+</scheme>

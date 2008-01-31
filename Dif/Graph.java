@@ -1,6 +1,7 @@
 import org.jfree.chart.*;
 import org.jfree.chart.plot.*;
 import org.jfree.data.xy.*;
+import javax.swing.*;
 
 public class Graph
 {
@@ -13,23 +14,32 @@ public class Graph
 		x, y -> drawing_ready{draw};
 	}
 	@*/
-	
+
+	public int getDelay( String name, double x, double y ) {
+		try {
+			return Integer.valueOf( (String) ProgramContext.getFieldValue( name, "delay" ) );
+		} catch(Exception e) { System.err.println( e ); }
+		return 50;
+	}
+
 	XYSeries xys;
 	ChartFrame frame;
-	DefaultTableXYDataset dataset;
+
 	JFreeChart chart;
 	boolean isInitialized;
 
 	private void init() {
+		XYSeriesCollection dataset = new XYSeriesCollection();
 
-		dataset = new DefaultTableXYDataset();
-		xys = new XYSeries("Legend", true, false);
+		xys = new XYSeries("Legend", false, true);
 		dataset.addSeries(xys);
 		chart = ChartFactory.createXYLineChart(
 				"",
-				"x", "y", dataset, PlotOrientation.VERTICAL, true, true, false );
+				"x", "y", dataset, PlotOrientation.VERTICAL, false, true, false );
 		
 		frame = new ChartFrame("Graph", chart );
+
+		frame.setLocationByPlatform( true );
 
 		frame.pack();
 		frame.setVisible(true);
@@ -43,17 +53,40 @@ public class Graph
 	xys.setKey( name );
     }
 	
-    public void draw( double x, double y ) {
+    public void draw( final double x, final double y ) {
     	if( !isInitialized ) {
 		init();
 	}
-    	try {
-    		Thread.sleep(50);
-    	} catch(Exception e ) {}
-    	xys.add( x, y );
+
+	SwingUtilities.invokeLater( new Runnable() {
+			public void run() {
+				xys.add( x, y );	
+			}
+		} );
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
