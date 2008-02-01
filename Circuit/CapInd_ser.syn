@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Circuit" superclass="Process_1">
+<object name="Extractor_1" type="Extractor" static="false">
+<properties x="274" y="186" width="50" height="160" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Process_1" type="Process" static="false">
+<properties x="94" y="236" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="min" type="double" value="0"/>
+<field name="step" type="double" value="0.1"/>
+<field name="max" type="double" value="3"/>
+</fields>
+</object>
+<object name="DoubleSeriesGraph_0" type="DoubleSeriesGraph" static="false">
+<properties x="403" y="198" width="119" height="112" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="x1" type="double"/>
+<field name="y1" type="double"/>
+<field name="x2" type="double"/>
+<field name="y2" type="double"/>
+<field name="seriesName1" type="String"/>
+<field name="seriesName2" type="String"/>
+</fields>
+</object>
+<object name="Capacitor_0" type="Capacitor" static="false">
+<properties x="180" y="21" width="44" height="59" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="f" type="double"/>
+<field name="C" type="double" value="1"/>
+<field name="g.re" type="double" value="1"/>
+</fields>
+</object>
+<object name="Ser_1" type="Ser" static="false">
+<properties x="186" y="41" width="31" height="83" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="f" type="double"/>
+<field name="u.re" type="double"/>
+<field name="u.im" type="double"/>
+<field name="u.mod" type="double"/>
+<field name="u.arg" type="double"/>
+<field name="z.re" type="double"/>
+<field name="z.im" type="double"/>
+<field name="z.mod" type="double"/>
+<field name="z.arg" type="double"/>
+<field name="i.re" type="double" value="1"/>
+<field name="i.im" type="double" value="1"/>
+<field name="i.mod" type="double"/>
+<field name="i.arg" type="double"/>
+<field name="g.re" type="double"/>
+<field name="g.im" type="double"/>
+<field name="g.mod" type="double"/>
+<field name="g.arg" type="double"/>
+</fields>
+</object>
+<object name="Inductor_0" type="Inductor" static="false">
+<properties x="185" y="80" width="30" height="60" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="f" type="double"/>
+<field name="L" type="double" value="1"/>
+<field name="z.re" type="double" value="1"/>
+</fields>
+</object>
+<connection obj1="Extractor_1" port1="port.f" obj2="DoubleSeriesGraph_0" port2="x1">
+<breakpoints>
+<point x="448" y="186"/>
+</breakpoints>
+</connection>
+<connection obj1="Process_1" port1="out" obj2="Extractor_1" port2="port.z.mod">
+<breakpoints>
+<point x="56" y="266"/>
+<point x="56" y="297"/>
+<point x="232" y="297"/>
+<point x="232" y="256"/>
+</breakpoints>
+</connection>
+<connection obj1="Extractor_1" port1="port.z.mod" obj2="DoubleSeriesGraph_0" port2="y1">
+<breakpoints>
+<point x="383" y="256"/>
+<point x="383" y="235"/>
+</breakpoints>
+</connection>
+<connection obj1="Process_1" port1="port" obj2="Extractor_1" port2="port">
+<breakpoints>
+<point x="119" y="219"/>
+<point x="179" y="219"/>
+<point x="179" y="266"/>
+</breakpoints>
+</connection>
+<connection obj1="Capacitor_0" port1="this" obj2="Ser_1" port2="x1">
+<breakpoints/>
+</connection>
+<connection obj1="Ser_1" port1="this" obj2="Process_1" port2="port">
+<breakpoints>
+<point x="119" y="81"/>
+</breakpoints>
+</connection>
+<connection obj1="Inductor_0" port1="this" obj2="Ser_1" port2="x2">
+<breakpoints/>
+</connection>
+<connection obj1="Extractor_1" port1="port.z.arg" obj2="DoubleSeriesGraph_0" port2="y2">
+<breakpoints/>
+</connection>
+<connection obj1="Process_1" port1="inp" obj2="Extractor_1" port2="port.f">
+<breakpoints>
+<point x="57" y="256"/>
+<point x="57" y="186"/>
+</breakpoints>
+</connection>
+<connection obj1="DoubleSeriesGraph_0" port1="x1" obj2="DoubleSeriesGraph_0" port2="x2">
+<breakpoints>
+<point x="462" y="315"/>
+</breakpoints>
+</connection>
+</scheme>

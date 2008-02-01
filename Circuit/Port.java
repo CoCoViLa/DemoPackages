@@ -8,6 +8,9 @@ class Port {
 	ohm.c=u;
 	g.mod * z.mod = 1;
 	g.arg + z.arg = 0;
+	const double PI = Math.PI;
     }@*/
 	
 }
+
+

@@ -4,4 +4,227 @@
 <package>
 <name>Circuit</name>
 <description>-</description>
+<class type="class">
+	<name>Capacitor</name>
+	<description>-</description>
+	<icon>images/capacitor_s.png</icon>
+<graphics>
+<bounds x="0" y="0" width="44" height="59"/>
+<image x="2" y="1" width="36" height="57" path="\images\capacitor.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="this" type="Port" x="21" y="30" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="C" type="double"/>
+		<field name="f" type="double"/>
+		<field name="g.re" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Inductor</name>
+	<description>-</description>
+	<icon>images/inductor_s.png</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="60"/>
+<image x="12" y="3" width="12" height="54" path="\images\inductor.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="this" type="Port" x="16" y="30" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="L" type="double"/>
+		<field name="f" type="double"/>
+		<field name="z.re" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Resistor</name>
+	<description>-</description>
+	<icon>images/resistor_s.png</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="60"/>
+<image x="6" y="1" width="17" height="58" path="\images\resistor.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="this" type="Port" x="14" y="31" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="r" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Ser</name>
+	<description>-</description>
+	<icon>images/ser.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="31" height="83"/>
+<line x1="15" y1="33" x2="15" y2="46" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="x1" type="Port" x="15" y="10" portConnection="" strict="true" />
+		<port name="x2" type="Port" x="15" y="69" portConnection="" strict="true" />
+		<port name="this" type="Port" x="15" y="40" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="f" type="double"/>
+		<field name="u.re" type="double"/>
+		<field name="u.im" type="double"/>
+		<field name="u.mod" type="double"/>
+		<field name="u.arg" type="double"/>
+		<field name="z.re" type="double"/>
+		<field name="z.im" type="double"/>
+		<field name="z.mod" type="double"/>
+		<field name="z.arg" type="double"/>
+		<field name="i.re" type="double"/>
+		<field name="i.im" type="double"/>
+		<field name="i.mod" type="double"/>
+		<field name="i.arg" type="double"/>
+		<field name="g.re" type="double"/>
+		<field name="g.im" type="double"/>
+		<field name="g.mod" type="double"/>
+		<field name="g.arg" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Par</name>
+	<description>-</description>
+	<icon>images/par.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="90" height="126"/>
+<line x1="7" y1="24" x2="82" y2="24" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="44" y1="9" x2="44" y2="24" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="44" y1="100" x2="44" y2="115" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="7" y1="99" x2="82" y2="99" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="7" y1="86" x2="7" y2="99" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="7" y1="25" x2="7" y2="38" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="82" y1="86" x2="82" y2="99" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="82" y1="25" x2="82" y2="38" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="x1" type="Port" x="7" y="62" portConnection="" strict="true" />
+		<port name="x2" type="Port" x="82" y="62" portConnection="" strict="true" />
+		<port name="this" type="Port" x="44" y="9" portConnection="" strict="true" />
+		<port name="this" type="Port" x="44" y="116" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="f" type="double"/>
+		<field name="u.re" type="double"/>
+		<field name="u.im" type="double"/>
+		<field name="u.mod" type="double"/>
+		<field name="u.arg" type="double"/>
+		<field name="z.re" type="double"/>
+		<field name="z.im" type="double"/>
+		<field name="z.mod" type="double"/>
+		<field name="z.arg" type="double"/>
+		<field name="i.re" type="double"/>
+		<field name="i.im" type="double"/>
+		<field name="i.mod" type="double"/>
+		<field name="i.arg" type="double"/>
+		<field name="g.re" type="double"/>
+		<field name="g.im" type="double"/>
+		<field name="g.mod" type="double"/>
+		<field name="g.arg" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>DoubleSeriesGraph</name>
+	<description>Double Series Graph</description>
+	<icon>DoubleSeriesGraph.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="119" height="112"/>
+<line x1="15" y1="7" x2="15" y2="107" colour="-16777216" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+<line x1="5" y1="97" x2="112" y2="97" colour="-16777216" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+<line x1="15" y1="6" x2="12" y2="16" colour="-16777216" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+<line x1="15" y1="6" x2="18" y2="16" colour="-16777216" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+<line x1="113" y1="97" x2="106" y2="100" colour="-16777216" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+<line x1="113" y1="97" x2="106" y2="94" colour="-16777216" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+<text string="y1" colour="-16777216" x="26" y="39" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="y2" colour="-16777216" x="26" y="70" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="x1" colour="-16777216" x="41" y="86" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="x2" colour="-16777216" x="70" y="86" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="y1" type="double" x="15" y="37" portConnection="" strict="false" />
+		<port name="y2" type="double" x="15" y="68" portConnection="" strict="false" />
+		<port name="x1" type="double" x="45" y="97" portConnection="" strict="false" />
+		<port name="x2" type="double" x="75" y="97" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="x1" type="double"/>
+		<field name="y1" type="double"/>
+		<field name="seriesName1" type="String"/>
+		<field name="x2" type="double"/>
+		<field name="y2" type="double"/>
+		<field name="seriesName2" type="String"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Process</name>
+	<description>-</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="50"/>
+<rect x="0" y="0" width="50" height="50" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="port" colour="-16777216" x="20" y="10" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="in" colour="-16777216" x="10" y="22" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="out" colour="-16777216" x="10" y="32" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="port" type="Port" x="25" y="0" portConnection="" strict="false" />
+		<port name="inp" type="double" x="0" y="20" portConnection="" strict="false" />
+		<port name="out" type="double" x="0" y="30" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="min" type="double"/>
+		<field name="step" type="double"/>
+		<field name="max" type="double"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Extractor</name>
+	<description>-</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="160"/>
+<text string="f" colour="-16777216" x="20" y="2" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="u.re" colour="-16777216" x="20" y="12" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="u.im" colour="-16777216" x="20" y="22" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="u.mod" colour="-16777216" x="20" y="32" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="u.arg" colour="-16777216" x="20" y="42" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="z.re" colour="-16777216" x="20" y="52" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="z.im" colour="-16777216" x="20" y="62" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="z.mod" colour="-16777216" x="20" y="72" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="z.arg" colour="-16777216" x="20" y="82" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="i.re" colour="-16777216" x="20" y="92" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="i.im" colour="-16777216" x="20" y="102" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="i.mod" colour="-16777216" x="20" y="112" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="i.arg" colour="-16777216" x="20" y="122" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="g.re" colour="-16777216" x="20" y="132" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="g.im" colour="-16777216" x="20" y="142" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="g.mod" colour="-16777216" x="20" y="152" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+<text string="g.arg" colour="-16777216" x="20" y="162" fontname="Courier" fontstyle="1" fontsize="10" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="port" type="Port" x="0" y="80" portConnection="" strict="false" />
+		<port name="port.f" type="double" x="10" y="0" portConnection="" strict="false" />
+		<port name="port.u.re" type="double" x="10" y="10" portConnection="" strict="false" />
+		<port name="port.u.im" type="double" x="10" y="20" portConnection="" strict="false" />
+		<port name="port.u.mod" type="double" x="10" y="30" portConnection="" strict="false" />
+		<port name="port.u.arg" type="double" x="10" y="40" portConnection="" strict="false" />
+		<port name="port.z.re" type="double" x="10" y="50" portConnection="" strict="false" />
+		<port name="port.z.im" type="double" x="10" y="60" portConnection="" strict="false" />
+		<port name="port.z.mod" type="double" x="10" y="70" portConnection="" strict="false" />
+		<port name="port.z.arg" type="double" x="10" y="80" portConnection="" strict="false" />
+		<port name="port.i.re" type="double" x="10" y="90" portConnection="" strict="false" />
+		<port name="port.i.im" type="double" x="10" y="100" portConnection="" strict="false" />
+		<port name="port.i.mod" type="double" x="10" y="110" portConnection="" strict="false" />
+		<port name="port.i.arg" type="double" x="10" y="120" portConnection="" strict="false" />
+		<port name="port.g.re" type="double" x="10" y="130" portConnection="" strict="false" />
+		<port name="port.g.im" type="double" x="10" y="140" portConnection="" strict="false" />
+		<port name="port.g.mod" type="double" x="10" y="150" portConnection="" strict="false" />
+		<port name="port.g.arg" type="double" x="10" y="160" portConnection="" strict="false" />
+	</ports>
+</class>
 </package>
+
