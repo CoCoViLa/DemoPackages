@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+    <name>Dialog</name>
+    <description>Package for demonstrating CoCoViLa features: interactive dialogs and rerunning the program</description>
+    <class type="class">
+        <name>Global</name>
+        <description>Scheme-Program interface example</description>
+        <icon>default.gif</icon>
+        <graphics>
+            <bounds x="0" y="0" width="100" height="100"/>
+            <rect x="0" y="0" width="100" height="100"
+                colour="-16777216" filled="false" fixed="false" stroke="2"
+                linetype="0" transparency="255" />
+        </graphics>
+        <fields>
+            <field name="a" type="int" description="Variable a">
+                <known>
+                    <graphics>
+                        <text string="a = " colour="-16777216" x="12" y="26" fontname="Arial" fontstyle="1" fontsize="12"/>
+                        <text string="*self" colour="-16777216" x="32" y="26" fontname="Arial" fontstyle="1" fontsize="12"/>
+                    </graphics>
+                </known>
+            </field>
+            <field name="b" type="int" description="Variable b">
+                <known>
+                    <graphics>
+                        <text string="b = " colour="-16777216" x="12" y="46" fontname="Arial" fontstyle="1" fontsize="12"/>
+                        <text string="*self" colour="-16777216" x="32" y="46" fontname="Arial" fontstyle="1" fontsize="12"/>
+                    </graphics>
+                </known>
+            </field>
+            <field name="c" type="int" description="Variable c">
+                <known>
+                    <graphics>
+                        <text string="c = " colour="-16777216" x="12" y="66" fontname="Arial" fontstyle="1" fontsize="12"/>
+                        <text string="*self" colour="-16777216" x="32" y="66" fontname="Arial" fontstyle="1" fontsize="12"/>
+                    </graphics>
+                </known>
+            </field>
+        </fields>
+    </class>
+</package>
+

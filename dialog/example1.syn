@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Dialog">
+<object name="Global_0" type="Global" static="false">
+<properties x="289" y="148" width="100" height="100" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="a" type="int" nature="input" value="5"/>
+<field name="b" type="int" nature="input"/>
+<field name="c" type="int" nature="input"/>
+</fields>
+</object>
+</scheme>
