@@ -68,8 +68,8 @@
 <object name="Selector_6" type="Selector" >
   <properties x="175" y="200" width="21" height="37" xsize="1.0" ysize="1.0" strict="false" />
   <fields>
-    <field name="fst" type="any"/>
-    <field name="snd" type="any"/>
+    <field name="fst" type="double"/>
+    <field name="snd" type="double"/>
   </fields>
 </object>
 <connection obj1="Wheel_1" port1="1" obj2="Wheel_0" port2="2">
