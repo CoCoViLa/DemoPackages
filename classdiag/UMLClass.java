@@ -1,7 +1,8 @@
 import java.io.*;
 class UMLClass {
 	/*@ 
-	specification UMLClass  {
+	specification UMLClass {
+		String any;
 		String name;
 		String parent;
 		String[] attrs;
@@ -41,4 +42,5 @@ class UMLClass {
 		}			
 	}
 };
+
 
