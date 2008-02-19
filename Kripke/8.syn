@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Kripke">
+<object name="Complex_0" type="Complex" static="false">
+<properties x="26" y="628" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long" value="1"/>
+</fields>
+</object>
+<object name="Complex_1" type="Complex" static="false">
+<properties x="26" y="540" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_2" type="Complex" static="false">
+<properties x="26" y="452" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_3" type="Complex" static="false">
+<properties x="26" y="364" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_4" type="Complex" static="false">
+<properties x="26" y="276" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_5" type="Complex" static="false">
+<properties x="26" y="188" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_6" type="Complex" static="false">
+<properties x="26" y="100" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_7" type="Complex" static="false">
+<properties x="26" y="12" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long" nature="goal"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<connection obj1="Complex_1" port1="Z" obj2="Complex_0" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_2" port1="Z" obj2="Complex_1" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_3" port1="Z" obj2="Complex_2" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_4" port1="Z" obj2="Complex_3" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_5" port1="Z" obj2="Complex_4" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_6" port1="Z" obj2="Complex_5" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_7" port1="Z" obj2="Complex_6" port2="B">
+<breakpoints/>
+</connection>
+</scheme>

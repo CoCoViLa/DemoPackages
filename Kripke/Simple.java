@@ -7,7 +7,7 @@ class Simple {
 
 [Y->A]->B{sum};
 [A->B]->X{sum};
-Y, X-> A{calc};
+Y, X -> A{calc};
 ->B;
 
     }@*/
@@ -33,8 +33,13 @@ public int sum(Subtask sub) {
 }
 
 public int calc( int y, int x ) {
+	System.out.println( "calc: " + (y * x) + " y: " + y + " x: " + x);
 	return y * x;
 }
 
 }
+
+
+
+
 

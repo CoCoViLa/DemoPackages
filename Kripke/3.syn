@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Kripke">
+<object name="Complex_1" type="Complex" static="false">
+<properties x="189" y="208" width="164" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_0" type="Complex" static="false">
+<properties x="189" y="344" width="164" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long" value="1"/>
+</fields>
+</object>
+<object name="Complex_2" type="Complex" static="false">
+<properties x="188" y="71" width="164" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="B" type="long" nature="goal"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<connection obj1="Complex_1" port1="Z" obj2="Complex_0" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_1" port1="B" obj2="Complex_2" port2="Z">
+<breakpoints/>
+</connection>
+</scheme>

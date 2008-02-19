@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Kripke">
+<object name="Complex_0" type="Complex" static="false">
+<properties x="39" y="935" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long" value="1"/>
+</fields>
+</object>
+<object name="Complex_1" type="Complex" static="false">
+<properties x="39" y="847" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_2" type="Complex" static="false">
+<properties x="39" y="759" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_3" type="Complex" static="false">
+<properties x="39" y="671" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_4" type="Complex" static="false">
+<properties x="39" y="583" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_5" type="Complex" static="false">
+<properties x="39" y="495" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_6" type="Complex" static="false">
+<properties x="39" y="407" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_7" type="Complex" static="false">
+<properties x="39" y="319" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_8" type="Complex" static="false">
+<properties x="39" y="231" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_9" type="Complex" static="false">
+<properties x="39" y="143" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_10" type="Complex" static="false">
+<properties x="39" y="55" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_13" type="Complex" static="false">
+<properties x="234" y="935" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_14" type="Complex" static="false">
+<properties x="234" y="847" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_15" type="Complex" static="false">
+<properties x="234" y="759" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_16" type="Complex" static="false">
+<properties x="234" y="671" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_17" type="Complex" static="false">
+<properties x="234" y="583" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_18" type="Complex" static="false">
+<properties x="234" y="495" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_19" type="Complex" static="false">
+<properties x="234" y="407" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_20" type="Complex" static="false">
+<properties x="234" y="319" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_21" type="Complex" static="false">
+<properties x="234" y="231" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_22" type="Complex" static="false">
+<properties x="234" y="143" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_23" type="Complex" static="false">
+<properties x="234" y="55" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_24" type="Complex" static="false">
+<properties x="430" y="934" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_25" type="Complex" static="false">
+<properties x="430" y="846" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_26" type="Complex" static="false">
+<properties x="430" y="758" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_27" type="Complex" static="false">
+<properties x="430" y="670" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_28" type="Complex" static="false">
+<properties x="430" y="582" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_29" type="Complex" static="false">
+<properties x="430" y="494" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_30" type="Complex" static="false">
+<properties x="430" y="406" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_31" type="Complex" static="false">
+<properties x="430" y="318" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_32" type="Complex" static="false">
+<properties x="430" y="230" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_33" type="Complex" static="false">
+<properties x="430" y="142" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_34" type="Complex" static="false">
+<properties x="430" y="54" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_35" type="Complex" static="false">
+<properties x="624" y="935" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_36" type="Complex" static="false">
+<properties x="624" y="847" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_37" type="Complex" static="false">
+<properties x="624" y="759" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_38" type="Complex" static="false">
+<properties x="624" y="671" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_39" type="Complex" static="false">
+<properties x="624" y="583" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_40" type="Complex" static="false">
+<properties x="624" y="495" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_41" type="Complex" static="false">
+<properties x="624" y="407" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_42" type="Complex" static="false">
+<properties x="624" y="319" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_43" type="Complex" static="false">
+<properties x="624" y="231" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_44" type="Complex" static="false">
+<properties x="624" y="143" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<object name="Complex_45" type="Complex" static="false">
+<properties x="624" y="55" width="164" height="103" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long" nature="goal"/>
+<field name="Z" type="long"/>
+</fields>
+</object>
+<connection obj1="Complex_1" port1="Z" obj2="Complex_0" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_2" port1="Z" obj2="Complex_1" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_3" port1="Z" obj2="Complex_2" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_4" port1="Z" obj2="Complex_3" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_5" port1="Z" obj2="Complex_4" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_6" port1="Z" obj2="Complex_5" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_7" port1="Z" obj2="Complex_6" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_8" port1="Z" obj2="Complex_7" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_9" port1="Z" obj2="Complex_8" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_10" port1="Z" obj2="Complex_9" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_14" port1="Z" obj2="Complex_13" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_15" port1="Z" obj2="Complex_14" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_16" port1="Z" obj2="Complex_15" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_17" port1="Z" obj2="Complex_16" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_18" port1="Z" obj2="Complex_17" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_19" port1="Z" obj2="Complex_18" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_20" port1="Z" obj2="Complex_19" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_21" port1="Z" obj2="Complex_20" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_22" port1="Z" obj2="Complex_21" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_23" port1="Z" obj2="Complex_22" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_10" port1="B" obj2="Complex_13" port2="Z">
+<breakpoints>
+<point x="120" y="29"/>
+<point x="215" y="28"/>
+<point x="215" y="1067"/>
+<point x="315" y="1067"/>
+</breakpoints>
+</connection>
+<connection obj1="Complex_25" port1="Z" obj2="Complex_24" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_23" port1="B" obj2="Complex_24" port2="Z">
+<breakpoints>
+<point x="315" y="29"/>
+<point x="420" y="28"/>
+<point x="421" y="1064"/>
+<point x="511" y="1065"/>
+</breakpoints>
+</connection>
+<connection obj1="Complex_26" port1="Z" obj2="Complex_25" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_27" port1="Z" obj2="Complex_26" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_28" port1="Z" obj2="Complex_27" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_29" port1="Z" obj2="Complex_28" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_30" port1="Z" obj2="Complex_29" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_31" port1="Z" obj2="Complex_30" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_32" port1="Z" obj2="Complex_31" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_33" port1="Z" obj2="Complex_32" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_34" port1="Z" obj2="Complex_33" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_34" port1="B" obj2="Complex_35" port2="Z">
+<breakpoints>
+<point x="511" y="28"/>
+<point x="615" y="29"/>
+<point x="615" y="1065"/>
+<point x="705" y="1064"/>
+</breakpoints>
+</connection>
+<connection obj1="Complex_36" port1="Z" obj2="Complex_35" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_37" port1="Z" obj2="Complex_36" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_38" port1="Z" obj2="Complex_37" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_39" port1="Z" obj2="Complex_38" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_40" port1="Z" obj2="Complex_39" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_41" port1="Z" obj2="Complex_40" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_42" port1="Z" obj2="Complex_41" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_43" port1="Z" obj2="Complex_42" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_44" port1="Z" obj2="Complex_43" port2="B">
+<breakpoints/>
+</connection>
+<connection obj1="Complex_45" port1="Z" obj2="Complex_44" port2="B">
+<breakpoints/>
+</connection>
+</scheme>

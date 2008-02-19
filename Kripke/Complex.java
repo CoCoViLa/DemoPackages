@@ -1,30 +1,26 @@
 class Complex {
     /*@ specification Complex {
-    int A;
-    int B;
-    int X;
-    int Y;
-    int W;
-    int U;
-    int V;
+	long A;
+	long B;
+	long X;
+	long Y;
+	long Z;
 
-[Y->A]->B{sum};
-[A->B]->X{sum};
-[U->V],Y, X-> A{calc};
-->B;
-
+	[Y->A]->B{sum};
+	[A->B]->X{sum};
+	X, Y, Z -> A{calc};
     }@*/
  
-public int sum(Subtask sub) {
+public long sum(Subtask sub) {
 	Object[] in = new Object[1];
 	
-	int b = 0;
+	long b = 0;
 	try {		 
 		for (int i = 1; i < 4;  i++ ){
-			in[0] = new Integer(i);
+			in[0] = new Long(i);
 			Object[] out = sub.run(in);
 			
-			b += ((Integer)out[0]).intValue();
+			b += ((Long)out[0]).longValue();
 		}		
 	}
 	catch (Exception e) {
@@ -35,9 +31,14 @@ public int sum(Subtask sub) {
 	return b;
 }
 
-public int calc( int y, int x ) {
-	return y * x;
+public long calc( long x, long y, long z ) {
+	return x * y * z;
 }
 
 }
+
+
+
+
+
 
