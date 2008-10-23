@@ -1,15 +1,15 @@
-class Clock {
+//Clock for Euler
+class Clock extends Integrator {
 	/*@ 
-	specification Clock {
-		double initstate, state, nextstate, finalstate;
-		double T, out;
+	specification Clock super Integrator {
 		initstate = 0;
-		nextstate = state + 1/T;
-		out = state;
-	
+		in = 1;
 	}
 	@*/
 }
+
+
+
 
 
 

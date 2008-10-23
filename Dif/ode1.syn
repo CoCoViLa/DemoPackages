@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Dif" superclass="Process_2">
+<object name="MultiSeriesGraph_0" type="MultiSeriesGraph" static="false">
+<properties x="452" y="341" width="119" height="112" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="repaintImmediately" type="boolean" value="true"/>
+<field name="seriesNames" type="String[]"/>
+</fields>
+</object>
+<object name="Clock_0" type="Clock" static="false">
+<properties x="433" y="468" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="T" type="double"/>
+</fields>
+</object>
+<object name="Integrator_3" type="Integrator" static="false">
+<properties x="186" y="186" width="89" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="initstate" type="double" value="0"/>
+<field name="T" type="double"/>
+</fields>
+</object>
+<object name="Integrator_4" type="Integrator" static="false">
+<properties x="330" y="186" width="89" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="initstate" type="double" value="1"/>
+<field name="T" type="double"/>
+</fields>
+</object>
+<object name="Adder_2" type="Adder" static="false">
+<properties x="57" y="181" width="87" height="84" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="k1" type="double" value="1"/>
+<field name="k2" type="double" value="-3"/>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+</fields>
+</object>
+<object name="Inverter_0" type="Inverter" static="false">
+<properties x="187" y="98" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="double"/>
+</fields>
+</object>
+<object name="Mult_3" type="Mult" static="false">
+<properties x="375" y="63" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+</fields>
+</object>
+<object name="Mult_4" type="Mult" static="false">
+<properties x="253" y="15" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+</fields>
+</object>
+<object name="Process_2" type="Process" static="false">
+<properties x="103" y="356" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="time" type="int" value="200"/>
+<field name="T" type="double" value="5"/>
+<field name="delay" type="long" value="50"/>
+<field name="debug" type="boolean" value="false"/>
+<field name="repaintImmediately" type="boolean" value="true"/>
+</fields>
+</object>
+<connection obj1="Clock_0" port1="out" obj2="MultiSeriesGraph_0" port2="x">
+<breakpoints/>
+</connection>
+<connection obj1="Adder_2" port1="out" obj2="Integrator_3" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Integrator_3" port1="out" obj2="Integrator_4" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Integrator_4" port1="out" obj2="Mult_3" port2="in2">
+<breakpoints>
+<point x="458" y="182"/>
+<point x="345" y="152"/>
+</breakpoints>
+</connection>
+<connection obj1="Mult_3" port1="in2" obj2="Mult_3" port2="in1">
+<breakpoints>
+<point x="362" y="100"/>
+</breakpoints>
+</connection>
+<connection obj1="Mult_3" port1="in1" obj2="Mult_4" port2="in2">
+<breakpoints>
+<point x="317" y="102"/>
+<point x="237" y="92"/>
+</breakpoints>
+</connection>
+<connection obj1="Mult_4" port1="out" obj2="Adder_2" port2="in2">
+<breakpoints>
+<point x="360" y="11"/>
+<point x="16" y="10"/>
+<point x="19" y="236"/>
+</breakpoints>
+</connection>
+<connection obj1="Mult_3" port1="out" obj2="Mult_4" port2="in1">
+<breakpoints/>
+</connection>
+<connection obj1="Integrator_4" port1="out" obj2="MultiSeriesGraph_0" port2="ys">
+<breakpoints>
+<point x="555" y="324"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator_3" port1="out" obj2="Inverter_0" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Inverter_0" port1="out" obj2="Adder_2" port2="in1">
+<breakpoints/>
+</connection>
+</scheme>

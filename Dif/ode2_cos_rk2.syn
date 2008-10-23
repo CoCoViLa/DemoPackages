@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Dif" superclass="Process_0">
+<object name="Cos_0" type="Cos" static="false">
+<properties x="283" y="56" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="double"/>
+<field name="out" type="double"/>
+</fields>
+</object>
+<object name="MultiSeriesGraph_0" type="MultiSeriesGraph" static="true">
+<properties x="412" y="240" width="119" height="112" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="repaintImmediately" type="boolean"/>
+<field name="seriesNames" type="String[]"/>
+</fields>
+</object>
+<object name="Adder_0" type="Adder" static="false">
+<properties x="167" y="52" width="87" height="84" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="k1" type="double" value="1"/>
+<field name="k2" type="double" value="1"/>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+</fields>
+</object>
+<object name="Mult_0" type="Mult" static="false">
+<properties x="407" y="100" width="85" height="76" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="double"/>
+<field name="in2" type="double"/>
+</fields>
+</object>
+<object name="Clock2_0" type="Clock2" static="false">
+<properties x="405" y="368" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="T" type="double"/>
+</fields>
+</object>
+<object name="Integrator2_0" type="Integrator2" static="false">
+<properties x="529" y="163" width="89" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="T" type="double"/>
+<field name="init" type="double" value="1"/>
+</fields>
+</object>
+<object name="Process_0" type="Process" static="false">
+<properties x="137" y="356" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="time" type="int" value="200000"/>
+<field name="T" type="double" value="100"/>
+<field name="delay" type="long" value="5"/>
+<field name="debug" type="boolean" value="false"/>
+<field name="repaintImmediately" type="boolean" value="false"/>
+</fields>
+</object>
+<connection obj1="Adder_0" port1="in1" obj2="Mult_0" port2="in2">
+<breakpoints>
+<point x="63" y="172"/>
+</breakpoints>
+</connection>
+<connection obj1="Cos_0" port1="out" obj2="Mult_0" port2="in1">
+<breakpoints/>
+</connection>
+<connection obj1="Cos_0" port1="in" obj2="Adder_0" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="MultiSeriesGraph_0" port1="x" obj2="Adder_0" port2="in2">
+<breakpoints/>
+</connection>
+<connection obj1="MultiSeriesGraph_0" port1="x" obj2="Clock2_0" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="Mult_0" port1="out" obj2="Integrator2_0" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Integrator2_0" port1="out" obj2="Adder_0" port2="in1">
+<breakpoints>
+<point x="665" y="61"/>
+<point x="100" y="25"/>
+<point x="102" y="65"/>
+</breakpoints>
+</connection>
+<connection obj1="Integrator2_0" port1="out" obj2="MultiSeriesGraph_0" port2="ys">
+<breakpoints>
+<point x="675" y="227"/>
+</breakpoints>
+</connection>
+</scheme>

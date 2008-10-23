@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE scheme SYSTEM "scheme.dtd">
-<scheme package="Dif" superclass="Euler_0">
+<scheme package="Dif" superclass="Process_2">
 <object name="Integrator_2" type="Integrator" static="false">
 <properties x="203" y="88" width="160" height="105" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="initstate" type="double" value="1"/>
 <field name="T" type="double"/>
-<field name="in" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="Adder_2" type="Adder" static="false">
@@ -17,7 +15,6 @@
 <field name="k2" type="double" value="-7"/>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="Integrator_1" type="Integrator" static="false">
@@ -25,31 +22,29 @@
 <fields>
 <field name="initstate" type="double" value="0"/>
 <field name="T" type="double"/>
-<field name="in" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="Clock_3" type="Clock" static="false">
-<properties x="467" y="314" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="466" y="313" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="initstate" type="double" value="0"/>
 <field name="T" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
-<object name="Euler_0" type="Euler" static="false">
-<properties x="60" y="330" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<object name="MultiSeriesGraph_0" type="MultiSeriesGraph" static="false">
+<properties x="473" y="184" width="119" height="112" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="time" type="int" value="2000"/>
-<field name="T" type="double" value="6"/>
+<field name="repaintImmediately" type="boolean" value="true"/>
+<field name="seriesNames" type="String[]"/>
+</fields>
+</object>
+<object name="Process_2" type="Process" static="false">
+<properties x="138" y="322" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="time" type="int" value="200"/>
+<field name="T" type="double" value="5"/>
 <field name="delay" type="long" value="50"/>
 <field name="debug" type="boolean" value="false"/>
-</fields>
-</object>
-<object name="Graph_0" type="Graph" static="true">
-<properties x="474" y="162" width="96" height="99" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="seriesName" type="String" value="Dif"/>
+<field name="repaintImmediately" type="boolean" value="true"/>
 </fields>
 </object>
 <connection obj1="Adder_2" port1="out" obj2="Integrator_2" port2="in">
@@ -84,13 +79,13 @@
 <point x="421" y="128"/>
 </breakpoints>
 </connection>
-<connection obj1="Graph_0" port1="y" obj2="Integrator_1" port2="out">
+<connection obj1="Integrator_1" port1="out" obj2="MultiSeriesGraph_0" port2="ys">
 <breakpoints>
-<point x="465" y="211"/>
-<point x="465" y="128"/>
+<point x="450" y="128"/>
+<point x="450" y="233"/>
 </breakpoints>
 </connection>
-<connection obj1="Clock_3" port1="out" obj2="Graph_0" port2="x">
+<connection obj1="Clock_3" port1="out" obj2="MultiSeriesGraph_0" port2="x">
 <breakpoints/>
 </connection>
 </scheme>
