@@ -41,9 +41,9 @@ class MultiSeriesGraph {
 
 			@Override
 			public void windowClosing( WindowEvent e ) {
-//				System.out.println( "Chart frame closed - terminating program" );
+				System.out.println( "Chart frame closed - terminating program" );
 				frame.dispose();
-//				ee.ioc.cs.vsle.api.ProgramContext.terminate();
+				ee.ioc.cs.vsle.api.ProgramContext.terminate();
 			}
 		} );
 
@@ -86,6 +86,7 @@ class MultiSeriesGraph {
 		}
 	}
 }
+
 
 
 
