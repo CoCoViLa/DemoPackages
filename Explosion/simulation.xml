@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>simulation</name>
+<description>Simulation</description>
+
+<class type="class">
+  <name>Random</name>
+  <description>Generates random locations</description>
+  <icon>default.gif</icon>
+  <graphics>
+    <bounds x="0" y="0" width="20" height="20"/>
+    <rect x="0" y="0" width="20" height="20" colour="-16777216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+  </graphics>
+  <ports>
+    <port name="rndloc" type="alias" x="5" y="10" portConnection="area" strict="false"/>
+    <port name="rnddim" type="alias" x="15" y="10" portConnection="area" strict="false"/>
+  </ports>
+  <fields>
+    <field name="base" type="double" value="20.0"/>
+    <field name="rndmax" type="double" value="200.0"/>
+  </fields>
+</class>
+
+<class type="class">
+  <name>Explosion</name>
+  <description>Explosion</description>
+  <icon>default.gif</icon>
+  <graphics>
+    <bounds x="0" y="0" width="30" height="30"/>
+    <oval x="0" y="0" width="30" height="30" colour="-1677216" filled="false" fixed="false" stroke="2" linetype="0" transparency="255"/>
+    <painter>ExplosionPainter</painter>
+  </graphics>
+  <ports>
+    <port name="loc" type="alias" x="0" y="0" portConnection="area" strict="false"/>
+    <port name="dim" type="alias" x="14" y="14" portConnection="area" strict="false"/>
+  </ports>
+  <fields>
+    <field name="x" type="double"/>
+    <field name="y" type="double" />
+    <field name="width" type="double" />
+    <field name="height" type="double" />
+    <field name="angle" type="double" />
+  </fields>
+</class>
+
+</package>

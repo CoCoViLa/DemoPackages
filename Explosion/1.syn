@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="simulation">
+<object name="Random_0" type="Random" static="false">
+<properties x="204" y="93" width="20" height="20" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="base" type="double" value="20.0"/>
+<field name="rndmax" type="double" value="200.0"/>
+</fields>
+</object>
+<object name="Explosion_0" type="Explosion" static="false">
+<properties x="160" y="210" width="30" height="30" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="x" type="double"/>
+<field name="y" type="double"/>
+<field name="width" type="double"/>
+<field name="height" type="double"/>
+<field name="angle" type="double"/>
+</fields>
+</object>
+<connection obj1="Random_0" port1="rndloc" obj2="Explosion_0" port2="loc">
+<breakpoints/>
+</connection>
+<connection obj1="Explosion_0" port1="dim" obj2="Random_0" port2="rnddim">
+<breakpoints/>
+</connection>
+</scheme>
