@@ -14,7 +14,7 @@ class MultiSeriesGraph {
 	//NB! seriesNames if defined must match ys
 	String[] seriesNames;
 	seriesNames -> init_ready{setSeriesName};
-	x, ys, repaintImmediately -> drawing_ready{draw};
+	x, ys, repaintImmediately -> drawing_ready, (Exception){draw};
 	paintAll, repaintImmediately ->done{drawAll};
     }@*/
 
@@ -52,7 +52,7 @@ class MultiSeriesGraph {
 		isInitialized = true;
 	}
 
-	public void draw( final double x, final double[] ys, final boolean repaintImmediately ) {
+	public void draw( final double x, final double[] ys, final boolean repaintImmediately ) throws Exception {
     		if( !isInitialized ) {
 			init( ys.length );
 		}
@@ -73,7 +73,6 @@ class MultiSeriesGraph {
 	}
 
 	public void drawAll( boolean repaintImmediately ) {
-//		System.out.println( "drawAll" );
 		if( !repaintImmediately ) {
 			try { 
 				dataset.validateObject();
@@ -86,6 +85,18 @@ class MultiSeriesGraph {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

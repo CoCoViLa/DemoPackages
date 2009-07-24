@@ -4,11 +4,11 @@
 <object name="Process" type="Process" static="false">
 <properties x="76" y="396" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="time" type="int" value="200000"/>
+<field name="time" type="int" value="20000"/>
 <field name="T" type="double" value="10"/>
 <field name="delay" type="long" value="1"/>
 <field name="debug" type="boolean" value="false"/>
-<field name="repaintImmediately" type="boolean" value="false"/>
+<field name="repaintImmediately" type="boolean" value="true"/>
 </fields>
 </object>
 <object name="Prey" type="Integrator2" static="false">
@@ -32,7 +32,6 @@
 <field name="k2" type="double" value="-0.0001"/>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="Adder_1" type="Adder" static="false">
@@ -42,7 +41,6 @@
 <field name="k2" type="double" value="0.000115"/>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="Mult_0" type="Mult" static="false">
@@ -50,7 +48,6 @@
 <fields>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="Mult_1" type="Mult" static="false">
@@ -58,7 +55,6 @@
 <fields>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
-<field name="out" type="double"/>
 </fields>
 </object>
 <object name="MultiSeriesGraph_2" type="MultiSeriesGraph" static="true">
@@ -69,7 +65,7 @@
 </fields>
 </object>
 <object name="Clock2_0" type="Clock2" static="false">
-<properties x="564" y="359" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="560" y="359" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="T" type="double"/>
 </fields>

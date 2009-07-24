@@ -50,24 +50,23 @@ public class Process {
 		return tmp;
 	}
 
-	public void proc_run(Subtask st, Object initst, int time, long delay, boolean debug, boolean repaintImmediately) {
+	public void proc_run( Subtask st, Object initst, int time, long delay,
+            boolean debug, boolean repaintImmediately ) {
 
-		if( debug )
-			System.out.println("time value is: " + time);
+        if ( debug )
+            System.out.println( "time value is: " + time );
 
-		Object[] in = new Object[] {initst};
-		try {		 
-			for (int i = 1; i <= time;  i++ ){	
-				Object[] out = st.run(in);
-				in = out;
+        Object[] in = new Object[] { initst };
+        for ( int i = 1; i <= time; i++ ) {
+            Object[] out = st.run( in );
+            in = out;
 
-				if( delay > 0 && repaintImmediately )
-    					Thread.sleep(delay);
-			}
-		
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}		 	
-	}
+            if ( delay > 0 && repaintImmediately )
+                try {
+                    Thread.sleep( delay );
+                } catch ( Exception e ) {
+                }
+        }
+    }
 }
+
