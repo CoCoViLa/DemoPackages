@@ -1,9 +1,12 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.util.*;
+import java.util.List;
 
 import org.jfree.chart.*;
 import org.jfree.chart.axis.*;
 import org.jfree.chart.plot.*;
+import org.jfree.chart.renderer.xy.*;
 import org.jfree.data.xy.*;
 
 class MultiSeriesGraph {
@@ -11,34 +14,42 @@ class MultiSeriesGraph {
         double x;
         alias (double) ys;
         void init_ready, drawing_ready, paintAll, done, updated;
-        boolean repaintImmediately;
+        boolean repaintImmediately, axisAlwaysIncludeZero, showSeparateAxis;
+        boolean autoSort, allowDuplicates;
+        float lineThickness;
         //NB! seriesNames if defined must match ys
         String[] seriesNames;
-        seriesNames -> init_ready{setSeriesName};
-        x, ys, repaintImmediately -> drawing_ready, (Exception){draw};
-        paintAll, repaintImmediately ->done{drawAll};
-        boolean axisAlwaysIncludeZero, showSeparateAxis;
-        float lineThickness;
-        lineThickness, axisAlwaysIncludeZero, showSeparateAxis -> updated {updateParams};
+        String domainName;
+        //----default settings
+        repaintImmediately = true;
+        axisAlwaysIncludeZero = true;
+        showSeparateAxis = false;
+        lineThickness = 1;   
+        autoSort = false; 
+        allowDuplicates = true;
+        domainName = "";
+        //change settings
+        ys.length, lineThickness, axisAlwaysIncludeZero, 
+              showSeparateAxis, autoSort, allowDuplicates -> init_ready {init};
+        //setup axis lables
+        init_ready, domainName, seriesNames, showSeparateAxis -> updated {setSeriesName};
+        //add coordinates
+        init_ready, x, ys, repaintImmediately -> drawing_ready, (Exception) {draw};
+        //paint all at once
+        paintAll, repaintImmediately -> done {drawAll};
     }@*/
 
-    XYSeriesCollection dataset;
-    ChartFrame frame;
-    XYPlot plot;
-    boolean isInitialized;
-
-    MultiSeriesGraph() {
-    }
-
-    private void init( int length ) {
-        dataset = new XYSeriesCollection();
-
-        for ( int i = 0; i < length; i++ ) {
-            dataset.addSeries( new XYSeries( "" + i, false, true ) );
-        }
-
-        JFreeChart chart = ChartFactory.createXYLineChart( "", "x", "y",
-                dataset, PlotOrientation.VERTICAL, true, true, false );
+    private JFreeChart chart;
+    private ChartFrame frame;
+    private XYPlot plot;
+    private List<XYSeries> series = new ArrayList<XYSeries>();
+    
+    private void initChart() {
+        chart = ChartFactory.createXYLineChart( null, null, null,
+                null, PlotOrientation.VERTICAL, 
+                true, //legend
+                true, //tooltip
+                false );//url
 
         plot = chart.getXYPlot();
 
@@ -52,64 +63,89 @@ class MultiSeriesGraph {
                 ee.ioc.cs.vsle.api.ProgramContext.terminate();
             }
         } );
-
-        frame.pack();
-        frame.setVisible( true );
-        isInitialized = true;
     }
+    
+    public void init( int length, float lineThickness,
+            boolean axisAlwaysIncludeZero, boolean showSeparateAxis, 
+            boolean autoSort, boolean allowDuplicates ) {
+        
+        initChart();
+        
+        if (showSeparateAxis) {
+            for (int i = 0; i < length; i++) {
+                XYSeriesCollection dataset = new XYSeriesCollection();
+                XYSeries ser = new XYSeries("" + i, autoSort, allowDuplicates);
+                dataset.addSeries(ser);
+                series.add( ser );
+                plot.setDataset(i, dataset);
+            }
+        } else {
+            XYSeriesCollection dataset = new XYSeriesCollection();
+            for (int i = 0; i < length; i++) {
+                XYSeries ser = new XYSeries("" + i, autoSort, allowDuplicates);
+                dataset.addSeries(ser);
+                series.add( ser );
+            }
+            plot.setDataset(0, dataset);
+        }
 
-    public void updateParams( float lineThickness,
-            boolean axisAlwaysIncludeZero, boolean showSeparateAxis ) {
-
-        plot.getRenderer().setStroke( new BasicStroke( lineThickness ) );
-
+        Stroke stroke = new BasicStroke( lineThickness );
         NumberAxis domainAxis = (NumberAxis) plot.getDomainAxis();
         domainAxis.setAutoRangeIncludesZero( axisAlwaysIncludeZero );
-
-        if ( showSeparateAxis && dataset.getSeriesCount() > 1 ) {
-            for ( int i = 0, len = dataset.getSeriesCount(); i < len; i++ ) {
-                NumberAxis axis = new NumberAxis( dataset.getSeries( i )
-                        .getKey().toString() );
+        
+        if ( showSeparateAxis && length > 1 ) {
+            chart.removeLegend();
+            for ( int i = 0, len = series.size(); i < len; i++ ) {
+                XYSeries ser  = series.get( i );
+                Paint color = plot.getDrawingSupplier().getNextPaint();
+                NumberAxis axis = new NumberAxis( ser.getKey().toString() );
                 axis.setAutoRangeIncludesZero( axisAlwaysIncludeZero );
+                axis.setLabelPaint( color );
+                axis.setTickLabelPaint( color );
                 plot.setRangeAxis( i, axis );
+                plot.mapDatasetToRangeAxis( i, i);
+                XYLineAndShapeRenderer rend = new XYLineAndShapeRenderer(true, false);
+                rend.setSeriesStroke( 0, stroke );
+                rend.setSeriesPaint( 0, color );
+                plot.setRenderer( i, rend );
             }
         } else {
             NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
             rangeAxis.setAutoRangeIncludesZero( axisAlwaysIncludeZero );
+            plot.getRenderer().setStroke( stroke );
         }
+        
+        frame.pack();
+        frame.setVisible( true );
     }
 
     public void draw( final double x, final double[] ys,
             final boolean repaintImmediately ) throws Exception {
-        if ( !isInitialized ) {
-            init( ys.length );
-        }
 
         for ( int i = 0; i < ys.length; i++ ) {
-            dataset.getSeries( i ).add( x, ys[i], repaintImmediately );
+            series.get( i ).add( x, ys[i], repaintImmediately );
         }
     }
 
-    public void setSeriesName( String[] names ) {
-        if ( !isInitialized ) {
-            init( names.length );
-        }
+    public void setSeriesName( String domain, String[] names, boolean showSeparateAxis ) {
 
-        for ( int i = 0; i < names.length; i++ ) {
-            dataset.getSeries( i ).setKey( names[i] );
+        if(domain != null && domain.length() > 0) {
+            NumberAxis domainAxis = (NumberAxis) plot.getDomainAxis();
+            domainAxis.setLabel( domain );
+        }
+        for (int i = 0; i < names.length; i++) {
+            if(showSeparateAxis) {
+                plot.getRangeAxis(i).setLabel(names[i]); 
+            }
+            series.get( i ).setKey(names[i]);   
         }
     }
 
     public void drawAll( boolean repaintImmediately ) {
         if ( !repaintImmediately ) {
-            try {
-                dataset.validateObject();
-            } catch ( Exception e ) {
-                System.err.println( "DrawAll failed: " + e.getMessage() );
+            for( XYSeries ser : series ){
+                ser.fireSeriesChanged();
             }
-            //			for( int i = 0, len = dataset.getSeriesCount(); i < len; i++ ) {
-            //				dataset.getSeries(i).fireSeriesChanged();	
-            //			}
         }
     }
 
@@ -119,11 +155,12 @@ class MultiSeriesGraph {
      */
     public static void main( String[] args ) throws Exception {
         MultiSeriesGraph g = new MultiSeriesGraph();
-        g.init( 2 );
-        g.setSeriesName( new String[] { "one", "two" } );
-        g.updateParams( 2f, false, true );
-        g.draw( 1, new double[] { 2, 3 }, true );
-        g.draw( 2, new double[] { 4, 5 }, true );
-        g.draw( 3, new double[] { 6, 7 }, true );
+        String[] range = new String[] { "one", "two", "333" };
+        boolean showSeparateAxis = false;
+        g.init( range.length, 4f, false, showSeparateAxis, false, true );
+        g.setSeriesName( "domain", range, showSeparateAxis );
+        g.draw( 1, new double[] { 0.2, 6, 60 }, true );
+        g.draw( 2, new double[] { 0.3, 8, 40 }, true );
+        g.draw( 3, new double[] { 0.6, 7, 12 }, true );
     }
 }

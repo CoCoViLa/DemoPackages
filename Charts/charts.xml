@@ -24,8 +24,6 @@
 		<port name="x" type="double" x="43" y="83" portConnection="" strict="false" />
 	</ports>
 	<fields>
-		<field name="x" type="double"/>
-		<field name="y" type="double"/>
 		<field name="seriesName" type="String"/>
 	</fields>
 </class>
@@ -53,11 +51,7 @@
 		<port name="x2" type="double" x="75" y="97" portConnection="" strict="false" />
 	</ports>
 	<fields>
-		<field name="x1" type="double"/>
-		<field name="y1" type="double"/>
 		<field name="seriesName1" type="String"/>
-		<field name="x2" type="double"/>
-		<field name="y2" type="double"/>
 		<field name="seriesName2" type="String"/>
 	</fields>
 </class>
@@ -81,11 +75,14 @@
 		<port name="x" type="double" x="43" y="83" portConnection="" strict="false" />
 	</ports>
 	<fields>
+		<field name="domainName" type="String" />
 		<field name="seriesNames" type="String[]" />
-		<field name="repaintImmediately" type="boolean" value="true"/>
-		<field name="lineThickness" type="float" value="1.0"/>
-		<field name="axisAlwaysIncludeZero" type="boolean" value="true"/>
-		<field name="showSeparateAxis" type="boolean" value="false"/>
+		<field name="repaintImmediately" type="boolean"/>
+		<field name="lineThickness" type="float"/>
+		<field name="axisAlwaysIncludeZero" type="boolean"/>
+		<field name="showSeparateAxis" type="boolean"/>
+		<field name="autoSort" type="boolean"/>
+		<field name="allowDuplicates" type="boolean"/>
 	</fields>
 </class>
 <class type="class">

@@ -5,14 +5,15 @@ import org.jfree.chart.plot.*;
 import org.jfree.data.xy.*;
 
 class DoubleSeriesGraph {
-    /*@ specification DoubleSeriesGraph {
-        double x1,y1,x2,y2;
-        String seriesName1, seriesName2;
-        void init_ready1, drawing_ready1, init_ready2, drawing_ready2;
-        seriesName1 -> init_ready1{setSeries1Name};
-        seriesName2 -> init_ready2{setSeries2Name};
-        x1, y1 -> drawing_ready1{draw1};
-        x2, y2 -> drawing_ready2{draw2};
+    /*@ 
+        specification DoubleSeriesGraph {
+            double x1,y1,x2,y2;
+            String seriesName1, seriesName2;
+            void init_ready1, drawing_ready1, init_ready2, drawing_ready2;
+            seriesName1 -> init_ready1{setSeries1Name};
+            seriesName2 -> init_ready2{setSeries2Name};
+            x1, y1 -> drawing_ready1{draw1};
+            x2, y2 -> drawing_ready2{draw2};
     }@*/
 
     DefaultXYDataset dataset = new DefaultXYDataset();
