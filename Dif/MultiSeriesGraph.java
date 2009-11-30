@@ -103,6 +103,9 @@ class MultiSeriesGraph {
                 axis.setAutoRangeIncludesZero( axisAlwaysIncludeZero );
                 axis.setLabelPaint( color );
                 axis.setTickLabelPaint( color );
+                if (i < len / 2) {
+                    plot.setRangeAxisLocation(i, AxisLocation.BOTTOM_OR_LEFT);
+                }
                 plot.setRangeAxis( i, axis );
                 plot.mapDatasetToRangeAxis( i, i);
                 XYLineAndShapeRenderer rend = new XYLineAndShapeRenderer(true, false);

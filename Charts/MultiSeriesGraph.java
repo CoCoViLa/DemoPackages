@@ -102,6 +102,9 @@ class MultiSeriesGraph {
                 axis.setAutoRangeIncludesZero( axisAlwaysIncludeZero );
                 axis.setLabelPaint( color );
                 axis.setTickLabelPaint( color );
+                if (i < len / 2) {
+                    plot.setRangeAxisLocation(i, AxisLocation.BOTTOM_OR_LEFT);
+                }
                 plot.setRangeAxis( i, axis );
                 plot.mapDatasetToRangeAxis( i, i);
                 XYLineAndShapeRenderer rend = new XYLineAndShapeRenderer(true, false);
@@ -155,10 +158,10 @@ class MultiSeriesGraph {
      */
     public static void main( String[] args ) throws Exception {
         MultiSeriesGraph g = new MultiSeriesGraph();
-        String[] range = new String[] { "one", "two", "333" };
-        boolean showSeparateAxis = false;
+        String[] range = new String[] { "one", "two", "three" };
+        boolean showSeparateAxis = true;
         g.init( range.length, 4f, false, showSeparateAxis, false, true );
-        g.setSeriesName( "domain", range, showSeparateAxis );
+        g.setSeriesName( "x-axis", range, showSeparateAxis );
         g.draw( 1, new double[] { 0.2, 6, 60 }, true );
         g.draw( 2, new double[] { 0.3, 8, 40 }, true );
         g.draw( 3, new double[] { 0.6, 7, 12 }, true );
