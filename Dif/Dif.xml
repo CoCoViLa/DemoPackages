@@ -22,6 +22,7 @@
 			<field name="delay" type="long" value="50" />
 			<field name="debug" type="boolean" value="false" />
 			<field name="repaintImmediately" type="boolean" value="true"/>
+			<field name="done" type="void" description="done" />
 		</fields>
 	</class>
 	<class type="class">
@@ -492,28 +493,34 @@
 			<field name="in" type="double" />
 		</fields>
 	</class>
-<class type="class">
+<class type="class" static="true" >
 	<name>MultiSeriesGraph</name>
 	<description>Multi Series Graph</description>
-	<icon>MultiSeriesGraph.gif</icon>
-<graphics>
-	<bounds x="0" y="0" width="119" height="112"/>
-	<line x1="7" y1="13" x2="7" y2="87" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-	<line x1="1" y1="83" x2="82" y2="83" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-	<line x1="7" y1="12" x2="4" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-	<line x1="7" y1="12" x2="10" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-	<line x1="83" y1="83" x2="79" y2="86" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-	<line x1="83" y1="82" x2="78" y2="80" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
-	<text string="x" colour="16777216" x="86" y="95" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
-	<text string="y" colour="16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
-</graphics>
+	<icon>MultiSeriesGraph.png</icon>
+	<graphics>
+		<bounds x="0" y="0" width="119" height="112"/>
+		<line x1="7" y1="13" x2="7" y2="87" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="1" y1="83" x2="82" y2="83" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="7" y1="12" x2="4" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="7" y1="12" x2="10" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="83" y1="83" x2="79" y2="86" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="83" y1="82" x2="78" y2="80" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<text string="x" colour="16777216" x="86" y="95" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
+		<text string="y[ ]" colour="16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
+	</graphics>
 	<ports>
 		<port name="ys" type="double[]" multi="true" x="7" y="49" portConnection="" strict="false" />
 		<port name="x" type="double" x="43" y="83" portConnection="" strict="false" />
 	</ports>
 	<fields>
+		<field name="domainName" type="String" />
 		<field name="seriesNames" type="String[]" />
-		<field name="repaintImmediately" type="boolean" value="true"/>
+		<field name="repaintImmediately" type="boolean"/>
+		<field name="lineThickness" type="float"/>
+		<field name="axisAlwaysIncludeZero" type="boolean"/>
+		<field name="showSeparateAxis" type="boolean"/>
+		<field name="autoSort" type="boolean"/>
+		<field name="allowDuplicates" type="boolean"/>
 	</fields>
 </class>
 	<class type="class">
