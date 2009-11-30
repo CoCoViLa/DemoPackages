@@ -130,5 +130,29 @@
 		<line x1="40" y1="40" x2="39" y2="47" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
 	</graphics>
 </class>
+<class type="class">
+	<name>Calibrator</name>
+	<description>Spinner calibrator</description>
+	<icon>Calibrator.png</icon>
+	<graphics>
+		<bounds x="0" y="0" width="80" height="50"/>
+		<line x1="0" y1="0" x2="80" y2="0" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="0" y1="0" x2="0" y2="50" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="80" y1="0" x2="80" y2="50" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<line x1="0" y1="50" x2="80" y2="50" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+		<text string="Calibrator" colour="16777216" x="10" y="25" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
+	</graphics>
+	<ports>
+		<port name="in" type="alias" multi="true" x="0" y="25" portConnection="" strict="false" />
+		<port name="out" type="alias" multi="true" x="80" y="25" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="min" type="double" />
+		<field name="max" type="double" />
+		<field name="step" type="double" />
+		<field name="sum" type="double" />
+		<field name="dflt" type="double" />
+	</fields>
+</class>
 </package>
 
