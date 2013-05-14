@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="CoCoSynth">
+<object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
+<properties x="154" y="39" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="computeAll" type="boolean" value="true"/>
+</fields>
+</object>
+<object name="Parser_0" type="Parser" static="false">
+<properties x="152" y="167" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="packName" type="String" value="xxx"/>
+</fields>
+</object>
+<connection obj1="DepthFirstPlanner_0" port1="in" obj2="Parser_0" port2="out" strict="false">
+<breakpoints/>
+</connection>
+</scheme>

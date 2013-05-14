@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="CoCoSynth">
+<object name="Parser_0" type="Parser" static="false">
+<properties x="82" y="176" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="packagePath" type="String" value="fsfas"/>
+</fields>
+</object>
+<object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
+<properties x="90" y="36" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="computeAll" type="boolean" value="true"/>
+</fields>
+</object>
+<object name="Generator_0" type="Generator" static="false">
+<properties x="297" y="52" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="out" type="String"/>
+</fields>
+</object>
+<object name="Edit_0" type="Edit" static="false">
+<properties x="83" y="352" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="spec" type="String"/>
+</fields>
+</object>
+<connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="DepthFirstPlanner_0" port1="algorithm" obj2="Generator_0" port2="algorithm" strict="false">
+<breakpoints>
+<point x="157" y="24"/>
+<point x="387" y="32"/>
+</breakpoints>
+</connection>
+<connection obj1="Parser_0" port1="problem" obj2="Generator_0" port2="problem" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Edit_0" port1="spec" obj2="Parser_0" port2="spec" strict="false">
+<breakpoints/>
+</connection>
+</scheme>
