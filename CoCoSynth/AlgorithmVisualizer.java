@@ -1,11 +1,11 @@
 class AlgorithmVisualizer {
     /*@ specification AlgorithmVisualizer {
-          EvaluationAlgorithm in;
+          ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm in;
           boolean showAlgorithm;
           boolean result;
           in,showAlgorithm -> result{visualize};
     }@*/
-    boolean visualize(EvaluationAlgorithm algorithm, boolean show){
+    boolean visualize(ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm algorithm, boolean show){
           return true;
     }
 }
