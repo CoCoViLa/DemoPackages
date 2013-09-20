@@ -2,7 +2,7 @@ import ee.ioc.cs.vsle.synthesize.PlannerFactory;
 
 class DepthFirstPlanner {
     /*@ specification DepthFirstPlanner {
-    ee.ioc.cs.vsle.synthesize.Problem problem;
+    ee.ioc.cs.vsle.synthesize.Problem problem; 
     ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm algorithm;
     boolean computeAll;
     problem, computeAll -> algorithm {planner1};
