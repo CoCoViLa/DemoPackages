@@ -4,7 +4,8 @@ class Generator {
     /*@ specification Generator {
 	    ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm algorithm;
 	    ee.ioc.cs.vsle.synthesize.Problem problem;            
-	    String out;
+	    String out, genOut;
+	    out = genOut;
              algorithm, problem -> out{generate};
     }@*/
  

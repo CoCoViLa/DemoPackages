@@ -57,6 +57,7 @@
 	</ports>
 	<fields>
 		<field name="spec" type="String"/>
+                <field name= "controlEdit" type= "boolean"/>
 	</fields>
 </class>
 <class type="class">
@@ -100,6 +101,20 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 	</ports>
 	<fields>
 		<field name="showAlgorithm" type="boolean"/>
+	</fields>
+</class>
+<class type="class">
+	<name>Controller</name>
+	<description>superclass of CoCoBootstrap</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="179" height="107"/>
+<rect x="32" y="53" width="0" height="0" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="8" y="8" width="166" height="93" colour="-3355648" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="Controller" colour="-16777216" x="45" y="57" fontname="Arial" fontstyle="0" fontsize="18" transparency="255"/>
+</graphics>
+	<fields>
+		<field name="classPath" type="String"/>
 	</fields>
 </class>
 </package>

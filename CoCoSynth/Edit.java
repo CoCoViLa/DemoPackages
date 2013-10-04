@@ -1,10 +1,11 @@
 public class Edit {
     /*@ specification Edit {
 	String spec;
-	-> spec {genSpec};
+          boolean controlEdit;
+	controlEdit -> spec {genSpec};
     }@*/
 	
-   String genSpec() { 
+   String genSpec(boolean b) { 
 	   return "public class CoCo {\n" +
 			   "  /*"+"@"+" specification CoCo {\n" +
 			   "    Edit1 ed;\n" +

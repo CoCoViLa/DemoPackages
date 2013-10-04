@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE scheme SYSTEM "scheme.dtd">
-<scheme package="CoCoSynth">
+<scheme package="CoCoSynth" superclass="Controller_0">
 <object name="Parser_0" type="Parser" static="false">
 <properties x="374" y="181" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
@@ -23,13 +23,19 @@
 <properties x="367" y="355" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="spec" type="String"/>
-<field name="controlEdit" type="boolean" value="true"/>
+<field name="controlEdit" type="boolean"/>
 </fields>
 </object>
 <object name="AlgorithmVisualizer_0" type="AlgorithmVisualizer" static="false">
 <properties x="126" y="47" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="showAlgorithm" type="boolean" value="false"/>
+</fields>
+</object>
+<object name="Controller_0" type="Controller" static="false">
+<properties x="111" y="249" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="classPath" type="String" value="xxx"/>
 </fields>
 </object>
 <connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
