@@ -4,7 +4,7 @@
 <object name="Parser_0" type="Parser" static="false">
 <properties x="374" y="181" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="packagePath" type="String" value="fsfas"/>
+<field name="packagePath" type="String" value="/Users/enntougu/workspace/cocovila-packages/gearbox/"/>
 </fields>
 </object>
 <object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">

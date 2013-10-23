@@ -12,8 +12,8 @@
 <bounds x="0" y="0" width="151" height="102"/>
 <rect x="5" y="10" width="139" height="84" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <text string="PLANNER" colour="-16777216" x="40" y="55" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
-<text string="EvaluationAlgorithm" colour="-16777216" x="29" y="20" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
-<text string="Problem" colour="-16777216" x="41" y="89" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="EvaluationAlgorithm" colour="-16777216" x="29" y="25" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+<text string="Problem" colour="-16777216" x="41" y="80" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="problem" type="ee.ioc.cs.vsle.synthesize.Problem" x="66" y="94" portConnection="" strict="false" />
@@ -31,8 +31,8 @@
 <bounds x="0" y="0" width="152" height="132"/>
 <rect x="6" y="8" width="140" height="117" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <text string="PARSER" colour="-16777216" x="47" y="74" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
-<text string="Problem" colour="-16777216" x="41" y="25" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
-<text string="String specification" colour="-16777216" x="31" y="110" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="Problem" colour="-16777216" x="41" y="25" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+<text string="String specification" colour="-16777216" x="31" y="110" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="spec" type="String" x="71" y="125" portConnection="" strict="false" />
@@ -50,7 +50,7 @@
 <bounds x="0" y="0" width="159" height="121"/>
 <rect x="5" y="8" width="149" height="109" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <text string="EDITOR" colour="-16777216" x="51" y="63" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
-<text string="String specification" colour="-16777216" x="29" y="25" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="String specification" colour="-16777216" x="29" y="25" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="spec" type="String" x="78" y="9" portConnection="" strict="false" />
@@ -68,9 +68,9 @@
 <bounds x="0" y="0" width="191" height="164"/>
 <rect x="7" y="11" width="177" height="144" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <text string="GENERATOR" colour="-16777216" x="48" y="73" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
-<text string="EvaluationAlgorithm" colour="-16777216" x="49" y="25" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
-<text string="String algorithmCode" colour="-16777216" x="49" y="140" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
-<text string="Problem" colour="-16777216" x="19" y="85" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="EvaluationAlgorithm" colour="-16777216" x="49" y="25" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+<text string="String algorithmCode" colour="-16777216" x="49" y="140" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+<text string="Problem" colour="-16777216" x="19" y="85" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="algorithm" type="ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm" x="93" y="11" portConnection="" strict="false" />
@@ -94,7 +94,7 @@
 <rect x="-167" y="108" width="0" height="0" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <text string="ALGORITHM
 VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
-<text string="EvaluationAlgorithm" colour="-16777216" x="56" y="24" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+<text string="EvaluationAlgorithm" colour="-16777216" x="56" y="24" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="in" type="ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm" x="104" y="6" portConnection="" strict="false" />
@@ -115,6 +115,44 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 </graphics>
 	<fields>
 		<field name="classPath" type="String"/>
+	</fields>
+</class>
+<class type="class">
+<name>DataClass</name>
+<description>Security measure group (without decorations, uses default values)</description>
+<icon>atasimple.png</icon>
+<graphics>
+<bounds x="0" y="0" width="150" height="20"/>
+<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+</graphics>
+<ports>
+  <port name="output" type="alias" x="150" y="10" portConnection="" strict="false"/>
+</ports>
+<fields>
+<field name="description" type="String" value="Measure group X" description="Description of the security measure group">
+  <known>
+    <graphics>
+      <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+</fields> 
+</class>
+<class type="class">
+	<name>Exe</name>
+	<description> program runner</description>
+	<icon>editor.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="159" height="121"/>
+<rect x="5" y="8" width="149" height="109" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="EXE" colour="-16777216" x="51" y="63" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
+<text string="String algorithmCode" colour="-16777216" x="29" y="25" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="algorithmCode" type="String" x="78" y="9" portConnection="" strict="false" />
+	</ports>
+	<fields>
+                <field name= "controlExe" type= "boolean"/>
 	</fields>
 </class>
 </package>
