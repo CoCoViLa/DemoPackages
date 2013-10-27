@@ -14,13 +14,13 @@ public class Controller {
 		packageFile = "";
 		schemeFile = "";
 		String _spec, _packagePath;
-		alias subtasksReady = (*.ready);
+		alias runnerReady = (*.runnerReady);
 		alias spec = (*.spec);
 		alias packagePath = (*.packagePath);
 		spec.length, _spec -> spec{fill};
 		_packagePath -> _packagePath, pathChecked{checkPath};
 		pathChecked, packagePath.length, _packagePath -> packagePath{fill};
-		[_spec, _packagePath -> subtasksReady], packageFile, schemeFile -> ready {initGUI};
+		[_spec, _packagePath -> runnerReady], packageFile, schemeFile -> ready {initGUI};
 	}
 	@*/
 	

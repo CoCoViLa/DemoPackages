@@ -31,10 +31,10 @@
 <field name="classPath" type="String" value="xxx"/>
 </fields>
 </object>
-<object name="Exe_0" type="Exe" static="false">
+<object name="Runner_0" type="Runner" static="false">
 <properties x="593" y="229" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="controlExe" type="boolean" value="true"/>
+<field name="controlRunner" type="boolean" value="true"/>
 </fields>
 </object>
 <connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
@@ -55,7 +55,7 @@
 <point x="230" y="32"/>
 </breakpoints>
 </connection>
-<connection obj1="Generator_0" port1="out" obj2="Exe_0" port2="algorithmCode" strict="false">
+<connection obj1="Generator_0" port1="out" obj2="Runner_0" port2="algorithmCode" strict="false">
 <breakpoints/>
 </connection>
 </scheme>

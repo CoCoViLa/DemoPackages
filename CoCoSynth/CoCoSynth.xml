@@ -137,7 +137,7 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 </fields> 
 </class>
 <class type="class">
-	<name>Exe</name>
+	<name>Runner</name>
 	<description> program runner</description>
 	<icon>editor.gif</icon>
 <graphics>

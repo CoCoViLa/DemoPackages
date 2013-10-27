@@ -30,7 +30,7 @@
 <field name="schemeFile" type="String" value="/Users/pavelg/Dropbox/workspace/packages-sf/gearbox/skeem5.syn"/>
 </fields>
 </object>
-<object name="Exe_0" type="Exe" static="false">
+<object name="Runner_0" type="Runner" static="false">
 <properties x="595" y="229" xsize="1.0" ysize="1.0" strict="false"/>
 <fields/>
 </object>
@@ -56,10 +56,10 @@
 <point x="230" y="32"/>
 </breakpoints>
 </connection>
-<connection obj1="Generator_0" port1="out" obj2="Exe_0" port2="algorithmCode" strict="false">
+<connection obj1="Generator_0" port1="out" obj2="Runner_0" port2="algorithmCode" strict="false">
 <breakpoints/>
 </connection>
-<connection obj1="Parser_0" port1="problem" obj2="Exe_0" port2="problem" strict="false">
+<connection obj1="Parser_0" port1="problem" obj2="Runner_0" port2="problem" strict="false">
 <breakpoints>
 <point x="440" y="162"/>
 <point x="555" y="162"/>
