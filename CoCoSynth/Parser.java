@@ -1,3 +1,5 @@
+import java.io.File;
+
 import ee.ioc.cs.vsle.synthesize.ClassList;
 import ee.ioc.cs.vsle.synthesize.ProblemCreator;
 import ee.ioc.cs.vsle.synthesize.SpecParser;
@@ -11,7 +13,7 @@ public class Parser {
 		 String mainClassName;
 		 spec -> mainClassName {getMainClassName};
 		 spec, mainClassName, packagePath -> classList {makeClasslist}; 
-		 classList, mainClassName -> problem {makeProblem}; 
+		 spec, classList, mainClassName -> problem {makeProblem}; 
 	 }@*/
 
 	public String getMainClassName(String spec) {
@@ -26,11 +28,15 @@ public class Parser {
 		}
 	}
 
-	public ee.ioc.cs.vsle.synthesize.Problem makeProblem(ClassList classList, String mainClassName) {
+	public ee.ioc.cs.vsle.synthesize.Problem makeProblem(String spec, ClassList classList, String mainClassName) {
 		ee.ioc.cs.vsle.synthesize.Problem problem;
 		
 		try {
-			problem = new ProblemCreator(classList, mainClassName).makeProblem();
+			problem = new ProblemCreator(classList)
+											.makeProblem()
+											.setMainClassName(mainClassName)
+											.setInitialSpecification(spec)
+											.setClassList(classList);
 		} catch (Throwable e) {
 			throw new RuntimeException(e);
 		}

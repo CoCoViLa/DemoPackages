@@ -6,7 +6,7 @@
 <fields/>
 </object>
 <object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
-<properties x="375" y="41" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="374" y="41" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="computeAll" type="boolean" value="true"/>
 </fields>
@@ -31,10 +31,8 @@
 </fields>
 </object>
 <object name="Exe_0" type="Exe" static="false">
-<properties x="593" y="229" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="controlExe" type="boolean" value="true"/>
-</fields>
+<properties x="595" y="229" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
 </object>
 <connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
 <breakpoints/>
@@ -46,7 +44,11 @@
 </breakpoints>
 </connection>
 <connection obj1="Parser_0" port1="problem" obj2="Generator_0" port2="problem" strict="false">
-<breakpoints/>
+<breakpoints>
+<point x="440" y="162"/>
+<point x="555" y="162"/>
+<point x="555" y="120"/>
+</breakpoints>
 </connection>
 <connection obj1="DepthFirstPlanner_0" port1="algorithm" obj2="AlgorithmVisualizer_0" port2="in" strict="false">
 <breakpoints>
@@ -56,5 +58,12 @@
 </connection>
 <connection obj1="Generator_0" port1="out" obj2="Exe_0" port2="algorithmCode" strict="false">
 <breakpoints/>
+</connection>
+<connection obj1="Parser_0" port1="problem" obj2="Exe_0" port2="problem" strict="false">
+<breakpoints>
+<point x="440" y="162"/>
+<point x="555" y="162"/>
+<point x="555" y="274"/>
+</breakpoints>
 </connection>
 </scheme>

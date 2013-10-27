@@ -1,4 +1,4 @@
-import java.util.concurrent.Callable;
+import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
 import javax.swing.SwingUtilities;
@@ -9,7 +9,7 @@ import ee.ioc.cs.vsle.editor.Editor.EditorBuilder;
 
 public class Controller {
 	/*@ specification Controller {
-		void ready;
+		void ready, pathChecked;
 		String packageFile, schemeFile;
 		packageFile = "";
 		schemeFile = "";
@@ -18,10 +18,18 @@ public class Controller {
 		alias spec = (*.spec);
 		alias packagePath = (*.packagePath);
 		spec.length, _spec -> spec{fill};
-		packagePath.length, _packagePath -> packagePath{fill};
+		_packagePath -> _packagePath, pathChecked{checkPath};
+		pathChecked, packagePath.length, _packagePath -> packagePath{fill};
 		[_spec, _packagePath -> subtasksReady], packageFile, schemeFile -> ready {initGUI};
 	}
 	@*/
+	
+	public String checkPath(String path) {
+		File packageFile = new File(path);
+		if(packageFile.isFile())
+			path = packageFile.getParentFile().getAbsolutePath() + File.separator;
+		return path;
+	}
 	
 	public Object[] fill(int length, Object input) {
 		Object[] result = new Object[length];

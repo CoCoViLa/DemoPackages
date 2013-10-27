@@ -143,14 +143,13 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 <graphics>
 <bounds x="0" y="0" width="159" height="121"/>
 <rect x="5" y="8" width="149" height="109" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
-<text string="EXE" colour="-16777216" x="51" y="63" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
+<text string="RUNNER" colour="-16777216" x="51" y="70" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
 <text string="String algorithmCode" colour="-16777216" x="29" y="25" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+<text string="Problem" colour="-16777216" x="19" y="50" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
 		<port name="algorithmCode" type="String" x="78" y="9" portConnection="" strict="false" />
+		<port name="problem" type="ee.ioc.cs.vsle.synthesize.Problem" x="7" y="45" portConnection="" strict="false" />
 	</ports>
-	<fields>
-                <field name= "controlExe" type= "boolean"/>
-	</fields>
 </class>
 </package>

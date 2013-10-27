@@ -6,7 +6,7 @@ class Generator {
 	    ee.ioc.cs.vsle.synthesize.Problem problem;            
 	    String out, genOut;
 	    out = genOut;
-             algorithm, problem -> out{generate};
+      algorithm, problem -> out{generate};
     }@*/
  
 	public String generate(ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm algorithm, 
