@@ -1,8 +1,9 @@
 public class Exe {
     /*@ specification Exe {
 	String algorithmCode, ready;
-          boolean controlExe;
-	controlExe, algorithmCode -> ready {genSpec};
+         boolean controlExe;
+	String packagePath;
+	packagePath, algorithmCode -> ready {genSpec};
     }@*/
 	
    String genSpec(boolean b, String code) { 

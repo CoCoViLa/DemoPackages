@@ -10,21 +10,36 @@ public class Controller {
 	/*@ specification Controller {
 		void ready;
 		String classPath;
+		String _spec, _packagePath;
 		alias subtasksReady = (*.ready);
 		alias spec = (*.spec);
-		[spec -> subtasksReady], classPath -> ready {initGUI};
+		alias packagePath = (*.packagePath);
+		spec.length, _spec -> spec{fill};
+		packagePath.length, _packagePath -> packagePath{fill};
+		[_spec, _packagePath -> subtasksReady], classPath -> ready {initGUI};
 	}
 	@*/
 	
+	public Object[] fill(Object input, int length) {
+		Object[] result = new Object[length];
+		java.util.Arrays.fill(result, input);
+		return result;
+	}
+
 	public void initGUI(final Subtask subtask, String cp) {
 		final CountDownLatch latch = new CountDownLatch(1);
 		
 		Runnable runEditor = new Runnable() {
 			public void run() {
-				Editor ed = Editor.createEditor();
+				final Editor ed = Editor.createEditor();
 				Runnable callback = new Runnable() {
 					public void run() {
 						latch.countDown();
+						SwingUtilities.invokeLater(new Runnable() {
+            						public void run() {
+            							ed.dispose();
+            						}
+            					});
 					}
 				};
 				ed.setSubtask(subtask, callback);
