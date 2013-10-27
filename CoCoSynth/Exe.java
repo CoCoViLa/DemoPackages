@@ -6,7 +6,7 @@ public class Exe {
 	packagePath, algorithmCode -> ready {genSpec};
     }@*/
 	
-   String genSpec(boolean b, String code) { 
+   String genSpec(String b, String code) { 
 	System.out.println("Exe: " + code);
 	   return "done";
    }

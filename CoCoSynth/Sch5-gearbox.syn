@@ -3,9 +3,7 @@
 <scheme package="CoCoSynth" superclass="Controller_0">
 <object name="Parser_0" type="Parser" static="false">
 <properties x="374" y="181" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="packagePath" type="String" value="/Users/enntougu/workspace/cocovila-packages/gearbox/"/>
-</fields>
+<fields/>
 </object>
 <object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
 <properties x="375" y="41" xsize="1.0" ysize="1.0" strict="false"/>
@@ -28,7 +26,8 @@
 <object name="Controller_0" type="Controller" static="false">
 <properties x="137" y="195" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="classPath" type="String" value="xxx"/>
+<field name="packageFile" type="String" value="/Users/pavelg/Dropbox/workspace/packages-sf/gearbox/gearbox.xml"/>
+<field name="schemeFile" type="String" value="/Users/pavelg/Dropbox/workspace/packages-sf/gearbox/skeem5.syn"/>
 </fields>
 </object>
 <object name="Exe_0" type="Exe" static="false">

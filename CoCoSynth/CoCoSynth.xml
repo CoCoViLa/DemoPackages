@@ -38,9 +38,6 @@
 		<port name="spec" type="String" x="71" y="125" portConnection="" strict="false" />
 		<port name="problem" type="ee.ioc.cs.vsle.synthesize.Problem" x="66" y="9" portConnection="" strict="false" />
 	</ports>
-	<fields>
-		<field name="packagePath" type="String"/>
-	</fields>
 </class>
 <class type="class">
 	<name>Edit</name>
@@ -114,7 +111,8 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 <text string="Controller" colour="-16777216" x="45" y="57" fontname="Arial" fontstyle="0" fontsize="18" transparency="255"/>
 </graphics>
 	<fields>
-		<field name="classPath" type="String"/>
+	  <field name="packageFile" type="String"/>
+		<field name="schemeFile" type="String"/>
 	</fields>
 </class>
 <class type="class">
