@@ -28,15 +28,14 @@ public class Parser {
 		}
 	}
 
-	public ee.ioc.cs.vsle.synthesize.Problem makeProblem(String spec, ClassList classList, String mainClassName) {
+	public ee.ioc.cs.vsle.synthesize.Problem makeProblem(String spec,
+			ClassList classList, String mainClassName) {
 		ee.ioc.cs.vsle.synthesize.Problem problem;
-		
+
 		try {
-			problem = new ProblemCreator(classList)
-											.makeProblem()
-											.setMainClassName(mainClassName)
-											.setInitialSpecification(spec)
-											.setClassList(classList);
+			problem = new ProblemCreator(classList).makeProblem()
+					.setMainClassName(mainClassName).setInitialSpecification(spec)
+					.setClassList(classList);
 		} catch (Throwable e) {
 			throw new RuntimeException(e);
 		}

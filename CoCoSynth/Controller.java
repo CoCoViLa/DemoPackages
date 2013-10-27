@@ -1,26 +1,53 @@
 import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import ee.ioc.cs.vsle.api.Subtask;
+import ee.ioc.cs.vsle.editor.CustomFileFilter;
 import ee.ioc.cs.vsle.editor.Editor;
+import ee.ioc.cs.vsle.editor.SchemeContainer;
 import ee.ioc.cs.vsle.editor.Editor.EditorBuilder;
+import ee.ioc.cs.vsle.editor.SpecGenFactory;
+import ee.ioc.cs.vsle.editor.SpecGenerator;
+import ee.ioc.cs.vsle.packageparse.PackageXmlProcessor;
+import ee.ioc.cs.vsle.vclass.VPackage;
 
 public class Controller {
 	/*@ specification Controller {
 		void ready, pathChecked;
+		//Initial configuration
+		boolean showAlgorithm;
+		showAlgorithm = false;
+		boolean computeAll;
+		computeAll = true;
+		boolean runProgram;
+		runProgram = true;
+		
 		String packageFile, schemeFile;
 		packageFile = "";
 		schemeFile = "";
 		String _spec, _packagePath;
-		alias runnerReady = (*.runnerReady);
+		
+		alias computeAlls = (*.computeAll);
+		computeAlls.length, computeAll -> computeAlls{fill};
+		
 		alias spec = (*.spec);
 		alias packagePath = (*.packagePath);
+		
 		spec.length, _spec -> spec{fill};
 		_packagePath -> _packagePath, pathChecked{checkPath};
 		pathChecked, packagePath.length, _packagePath -> packagePath{fill};
-		[_spec, _packagePath -> runnerReady], packageFile, schemeFile -> ready {initGUI};
+		
+		alias runnerReady = (*.runnerReady);
+		alias visualizerReady = (*.visualizerReady);
+		
+		[_spec, _packagePath -> runnerReady], 
+		[_spec, _packagePath -> visualizerReady], 
+		packageFile, schemeFile, showAlgorithm, computeAll, runProgram
+			-> ready {initGUI};
 	}
 	@*/
 	
@@ -37,37 +64,52 @@ public class Controller {
 		return result;
 	}
 
-	public void initGUI(final Subtask subtask, String _package, String _scheme) {
-		final CountDownLatch latch = new CountDownLatch(1);
+	public void initGUI(final Subtask runProgramSt, final Subtask showAlgorithmSt, String _package, String _scheme, boolean showAlgorithm, boolean computeAll, boolean runProgram) {
 		
-		final EditorBuilder builder = new EditorBuilder();
-		
-		Runnable callback = new Runnable() {
-			public void run() {
-				latch.countDown();
-				SwingUtilities.invokeLater(new Runnable() {
-					public void run() {
-						builder.getEditor().setVisible(true);
-						builder.getEditor().dispose();
-					}
-				});
+		if(runProgram) {
+			final CountDownLatch latch = new CountDownLatch(1);
+
+			final EditorBuilder builder = new EditorBuilder();
+
+			Runnable callback = new Runnable() {
+				public void run() {
+					latch.countDown();
+					SwingUtilities.invokeLater(new Runnable() {
+						public void run() {
+							builder.getEditor().setVisible(true);
+							builder.getEditor().dispose();
+						}
+					});
+				}
+			};
+
+			builder
+				.setOnExitAction(callback)
+				.setPackageFile(_package == null || _package.trim().length() == 0 ? null : _package)
+				.setSchemeFile(_scheme == null || _scheme.trim().length() == 0 ? null : _scheme)
+				.setSubtask(runProgramSt)
+				.setCallback(callback)
+				.create();
+
+			try {
+				System.out.println("Waiting for latch in Controller.initGUI()");
+				latch.await();
+				System.out.println("Latch released in Controller.initGUI()");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
-		};
-			
-		builder
-			.setOnExitAction(callback)
-			.setPackageFile(_package == null || _package.trim().length() == 0 ? null : _package)
-			.setSchemeFile(_scheme == null || _scheme.trim().length() == 0 ? null : _scheme)
-			.setSubtask(subtask)
-			.setCallback(callback)
-			.create();
+		}
 		
-		try {
-			System.out.println("Waiting for latch in Controller.initGUI()");
-			latch.await();
-			System.out.println("Latch released in Controller.initGUI()");
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+		if(showAlgorithm) {
+			VPackage pkg;
+			File packFile = new File(_package);
+      if((pkg = PackageXmlProcessor.load(packFile)) != null ) {
+      	SchemeContainer container = new SchemeContainer( pkg, packFile.getParent() + File.separator );
+      	container.loadScheme( new File(_scheme) );
+      	String spec = SpecGenFactory.getInstance().getCurrentSpecGen().generateSpec(container.getScheme(), container.getSchemeName());
+      	
+      	showAlgorithmSt.run(new Object[] {spec, _package});
+      }
 		}
 	}
 	

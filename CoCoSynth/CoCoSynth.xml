@@ -19,9 +19,6 @@
 		<port name="problem" type="ee.ioc.cs.vsle.synthesize.Problem" x="66" y="94" portConnection="" strict="false" />
 		<port name="algorithm" type="ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm" x="66" y="8" portConnection="" strict="false" />
 	</ports>
-	<fields>
-		<field name="computeAll" type="boolean"/>
-	</fields>
 </class>
 <class type="class">
 	<name>Parser</name>
@@ -96,9 +93,6 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 	<ports>
 		<port name="in" type="ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm" x="104" y="6" portConnection="" strict="false" />
 	</ports>
-	<fields>
-		<field name="showAlgorithm" type="boolean"/>
-	</fields>
 </class>
 <class type="class">
 	<name>Controller</name>
@@ -113,6 +107,9 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 	<fields>
 	  <field name="packageFile" type="String"/>
 		<field name="schemeFile" type="String"/>
+		<field name="computeAll" type="boolean"/>
+		<field name="runProgram" type="boolean"/>
+		<field name="showAlgorithm" type="boolean"/>
 	</fields>
 </class>
 <class type="class">

@@ -1,11 +1,11 @@
 class AlgorithmVisualizer {
     /*@ specification AlgorithmVisualizer {
           ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm in;
-          boolean showAlgorithm;
-          boolean result;
-          in,showAlgorithm -> result{visualize};
+          void visualizerReady;
+          in -> visualizerReady {visualize};
     }@*/
-    boolean visualize(ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm algorithm, boolean show){
-          return true;
+    
+		public void visualize(ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm algorithm){
+			ee.ioc.cs.vsle.synthesize.AlgorithmVisualizer.getInstance().addNewTab( "Generated Program", algorithm );
     }
 }

@@ -7,9 +7,7 @@
 </object>
 <object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
 <properties x="374" y="41" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="computeAll" type="boolean" value="true"/>
-</fields>
+<fields/>
 </object>
 <object name="Generator_0" type="Generator" static="false">
 <properties x="581" y="40" xsize="1.0" ysize="1.0" strict="false"/>
@@ -19,13 +17,14 @@
 </object>
 <object name="AlgorithmVisualizer_0" type="AlgorithmVisualizer" static="false">
 <properties x="126" y="47" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="showAlgorithm" type="boolean" value="false"/>
-</fields>
+<fields/>
 </object>
 <object name="Controller_0" type="Controller" static="false">
 <properties x="137" y="195" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
+<field name="showAlgorithm" type="boolean" value="true"/>
+<field name="computeAll" type="boolean"/>
+<field name="runProgram" type="boolean"/>
 <field name="packageFile" type="String" value="/Users/pavelg/Dropbox/workspace/packages-sf/gearbox/gearbox.xml"/>
 <field name="schemeFile" type="String" value="/Users/pavelg/Dropbox/workspace/packages-sf/gearbox/skeem5.syn"/>
 </fields>
