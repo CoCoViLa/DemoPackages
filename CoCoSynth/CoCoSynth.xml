@@ -149,4 +149,20 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 		<port name="problem" type="ee.ioc.cs.vsle.synthesize.Problem" x="7" y="45" portConnection="" strict="false" />
 	</ports>
 </class>
+<class type="class">
+	<name>GUIactions</name>
+	<description>GUI action listeners</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="139" height="97"/>
+<rect x="7" y="8" width="146" height="84" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="GUIactions" colour="-16777216" x="42" y="55" fontname="Arial" fontstyle="0" fontsize="18" transparency="255"/>
+<text string="actionDone" colour="-16777216" x="39" y="23" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+<text string="actionInf" colour="-16777216" x="42" y="81" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="actionDone" type="String" x="65" y="7" portConnection="" strict="false" />
+		<port name="actionInf" type="String" x="64" y="91" portConnection="" strict="false" />
+	</ports>
+</class>
 </package>
