@@ -1,3 +1,4 @@
+import java.awt.event.*;
 import java.io.File;
 import java.util.concurrent.CountDownLatch;
 
@@ -6,14 +7,10 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import ee.ioc.cs.vsle.api.Subtask;
-import ee.ioc.cs.vsle.editor.CustomFileFilter;
-import ee.ioc.cs.vsle.editor.Editor;
-import ee.ioc.cs.vsle.editor.SchemeContainer;
+import ee.ioc.cs.vsle.editor.*;
 import ee.ioc.cs.vsle.editor.Editor.EditorBuilder;
-import ee.ioc.cs.vsle.editor.SpecGenFactory;
-import ee.ioc.cs.vsle.editor.SpecGenerator;
 import ee.ioc.cs.vsle.packageparse.PackageXmlProcessor;
-import ee.ioc.cs.vsle.vclass.VPackage;
+import ee.ioc.cs.vsle.vclass.*;
 
 public class Controller {
 	/*@ specification Controller {
@@ -85,10 +82,26 @@ public class Controller {
 
 			builder
 				.setOnExitAction(callback)
-				.setPackageFile(_package == null || _package.trim().length() == 0 ? null : _package)
-				.setSchemeFile(_scheme == null || _scheme.trim().length() == 0 ? null : _scheme)
-				.setSubtask(runProgramSt)
-				.setCallback(callback)
+				.setPackageFile(getStringOrNull(_package))
+				.setSchemeFile(getStringOrNull(_scheme))
+				.addEditorAction( Menu.RUN, new EditorAction() {
+                    public void onAction( String action, Editor editor, ActionEvent e ) {
+				        System.out.println("EditorAction: " + action);
+                        Canvas canv = editor.getCurrentCanvas();
+                        final ee.ioc.cs.vsle.vclass.Scheme scheme = canv.getScheme();
+                        final String schemeName = canv.getSchemeName();
+                        final String path = canv.getPackage().getPath();
+                        final String spec = 
+                                SpecGenFactory.getInstance()
+                                    .getCurrentSpecGen().generateSpec(scheme, schemeName);
+                        
+                        new Thread(new Runnable() {
+                            public void run() {
+                                runProgramSt.run(new Object[]{spec, path});
+                            }
+                        }).start();
+                    }
+                })
 				.create();
 
 			try {
@@ -113,6 +126,9 @@ public class Controller {
 		}
 	}
 	
+	private String getStringOrNull(String s) {
+	    return s == null || s.trim().length() == 0 ? null : s;
+	}
 }
 
 
