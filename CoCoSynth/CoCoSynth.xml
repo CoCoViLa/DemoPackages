@@ -114,14 +114,14 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 </class>
 <class type="class">
 <name>DataClass</name>
-<description>Security measure group (without decorations, uses default values)</description>
-<icon>atasimple.png</icon>
+<description>data class</description>
+<icon>default.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="150" height="20"/>
 <rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
 </graphics>
 <ports>
-  <port name="output" type="alias" x="150" y="10" portConnection="" strict="false"/>
+  <port name="output" type="any" x="150" y="10" portConnection="" strict="false"/>
 </ports>
 <fields>
 <field name="description" type="String" value="Measure group X" description="Description of the security measure group">
