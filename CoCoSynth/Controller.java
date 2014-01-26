@@ -84,9 +84,9 @@ public class Controller {
 				.setOnExitAction(callback)
 				.setPackageFile(getStringOrNull(_package))
 				.setSchemeFile(getStringOrNull(_scheme))
+				.setWindowTitle("CCV")
 				.addEditorAction( Menu.RUN, new EditorAction() {
                     public void onAction( String action, Editor editor, ActionEvent e ) {
-				        System.out.println("EditorAction: " + action);
                         Canvas canv = editor.getCurrentCanvas();
                         final ee.ioc.cs.vsle.vclass.Scheme scheme = canv.getScheme();
                         final String schemeName = canv.getSchemeName();
