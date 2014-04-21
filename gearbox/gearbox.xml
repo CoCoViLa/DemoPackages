@@ -209,4 +209,63 @@
 
 
 </class>
+<class type="class">
+	<name>Not</name>
+	<description>Not</description>
+	<icon>not.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="50"/>
+<oval x="40" y="20" width="10" height="10" colour="-16777216" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="in" type="int" x="0" y="25" portConnection="" strict="false" />
+		<port name="out" type="int" x="45" y="25" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="in" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+       <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
+</class>
+<class type="class">
+	<name>NumGenerator</name>
+	<description>Number Generator</description>
+	<icon>numgenerator.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="30"/>
+<rect x="0" y="0" width="30" height="30" colour="-1" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="0" x2="0" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="30" x2="30" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="0" x2="30" y2="0" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="30" y1="0" x2="30" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>Delayer</name>
+	<description>Delayer</description>
+	<icon>delayer.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="30"/>
+<rect x="0" y="0" width="30" height="30" colour="-1" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="0" y="0" width="30" height="30" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="in" type="int" x="0" y="15" portConnection="" strict="false" />
+		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
+	</ports>
+</class>
 </package>

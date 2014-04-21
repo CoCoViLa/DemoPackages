@@ -157,6 +157,7 @@
 		<field name="x2" type="double"/>
 		<field name="y2" type="double"/>
 		<field name="seriesName2" type="String"/>
+		<field name="drawing_ready" type="void"/>
 	</fields>
 </class>
 <class type="class">
