@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="CoCoSynth" superclass="Controller_0">
+<object name="Parser_0" type="Parser" static="false">
+<properties x="282" y="389" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
+<properties x="281" y="263" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Generator_0" type="Generator" static="false">
+<properties x="545" y="130" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="out" type="String"/>
+</fields>
+</object>
+<object name="AlgorithmVisualizer_0" type="AlgorithmVisualizer" static="false">
+<properties x="37" y="137" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Controller_0" type="Controller" static="false">
+<properties x="48" y="285" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="showAlgorithm" type="boolean" value="true"/>
+<field name="computeAll" type="boolean" value="true"/>
+<field name="runProgram" type="boolean" value="true"/>
+<field name="packageFile" type="String" value="/Users/enntougu/workspace/cocovila-packages/Circuit/Circuit.xml"/>
+<field name="schemeFile" type="String" value="/Users/enntougu/workspace/cocovila-packages/Circuit/Capind_ser.syn"/>
+</fields>
+</object>
+<object name="Runner_0" type="Runner" static="false">
+<properties x="559" y="319" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Optimizer1_0" type="Optimizer1" static="false">
+<properties x="341" y="23" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Generator_0" port1="out" obj2="Runner_0" port2="algorithmCode" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Parser_0" port1="problem" obj2="Runner_0" port2="problem" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Optimizer1_0" port1="in" obj2="DepthFirstPlanner_0" port2="algorithm" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Optimizer1_0" port1="out" obj2="Generator_0" port2="algorithm" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Optimizer1_0" port1="out" obj2="AlgorithmVisualizer_0" port2="in" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Parser_0" port1="problem" obj2="Generator_0" port2="problem" strict="false">
+<breakpoints>
+<point x="450" y="355"/>
+<point x="450" y="209"/>
+</breakpoints>
+</connection>
+</scheme>

@@ -1,7 +1,9 @@
 class GUIactions {
     /*@ specification Actions {
-       String actionDone, actionInf;
+       String actionDone;
+       String actionInf;
        actionInf -> actionDone {generalActionListener};
+       String generalActionListener(String in){};
     }@*/
  
 }

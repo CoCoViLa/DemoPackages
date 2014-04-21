@@ -51,7 +51,7 @@
 	</ports>
 	<fields>
 		<field name="spec" type="String"/>
-                <field name= "controlEdit" type= "boolean"/>
+		<field name="controlEdit" type="boolean"/>
 	</fields>
 </class>
 <class type="class">
@@ -86,8 +86,7 @@
 <rect x="42" y="31" width="0" height="0" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <rect x="42" y="31" width="0" height="0" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 <rect x="-167" y="108" width="0" height="0" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
-<text string="ALGORITHM
-VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
+<text string="ALGORITHM VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" fontsize="14" transparency="255"/>
 <text string="EvaluationAlgorithm" colour="-16777216" x="56" y="24" fontname="Arial" fontstyle="0" fontsize="12" transparency="255"/>
 </graphics>
 	<ports>
@@ -105,7 +104,7 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 <text string="Controller" colour="-16777216" x="45" y="57" fontname="Arial" fontstyle="0" fontsize="18" transparency="255"/>
 </graphics>
 	<fields>
-	  <field name="packageFile" type="String"/>
+		<field name="packageFile" type="String"/>
 		<field name="schemeFile" type="String"/>
 		<field name="computeAll" type="boolean"/>
 		<field name="runProgram" type="boolean"/>
@@ -113,25 +112,25 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 	</fields>
 </class>
 <class type="class">
-<name>DataClass</name>
-<description>data class</description>
-<icon>default.gif</icon>
+	<name>DataClass</name>
+	<description>Security measure group (without decorations, uses default values)</description>
+	<icon>atasimple.png</icon>
 <graphics>
 <bounds x="0" y="0" width="150" height="20"/>
-<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 </graphics>
-<ports>
-  <port name="output" type="any" x="150" y="10" portConnection="" strict="false"/>
-</ports>
-<fields>
-<field name="description" type="String" value="Measure group X" description="Description of the security measure group">
-  <known>
-    <graphics>
-      <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
-    </graphics>
-  </known>
-</field>
-</fields> 
+	<ports>
+		<port name="output" type="alias" x="150" y="10" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="description" type="String" value="Measure group X">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1" fontsize="12" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
 </class>
 <class type="class">
 	<name>Runner</name>
@@ -163,6 +162,37 @@ VISUALIZER" colour="-16777216" x="20" y="56" fontname="Arial" fontstyle="0" font
 	<ports>
 		<port name="actionDone" type="String" x="65" y="7" portConnection="" strict="false" />
 		<port name="actionInf" type="String" x="64" y="91" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>Optimizer1</name>
+	<description>optimizes synthesized algorithm</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="167" height="95"/>
+<oval x="5" y="0" width="163" height="94" colour="-6710785" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="Optimizer1" colour="-16777216" x="49" y="22" fontname="Lucida Grande" fontstyle="0" fontsize="13" transparency="255"/>
+<text string="EvaluationAlgorithm" colour="-16777216" x="14" y="47" fontname="Lucida Grande" fontstyle="0" fontsize="13" transparency="255"/>
+<text string="out" colour="-16777216" x="74" y="83" fontname="Lucida Grande" fontstyle="0" fontsize="13" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="in" type="ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm" x="6" y="42" portConnection="" strict="false" />
+		<port name="out" type="ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm" x="84" y="96" portConnection="" strict="false" />
+		<port name="problem" type="ee.ioc.cs.vsle.synthesize.Problem" x="163" y="42" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>Delayer</name>
+	<description>Delayer</description>
+	<icon>delayer.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="30"/>
+<rect x="0" y="0" width="30" height="30" colour="-1" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="0" y="0" width="30" height="30" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="in" type="int" x="0" y="15" portConnection="" strict="false" />
+		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
 	</ports>
 </class>
 </package>

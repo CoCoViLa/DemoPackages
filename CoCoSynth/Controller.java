@@ -22,6 +22,8 @@ public class Controller {
 		computeAll = true;
 		boolean runProgram;
 		runProgram = true;
+		boolean generate;
+		generate = false;
 		
 		String packageFile, schemeFile;
 		packageFile = "";
@@ -40,10 +42,12 @@ public class Controller {
 		
 		alias runnerReady = (*.runnerReady);
 		alias visualizerReady = (*.visualizerReady);
+		alias generatorReady = (*.genOut);
 		
 		[_spec, _packagePath -> runnerReady], 
 		[_spec, _packagePath -> visualizerReady], 
-		packageFile, schemeFile, showAlgorithm, computeAll, runProgram
+		[_spec, _packagePath -> generatorReady],
+		packageFile, schemeFile, showAlgorithm, computeAll, runProgram, generate
 			-> ready {initGUI};
 	}
 	@*/
@@ -61,7 +65,8 @@ public class Controller {
 		return result;
 	}
 
-	public void initGUI(final Subtask runProgramSt, final Subtask showAlgorithmSt, String _package, String _scheme, boolean showAlgorithm, boolean computeAll, boolean runProgram) {
+	public void initGUI(final Subtask runProgramSt, final Subtask showAlgorithmSt, final Subtask generateSt, 
+			String _package, String _scheme, boolean showAlgorithm, boolean computeAll, boolean runProgram, boolean generate) {
 		
 		if(runProgram) {
 			final CountDownLatch latch = new CountDownLatch(1);
@@ -112,6 +117,19 @@ public class Controller {
 				e.printStackTrace();
 			}
 		}
+		
+		if(generate) {
+			VPackage pkg;
+			File packFile = new File(_package);
+      if((pkg = PackageXmlProcessor.load(packFile)) != null ) {
+      	SchemeContainer container = new SchemeContainer( pkg, packFile.getParent() + File.separator );
+      	container.loadScheme( new File(_scheme) );
+      	String spec = SpecGenFactory.getInstance().getCurrentSpecGen().generateSpec(container.getScheme(), container.getSchemeName());
+      	
+      	generateSt.run(new Object[] {spec, _package});
+      }
+			
+		};
 		
 		if(showAlgorithm) {
 			VPackage pkg;

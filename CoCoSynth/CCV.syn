@@ -2,7 +2,7 @@
 <!DOCTYPE scheme SYSTEM "scheme.dtd">
 <scheme package="CoCoSynth" superclass="Controller_0">
 <object name="Parser_0" type="Parser" static="false">
-<properties x="375" y="360" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="374" y="186" xsize="1.0" ysize="1.0" strict="false"/>
 <fields/>
 </object>
 <object name="DepthFirstPlanner_0" type="DepthFirstPlanner" static="false">
@@ -30,18 +30,8 @@
 <fields/>
 </object>
 <object name="GUIactions_2" type="GUIactions" static="false">
-<properties x="577" y="313" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="609" y="219" xsize="1.0" ysize="1.0" strict="false"/>
 <fields/>
-</object>
-<object name="GUIactions_1" type="GUIactions" static="false">
-<properties x="770" y="313" xsize="1.0" ysize="1.0" strict="false"/>
-<fields/>
-</object>
-<object name="DataClass_1" type="DataClass" static="false">
-<properties x="685" y="489" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="description" type="String" value="actionInf"/>
-</fields>
 </object>
 <connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
 <breakpoints/>
@@ -60,11 +50,5 @@
 <point x="211" y="29"/>
 <point x="440" y="30"/>
 </breakpoints>
-</connection>
-<connection obj1="GUIactions_1" port1="actionInf" obj2="DataClass_1" port2="output" strict="false">
-<breakpoints/>
-</connection>
-<connection obj1="GUIactions_2" port1="actionInf" obj2="DataClass_1" port2="output" strict="false">
-<breakpoints/>
 </connection>
 </scheme>
