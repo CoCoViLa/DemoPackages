@@ -104,7 +104,7 @@
 <text string="Controller" colour="-16777216" x="45" y="57" fontname="Arial" fontstyle="0" fontsize="18" transparency="255"/>
 </graphics>
 	<fields>
-		<field name="packageFile" type="String"/>
+	  <field name="packageFile" type="String"/>
 		<field name="schemeFile" type="String"/>
 		<field name="computeAll" type="boolean"/>
 		<field name="runProgram" type="boolean"/>
@@ -112,25 +112,25 @@
 	</fields>
 </class>
 <class type="class">
-	<name>DataClass</name>
-	<description>Security measure group (without decorations, uses default values)</description>
-	<icon>atasimple.png</icon>
+<name>DataClass</name>
+<description>data class</description>
+<icon>default.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="150" height="20"/>
-<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
 </graphics>
-	<ports>
-		<port name="output" type="alias" x="150" y="10" portConnection="" strict="false" />
-	</ports>
-	<fields>
-       <field name="description" type="String" value="Measure group X">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1" fontsize="12" transparency="255"/>
-          </graphics>
-        </known>
-      </field>
-	</fields>
+<ports>
+  <port name="output" type="any" x="150" y="10" portConnection="" strict="false"/>
+</ports>
+<fields>
+<field name="description" type="String" value="Measure group X" description="Description of the security measure group">
+  <known>
+    <graphics>
+      <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+</fields> 
 </class>
 <class type="class">
 	<name>Runner</name>
