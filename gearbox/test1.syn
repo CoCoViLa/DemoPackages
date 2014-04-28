@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Gearbox">
+<object name="NumGenerator_3" type="NumGenerator" static="false">
+<properties x="33" y="38" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Not_3" type="Not" static="false">
+<properties x="113" y="74" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="Not_4" type="Not" static="false">
+<properties x="213" y="131" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="Delayer_0" type="Delayer" static="false">
+<properties x="325" y="142" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Delayer_1" type="Delayer" static="false">
+<properties x="429" y="141" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Delayer_2" type="Delayer" static="false">
+<properties x="328" y="211" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<connection obj1="NumGenerator_3" port1="out" obj2="Not_3" port2="in" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Not_3" port1="out" obj2="Not_4" port2="in" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Not_4" port1="out" obj2="Delayer_0" port2="in" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Delayer_0" port1="out" obj2="Delayer_1" port2="in" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Not_4" port1="out" obj2="Delayer_2" port2="in" strict="false">
+<breakpoints/>
+</connection>
+</scheme>
