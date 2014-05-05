@@ -104,7 +104,7 @@
 <text string="Controller" colour="-16777216" x="45" y="57" fontname="Arial" fontstyle="0" fontsize="18" transparency="255"/>
 </graphics>
 	<fields>
-	  <field name="packageFile" type="String"/>
+		<field name="packageFile" type="String"/>
 		<field name="schemeFile" type="String"/>
 		<field name="computeAll" type="boolean"/>
 		<field name="runProgram" type="boolean"/>
@@ -112,25 +112,25 @@
 	</fields>
 </class>
 <class type="class">
-<name>DataClass</name>
-<description>data class</description>
-<icon>default.gif</icon>
+	<name>DataClass</name>
+	<description>data class</description>
+	<icon>default.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="150" height="20"/>
-<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<rect x="0" y="0" width="150" height="20" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 </graphics>
-<ports>
-  <port name="output" type="any" x="150" y="10" portConnection="" strict="false"/>
-</ports>
-<fields>
-<field name="description" type="String" value="Measure group X" description="Description of the security measure group">
-  <known>
-    <graphics>
-      <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
-    </graphics>
-  </known>
-</field>
-</fields> 
+	<ports>
+		<port name="output" type="any" x="150" y="10" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="description" type="String" value="Measure group X">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1" fontsize="12" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
 </class>
 <class type="class">
 	<name>Runner</name>
@@ -194,5 +194,22 @@
 		<port name="in" type="int" x="0" y="15" portConnection="" strict="false" />
 		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
 	</ports>
+</class>
+<class type="class">
+	<name>CodeVisualiser</name>
+	<description>Shows synthesized code</description>
+	<icon>codeVisualiser.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="147" height="99"/>
+<oval x="3" y="3" width="138" height="91" colour="-10053121" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="Code visualiser" colour="-16777216" x="24" y="51" fontname="Lucida Grande" fontstyle="0" fontsize="13" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="code" type="String" x="69" y="4" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="visualizerDone" type="boolean"/>
+		<field name="code" type="String"/>
+	</fields>
 </class>
 </package>

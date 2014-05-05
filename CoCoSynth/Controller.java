@@ -42,9 +42,10 @@ public class Controller {
 		
 		alias runnerReady = (*.runnerReady);
 		alias visualizerReady = (*.visualizerReady);
+		alias visualizerDone = (*.visualizerDone);
 		alias generatorReady = (*.genOut);
 		
-		[_spec, _packagePath -> runnerReady], 
+		[_spec, _packagePath -> runnerReady,visualizerDone], 
 		[_spec, _packagePath -> visualizerReady], 
 		[_spec, _packagePath -> generatorReady],
 		packageFile, schemeFile, showAlgorithm, computeAll, runProgram, generate

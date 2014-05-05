@@ -3,13 +3,11 @@ import ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm;
 import ee.ioc.cs.vsle.synthesize.PlanningResult;
 import ee.ioc.cs.vsle.synthesize.Rel;
 import ee.ioc.cs.vsle.synthesize.Problem;
-import ee.ioc.cs.vsle.synthesize.RelType;
-import ee.ioc.cs.vsle.synthesize.SubtaskRel;
 import ee.ioc.cs.vsle.synthesize.Var;
 
 import java.util.*;
 
-public class Optimizer1 {
+class Optimizer1 {
 	/**
 	 * Deletes unnecessary assignments caused by equalities.
 	 * At present should work correctly for a linear branch.
@@ -46,21 +44,7 @@ public class Optimizer1 {
     		} 
     		else {
     			rel.addSubstitutions(substitutions);
-    			
-				if (rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_METHOD_WITH_SUBTASK) {
-
-					PlanningResult resultWithSubtasks = new PlanningResult(rel, true);
-					
-					for (SubtaskRel subtask : rel.getSubtasks()) {
-						EvaluationAlgorithm subtaskAlgorithm = optimize(problem, alg.getSubtaskAlgorithm( subtask ));
-						resultWithSubtasks.addSubtaskAlgorithm(subtask, subtaskAlgorithm);
-					}
-					
-					result.add(resultWithSubtasks);
-				}
-				else {
-					result.addRel(rel);
-				}
+    			result.addRel(rel);
     		}
     	}
 	   return result; 
