@@ -18,41 +18,58 @@ public class Optimizer1 {
        ee.ioc.cs.vsle.synthesize.Problem problem; 
        ee.ioc.cs.vsle.synthesize.EvaluationAlgorithm in, out;
        problem, in -> out{optimize};
-    }@*/	
-    EvaluationAlgorithm  optimize(ee.ioc.cs.vsle.synthesize.Problem problem, EvaluationAlgorithm algorithm){
-    	EvaluationAlgorithm result = new EvaluationAlgorithm();
+    }@*/
+	
+	EvaluationAlgorithm  optimize(ee.ioc.cs.vsle.synthesize.Problem problem, EvaluationAlgorithm algorithm){
+//Substitutions is a collection of pairs that redefine the bound variables of a rel after optimization.
     	HashMap<String, String> substitutions = new HashMap<String, String>();
-    	System.out.println("***I am optimizer1***");
-    	java.util.Set<Var> goals= problem.getCurrentContext().getAllGoals();
-    	
+		return optimizeInternal(problem.getAssumptions(), problem.getCurrentContext().getAllGoals(), substitutions, algorithm);
+	}
+	
+    private EvaluationAlgorithm  optimizeInternal(java.util.Collection<Var> goalInputs, java.util.Collection<Var> goalOutputs, 
+    	HashMap<String, String> substitutions, EvaluationAlgorithm algorithm){
+    	EvaluationAlgorithm result = new EvaluationAlgorithm();   	
+        //goalOutputs.addAll(goalInputs);    //??
+ System.out.println("***I am optimizer1*** with goals: " + goalInputs + " -> " + goalOutputs);
     	for ( PlanningResult alg : algorithm ) {
     		Rel rel = alg.getRel();
-    		Var output = rel.getFirstOutput();
-    		boolean isGoal = goals.contains(output);
-    		
-    		if (isEquality(rel)) {
+ System.out.println(rel.getDeclaration());
+    		Var firstOutput = rel.getFirstOutput();
+ System.out.println(firstOutput.getFullName());
+    		boolean isGoal = goalOutputs.contains(firstOutput);
+ //For an equality, add a new element into HashMap substitutions.   		
+    		if (rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_EQUATION & rel.getInputs().isEmpty()){
+				result.addRel(rel);
+    		}
+    		else if(rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_EQUATION & isEquality(rel)) {
+    			
     			StringTokenizer varsPair=new StringTokenizer(rel.getDeclaration(),"=,;");
     			varsPair.nextToken();//skip first
-    			String first = output.getFullName();
+    			String first = firstOutput.getFullName();
     			String second = rel.getInputs().isEmpty() ? varsPair.nextToken() : rel.getFirstInput().getFullName();
-//    			System.out.println("***first= "+first+"    second= "+second);
+System.out.println("***first= "+first+"    second= "+second);
+				//first := second;
     			expandSubst(substitutions,first,second);
-    			
+//If the equality computes a goal, then add it as a new step into optimized algorithm.    			
     			if(isGoal) {
     				result.addRel(rel);
-    				System.out.println("*** goal = "+output.getFullName()+ " ***  ");
+System.out.println("*** goal = "+firstOutput.getFullName()+ " ***  ");
     			}
 //    			System.out.println((isGoal ? "***goal   " : "***not a goal***  ") +rel.getDeclaration());
     		} 
     		else {
     			rel.addSubstitutions(substitutions);
-    			
+//If method with subtasks, call optimizer recursively for every subtask.   			
 				if (rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_METHOD_WITH_SUBTASK) {
+System.out.println("************** SUBTASK  ***  ");
 
 					PlanningResult resultWithSubtasks = new PlanningResult(rel, true);
 					
 					for (SubtaskRel subtask : rel.getSubtasks()) {
-						EvaluationAlgorithm subtaskAlgorithm = optimize(problem, alg.getSubtaskAlgorithm( subtask ));
+						HashMap<String, String> substitutionsCopy = new HashMap<String, String>(substitutions);
+System.out.println("All substitutionsCopy: " + substitutionsCopy);					
+						EvaluationAlgorithm subtaskAlgorithm = optimizeInternal(subtask.getInputs(), subtask.getOutputs(), substitutionsCopy, alg.getSubtaskAlgorithm( subtask ));
+			
 						resultWithSubtasks.addSubtaskAlgorithm(subtask, subtaskAlgorithm);
 					}
 					
@@ -76,25 +93,16 @@ public class Optimizer1 {
     	return true;   	
     }
     
-//    boolean isGoal(String var1){
-//    	return false;
-//    }
-    
-    HashMap<String,String> expandSubst(HashMap<String, String> substitutions,String var1,String var2){
-    	String s; 
-    	s = substitutions.get(var1);
-    	if(s != null){
-    		substitutions.put(var2,s);
-    		System.out.println("added"+var2+""+s);
-    	}; 
-    	s = substitutions.get(var2);    	
-    	if(s != null){
-    		substitutions.put(var1,s);
-    	}; 
-    	return substitutions;
+    void expandSubst(HashMap<String, String> substitutions, String output, String input){
+    	
+    	String existingSubstitution = substitutions.get(input);
+    	if(existingSubstitution == null) {
+    		substitutions.put(output, input);
+    	}
+    	else {
+    		substitutions.put(output, existingSubstitution);
+    	}
     }
-    
-
  
 }
     

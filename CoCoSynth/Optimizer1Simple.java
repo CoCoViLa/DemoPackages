@@ -7,7 +7,7 @@ import ee.ioc.cs.vsle.synthesize.Var;
 
 import java.util.*;
 
-class Optimizer1 {
+class Optimizer1Simple {
 	/**
 	 * Deletes unnecessary assignments caused by equalities.
 	 * At present should work correctly for a linear branch.

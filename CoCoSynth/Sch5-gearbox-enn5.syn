@@ -16,17 +16,17 @@
 </fields>
 </object>
 <object name="AlgorithmVisualizer_0" type="AlgorithmVisualizer" static="false">
-<properties x="37" y="137" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="50" y="232" xsize="1.0" ysize="1.0" strict="false"/>
 <fields/>
 </object>
 <object name="Controller_0" type="Controller" static="false">
-<properties x="49" y="285" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="47" y="373" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="showAlgorithm" type="boolean" value="true"/>
 <field name="computeAll" type="boolean" value="true"/>
 <field name="runProgram" type="boolean" value="true"/>
-<field name="packageFile" type="String" value="/Users/enntougu/workspace/cocovila-packages/Circuit/Circuit.xml"/>
-<field name="schemeFile" type="String" value="/Users/enntougu/workspace/cocovila-packages/Circuit/Capind_ser_gen.syn"/>
+<field name="packageFile" type="String" value="/Users/enntougu/workspace/cocovila-packages/gearbox/gearbox.xml"/>
+<field name="schemeFile" type="String" value="/Users/enntougu/workspace/cocovila-packages/gearbox/test2.syn"/>
 </fields>
 </object>
 <object name="Optimizer1_1" type="Optimizer1" static="false">
@@ -34,7 +34,7 @@
 <fields/>
 </object>
 <object name="CodeVisualiser_0" type="CodeVisualiser" static="false">
-<properties x="831" y="331" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="754" y="316" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="visualizerDone" type="boolean" nature="goal"/>
 <field name="code" type="String"/>
@@ -42,6 +42,10 @@
 </object>
 <object name="Runner_0" type="Runner" static="false">
 <properties x="557" y="347" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="AlgorithmVisualizer_2" type="AlgorithmVisualizer" static="false">
+<properties x="55" y="64" xsize="1.0" ysize="1.0" strict="false"/>
 <fields/>
 </object>
 <connection obj1="Parser_0" port1="problem" obj2="DepthFirstPlanner_0" port2="problem" strict="false">
@@ -58,9 +62,6 @@
 <point x="290" y="205"/>
 </breakpoints>
 </connection>
-<connection obj1="AlgorithmVisualizer_0" port1="in" obj2="Optimizer1_1" port2="out" strict="false">
-<breakpoints/>
-</connection>
 <connection obj1="Optimizer1_1" port1="out" obj2="Generator_0" port2="algorithm" strict="false">
 <breakpoints/>
 </connection>
@@ -76,6 +77,12 @@
 <breakpoints/>
 </connection>
 <connection obj1="Parser_0" port1="problem" obj2="Runner_0" port2="problem" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="AlgorithmVisualizer_0" port1="in" obj2="Optimizer1_1" port2="out" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="AlgorithmVisualizer_2" port1="in" obj2="Optimizer1_1" port2="in" strict="false">
 <breakpoints/>
 </connection>
 </scheme>
