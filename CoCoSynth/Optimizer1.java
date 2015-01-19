@@ -63,7 +63,11 @@ System.out.println("************** SUBTASK  ***  ");
 					PlanningResult resultWithSubtasks = new PlanningResult(rel, true);
 					
 					for (SubtaskRel subtask : rel.getSubtasks()) {
-						HashMap<String, String> substitutionsCopy = new HashMap<String, String>(substitutions);					
+						boolean independent = subtask.isIndependent();//TODO implement
+						HashMap<String, String> substitutionsCopy = new HashMap<String, String>();
+						if(!independent) {
+							substitutionsCopy.putAll(substitutions);
+						}
 						EvaluationAlgorithm subtaskAlgorithm = optimizeInternal(subtask.getInputs(), subtask.getOutputs(), substitutionsCopy, alg.getSubtaskAlgorithm( subtask ));
 			
 						resultWithSubtasks.addSubtaskAlgorithm(subtask, subtaskAlgorithm);
