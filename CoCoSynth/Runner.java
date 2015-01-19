@@ -23,7 +23,10 @@ public class Runner {
 					problem.getMainClassName(), packagePath, storage = new MemoryStorage());
 			
 			Object getObj = ProgramRunner.compile(storage, RunnerClassLoader.create(storage, packagePath), problem.getMainClassName());
+                               long start = System.currentTimeMillis();
 			ProgramRunner.run(getObj);
+                               long exeTime = System.currentTimeMillis() - start;
+System.out.println("exeTime = " + exeTime);
 		} catch (Throwable e) {
 			throw new RuntimeException(e);
 		}

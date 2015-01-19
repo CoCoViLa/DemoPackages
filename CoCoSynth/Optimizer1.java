@@ -33,41 +33,37 @@ public class Optimizer1 {
  System.out.println("***I am optimizer1*** with goals: " + goalInputs + " -> " + goalOutputs);
     	for ( PlanningResult alg : algorithm ) {
     		Rel rel = alg.getRel();
- System.out.println(rel.getDeclaration());
-    		Var firstOutput = rel.getFirstOutput();
- System.out.println(firstOutput.getFullName());
-    		boolean isGoal = goalOutputs.contains(firstOutput);
- //For an equality, add a new element into HashMap substitutions.   		
+    		System.out.println("rel: " + rel + ", " + rel.getDeclaration());
+ //For an equality with constant, add relation.   		
     		if (rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_EQUATION & rel.getInputs().isEmpty()){
 				result.addRel(rel);
     		}
     		else if(rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_EQUATION & isEquality(rel)) {
-    			
+    			Var firstOutput = rel.getFirstOutput();
+         		boolean isGoal = goalOutputs.contains(firstOutput);
+ //For an equality, expand substitutions.   			
     			StringTokenizer varsPair=new StringTokenizer(rel.getDeclaration(),"=,;");
     			varsPair.nextToken();//skip first
     			String first = firstOutput.getFullName();
     			String second = rel.getInputs().isEmpty() ? varsPair.nextToken() : rel.getFirstInput().getFullName();
-System.out.println("***first= "+first+"    second= "+second);
 				//first := second;
     			expandSubst(substitutions,first,second);
-//If the equality computes a goal, then add it as a new step into optimized algorithm.    			
+//If the equality computes a goal, then add it as a new step into the optimized algorithm.    			
     			if(isGoal) {
     				result.addRel(rel);
-System.out.println("*** goal = "+firstOutput.getFullName()+ " ***  ");
     			}
-//    			System.out.println((isGoal ? "***goal   " : "***not a goal***  ") +rel.getDeclaration());
     		} 
     		else {
     			rel.addSubstitutions(substitutions);
-//If method with subtasks, call optimizer recursively for every subtask.   			
-				if (rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_METHOD_WITH_SUBTASK) {
+    		}
+//If method with subtasks, call optimizer recursively for every subtask and add rel with subtasks, else add rel.   			
+    		if (rel.getType() == ee.ioc.cs.vsle.synthesize.RelType.TYPE_METHOD_WITH_SUBTASK) {
 System.out.println("************** SUBTASK  ***  ");
 
 					PlanningResult resultWithSubtasks = new PlanningResult(rel, true);
 					
 					for (SubtaskRel subtask : rel.getSubtasks()) {
-						HashMap<String, String> substitutionsCopy = new HashMap<String, String>(substitutions);
-System.out.println("All substitutionsCopy: " + substitutionsCopy);					
+						HashMap<String, String> substitutionsCopy = new HashMap<String, String>(substitutions);					
 						EvaluationAlgorithm subtaskAlgorithm = optimizeInternal(subtask.getInputs(), subtask.getOutputs(), substitutionsCopy, alg.getSubtaskAlgorithm( subtask ));
 			
 						resultWithSubtasks.addSubtaskAlgorithm(subtask, subtaskAlgorithm);
@@ -75,15 +71,18 @@ System.out.println("All substitutionsCopy: " + substitutionsCopy);
 					
 					result.add(resultWithSubtasks);
 				}
-				else {
-					result.addRel(rel);
-				}
-    		}
+
+
+	            else {
+			        result.addRel(rel);	
+	            }
+
     	}
 	   return result; 
     	
     }
     boolean isEquality(Rel rel){
+    	if(rel.getOutputs().isEmpty()) { return false; }
     	String s=rel.getDeclaration();
     	String[] ops = {"(","+","-","*","/","^"};
     	for(int i=0; i<ops.length;i++){
