@@ -17,11 +17,27 @@
 <field name="U" type="long"/>
 </fields>
 </object>
+<object name="c5" type="Complex2" static="false">
+<properties x="250" y="430" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long" nature="input"/>
+<field name="U" type="long"/>
+</fields>
+</object>
 <object name="c3" type="Complex2" static="false">
 <properties x="250" y="254" xsize="1.0" ysize="1.0" strict="true"/>
 <fields>
 <field name="B" type="long"/>
-<field name="Z" type="long" nature="input"/>
+<field name="Z" type="long"/>
+<field name="U" type="long"/>
+</fields>
+</object>
+<object name="c4" type="Complex2" static="false">
+<properties x="250" y="342" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="B" type="long"/>
+<field name="Z" type="long"/>
 <field name="U" type="long"/>
 </fields>
 </object>
@@ -29,6 +45,12 @@
 <breakpoints/>
 </connection>
 <connection obj1="c3" port1="bu" obj2="c2" port2="zy">
+<breakpoints/>
+</connection>
+<connection obj1="c4" port1="bu" obj2="c3" port2="zy">
+<breakpoints/>
+</connection>
+<connection obj1="c5" port1="bu" obj2="c4" port2="zy">
 <breakpoints/>
 </connection>
 </scheme>
