@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<tables xmlns="cocovila"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="cocovila file:./table.xsd"
+xmlns:cocovila="cocovila">
+  <table id="multiplication" description="multiplication table from 1 to 2">
+    <input>
+      <var id="x" type="int"/>
+      <var id="y" type="int"/>
+    </input>
+    <output>
+      <var id="z" type="int"/>
+    </output>
+    <hrules>
+      <rule var="x" cond="eq" value="1">
+	    <entry id="0"/>
+      </rule>
+      <rule var="x" cond="eq" value="2">
+	    <entry id="1"/>
+      </rule>
+      <rule var="x" cond="eq" value="3">
+	    <entry id="2"/>
+      </rule>
+      <rule var="x" cond="eq" value="4">
+	    <entry id="3"/>
+      </rule>
+      <rule var="x" cond="eq" value="5">
+	    <entry id="4"/>
+      </rule>
+      <rule var="x" cond="eq" value="6">
+	    <entry id="5"/>
+      </rule>
+      <rule var="x" cond="eq" value="7">
+	    <entry id="6"/>
+      </rule>
+      <rule var="x" cond="eq" value="8">
+	    <entry id="7"/>
+      </rule>
+      <rule var="x" cond="eq" value="9">
+	    <entry id="8"/>
+      </rule>
+    </hrules>
+    <vrules>
+      <rule var="y" cond="eq" value="1">
+	    <entry id="0"/>
+      </rule>
+      <rule var="y" cond="eq" value="2">
+	    <entry id="1"/>
+      </rule>
+      <rule var="y" cond="eq" value="3">
+	    <entry id="2"/>
+      </rule>
+      <rule var="y" cond="eq" value="4">
+	    <entry id="3"/>
+      </rule>
+      <rule var="y" cond="eq" value="5">
+	    <entry id="4"/>
+      </rule>
+      <rule var="y" cond="eq" value="6">
+	    <entry id="5"/>
+      </rule>
+      <rule var="y" cond="eq" value="7">
+	    <entry id="6"/>
+      </rule>
+      <rule var="y" cond="eq" value="8">
+	    <entry id="7"/>
+      </rule>
+      <rule var="y" cond="eq" value="9">
+	    <entry id="8"/>
+      </rule>
+    </vrules>
+    <data>
+      <row id="0">
+	    <cell id="0">1</cell>
+	    <cell id="1">2</cell>
+	    <cell id="2">3</cell>
+	    <cell id="3">4</cell>
+	    <cell id="4">5</cell>
+	    <cell id="5">6</cell>
+	    <cell id="6">7</cell>
+	    <cell id="7">8</cell>
+	    <cell id="8">9</cell>
+      </row>
+      <row id="1">
+	    <cell id="0">2</cell>
+	    <cell id="1">4</cell>
+	    <cell id="2">6</cell>
+	    <cell id="3">8</cell>
+	    <cell id="4">10</cell>
+	    <cell id="5">12</cell>
+	    <cell id="6">14</cell>
+	    <cell id="7">16</cell>
+	    <cell id="8">18</cell>
+      </row>
+      <row id="2">
+	    <cell id="0">3</cell>
+	    <cell id="1">6</cell>
+	    <cell id="2">9</cell>
+	    <cell id="3">12</cell>
+	    <cell id="4">15</cell>
+	    <cell id="5">18</cell>
+	    <cell id="6">21</cell>
+	    <cell id="7">24</cell>
+	    <cell id="8">27</cell>
+      </row>
+      <row id="3">
+	    <cell id="0">4</cell>
+	    <cell id="1">8</cell>
+	    <cell id="2">12</cell>
+	    <cell id="3">16</cell>
+	    <cell id="4">20</cell>
+	    <cell id="5">24</cell>
+	    <cell id="6">28</cell>
+	    <cell id="7">32</cell>
+	    <cell id="8">36</cell>
+      </row>
+      <row id="4">
+	    <cell id="0">5</cell>
+	    <cell id="1">10</cell>
+	    <cell id="2">15</cell>
+	    <cell id="3">20</cell>
+	    <cell id="4">25</cell>
+	    <cell id="5">30</cell>
+	    <cell id="6">35</cell>
+	    <cell id="7">40</cell>
+	    <cell id="8">45</cell>
+      </row>
+      <row id="5">
+	    <cell id="0">6</cell>
+	    <cell id="1">12</cell>
+	    <cell id="2">18</cell>
+	    <cell id="3">24</cell>
+	    <cell id="4">30</cell>
+	    <cell id="5">36</cell>
+	    <cell id="6">42</cell>
+	    <cell id="7">48</cell>
+	    <cell id="8">54</cell>
+      </row>
+      <row id="6">
+	    <cell id="0">7</cell>
+	    <cell id="1">14</cell>
+	    <cell id="2">21</cell>
+	    <cell id="3">28</cell>
+	    <cell id="4">35</cell>
+	    <cell id="5">42</cell>
+	    <cell id="6">49</cell>
+	    <cell id="7">56</cell>
+	    <cell id="8">63</cell>
+      </row>
+      <row id="7">
+	    <cell id="0">8</cell>
+	    <cell id="1">16</cell>
+	    <cell id="2">24</cell>
+	    <cell id="3">32</cell>
+	    <cell id="4">40</cell>
+	    <cell id="5">48</cell>
+	    <cell id="6">56</cell>
+	    <cell id="7">64</cell>
+	    <cell id="8">72</cell>
+      </row>
+      <row id="8">
+	    <cell id="0">9</cell>
+	    <cell id="1">18</cell>
+	    <cell id="2">27</cell>
+	    <cell id="3">36</cell>
+	    <cell id="4">45</cell>
+	    <cell id="5">54</cell>
+	    <cell id="6">63</cell>
+	    <cell id="7">72</cell>
+	    <cell id="8">81</cell>
+      </row>
+    </data>
+  </table>
+</tables>
+

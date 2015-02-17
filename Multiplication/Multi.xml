@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>Multiplication</name>
+<description>-</description>
+<class type="class">
+	<name>Multi</name>
+	<description>-</description>
+	<icon>default.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="128" height="77"/>
+<rect x="0" y="0" width="128" height="77" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<text string="Multiplication table" colour="-16777216" x="10" y="10" fontname="Arial" fontstyle="0" fontsize="10" transparency="255"/>
+</graphics>
+<fields>
+<field name="x" type="int">
+        <known>
+          <graphics>
+            <text string="x =" colour="-16777216" x="10" y="25" fontname="Arial" fontstyle="1"  fontsize="12" />
+            <text string="*self" colour="-16777216" x="30" y="25" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+<field name="y" type="int">
+        <known>
+          <graphics>
+            <text string="y =" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+            <text string="*self" colour="-16777216" x="30" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+<field name="value" type="int">
+        <known>
+          <graphics>
+            <text string="v =" colour="-16777216" x="10" y="55" fontname="Arial" fontstyle="1"  fontsize="12" />
+            <text string="*self" colour="-16777216" x="30" y="55" fontname="Arial" fontstyle="1"  fontsize="12" />
+          </graphics>
+        </known>
+</field>
+</fields> 
+</class>
+</package>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Multiplication">
+<object name="Multi_0" type="Multi" static="false">
+<properties x="210" y="129" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="x" type="int" nature="input"/>
+<field name="y" type="int" nature="input"/>
+<field name="value" type="int" nature="goal"/>
+</fields>
+</object>
+</scheme>
