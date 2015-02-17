@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables xmlns="cocovila">
+    <table id="Taxonomy1">
+        <input>
+            <var id="cybSpace" type="String">
+                <question>Is it in or using cyberspace?</question>
+            </var>
+            <var id="act" type="String">
+                <question>Is it an act or action?</question>
+            </var>
+            <var id="death" type="String">
+                <question>Is it expected to cause death or injury?</question>
+            </var>
+            <var id="damage" type="String">
+                <question>Is it expected to cause material damage?</question>
+            </var>
+            <var id="criminal" type="String">
+                <question>Is it  criminal act?</question>
+            </var>
+            <var id="protectedInfo" type="String">
+                <question>Is it for getting protected info?</question>
+            </var>
+            <var id="privatInfo" type="String">
+                <question>Is it getting info only for private use?</question>
+            </var>
+            <var id="deviations" type="String">
+                <question>Is it expected to cause unexpected deviations in cyber space? </question>
+            </var>
+            <var id="CII" type="String">
+                <question>Is it expected to cause damage or destruction of critical information infrastructure?</question>
+            </var>
+            <var id="selector" type="String">
+                <question>Do you wish to continue?</question>
+            </var>
+
+        </input>
+        <output>
+            <var id="result" type="String"/>
+        </output>
+        <hrules>
+            <rule cond="!eq" value="yes" var="cybSpace">
+                <entry id="0"/>
+            </rule>
+            <rule cond="!eq" value="yes" var="act">
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="yes" var="death">
+                <entry id="2"/>
+            </rule>
+            <rule cond="eq" value="yes" var="damage">
+                <entry id="3"/>
+            </rule>
+            <rule cond="eq" value="yes" var="CII">
+                <entry id="8"/>
+            </rule>
+            <rule cond="eq" value="yes" var="criminal">
+                <entry id="4"/>
+            </rule>
+            <rule cond="eq" value="yes" var="protectedInfo">
+                <entry id="5"/>
+            </rule>
+            <rule cond="!eq" value="yes" var="privatInfo">
+                <entry id="5"/>
+            </rule>
+            <rule cond="eq" value="yes" var="deviations">
+                <entry id="6"/>
+            </rule>
+        </hrules>
+        <vrules/>
+        <data>
+            <row id="0">
+                <cell id="0">
+                    <value var="result">This is not a cyber event</value>
+                </cell>
+            </row>
+            <row id="1">
+                <cell id="0">
+                    <value var="result">This is not a cyber event</value>
+                </cell>
+            </row>
+            <row id="4">
+                <cell id="0">
+                    <value var="result">This is a cyber crime</value>
+                </cell>
+            </row>
+            <row id="5">
+                <cell id="0">
+                    <value var="result">This is a cyber espionage</value>
+                </cell>
+            </row>
+            <row id="2">
+                <cell id="0">
+                    <value var="result">This is a cyber attack</value>
+                </cell>
+            </row>
+            <row id="3">
+                <cell id="0">
+                    <value var="result">This is a cyber attack</value>
+                </cell>
+            </row>
+            <row id="8">
+                <cell id="0">
+                    <value var="result">This is a cyber attack</value>
+                </cell>
+            </row>
+            <row id="6">
+                <cell id="0">
+                    <value var="result">This is a cyber incident</value>
+                </cell>
+            </row>
+            <row id="7">
+                <cell id="0">
+                    <value var="result">The result is not defined </value>
+                </cell>
+            </row>
+        </data>
+    </table>
+</tables>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables xmlns="cocovila">
+    <table id="Shipping">
+        <input>
+            <var id="PurchaseAmount" type="String"/>
+            <var id="Items" type="String"/>
+            <var id="DeliveryDay" type="String"/>
+        </input>
+        <output>
+            <var id="Charge" type="String"/>
+        </output>
+        <hrules>
+            <rule cond="!less" value="$250.00" var="PurchaseAmount">
+                <entry id="0"/>
+                <entry id="1"/>
+                <entry id="2"/>
+                <entry id="3"/>
+                <entry id="4"/>
+                <entry id="5"/>
+            </rule>
+            <rule cond="less" value="$250.00" var="PurchaseAmount">
+                <entry id="6"/>
+                <entry id="7"/>
+            </rule>
+            <rule cond="leq" value="3" var="Items">
+                <entry id="0"/>
+                <entry id="1"/>
+                <entry id="2"/>
+                <entry id="6"/>
+            </rule>
+            <rule cond="!less" value="4" var="Items">
+                <entry id="3"/>
+                <entry id="4"/>
+                <entry id="5"/>
+                <entry id="1"/>
+                <entry id="7"/>
+            </rule>
+        </hrules>
+        <vrules>
+            <rule cond="eq" value="Next" var="DeliveryDay">
+                <entry id="0"/>
+            </rule>
+            <rule cond="eq" value="2nd day" var="DeliveryDay">
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="Std." var="DeliveryDay">
+                <entry id="2"/>
+            </rule>
+        </vrules>
+        <data>
+            <row id="0">
+                <cell id="0">
+                    <value var="Charge">25</value>
+                </cell>
+                <cell id="1">
+                    <value var="Charge">10</value>
+                </cell>
+                <cell id="2">
+                    <value var="Charge">N*$1.50</value>
+                </cell>
+            </row>
+            <row id="3">
+                <cell id="0">
+                    <value var="Charge">N*$6.00</value>
+                </cell>
+                <cell id="1">
+                    <value var="Charge">N*$2.50</value>
+                </cell>
+                <cell id="2">
+                    <value var="Charge">FREE</value>
+                </cell>
+            </row>
+            <row id="6">
+                <cell id="0">
+                    <value var="Charge">35</value>
+                </cell>
+                <cell id="1">
+                    <value var="Charge">15</value>
+                </cell>
+                <cell id="2">
+                    <value var="Charge">10</value>
+                </cell>
+            </row>
+            <row id="7">
+                <cell id="0">
+                    <value var="Charge">N*$7.50</value>
+                </cell>
+                <cell id="1">
+                    <value var="Charge">N*$3.50</value>
+                </cell>
+                <cell id="2">
+                    <value var="Charge">N*$2.50</value>
+                </cell>
+            </row>
+        </data>
+    </table>
+</tables>

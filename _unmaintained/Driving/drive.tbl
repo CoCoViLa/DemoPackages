@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables xmlns="cocovila">
+    <table id="drive">
+        <input>
+            <var id="road" type="String"/>
+            <var id="visibility" type="String"/>
+            <var id="tech_condition" type="String"/>
+            <var id="experience" type="String"/>
+        </input>
+        <output>
+            <var id="result" type="String"/>
+        </output>
+        <hrules>
+            <rule cond="eq" value="dry" var="road">
+                <entry id="0"/>
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="wet" var="road">
+                <entry id="2"/>
+                <entry id="3"/>
+            </rule>
+            <rule cond="eq" value="icy" var="road">
+                <entry id="4"/>
+                <entry id="5"/>
+            </rule>
+            <rule cond="!leq" value="100" var="visibility">
+                <entry id="0"/>
+                <entry id="2"/>
+            </rule>
+            <rule cond="leq" value="100" var="visibility">
+                <entry id="1"/>
+                <entry id="3"/>
+            </rule>
+        </hrules>
+        <vrules>
+            <rule cond="eq" value="good" var="tech_condition">
+                <entry id="0"/>
+            </rule>
+            <rule cond="eq" value="bad_tires" var="tech_condition">
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="beginner" var="experience">
+                <entry id="1"/>
+            </rule>
+        </vrules>
+        <data>
+            <row id="0">
+                <cell id="0">
+                    <value var="result">90</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="1">
+                <cell id="0">
+                    <value var="result">80</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="2">
+                <cell id="0">
+                    <value var="result">90</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="3">
+                <cell id="0">
+                    <value var="result">70</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="4">
+                <cell id="0"/>
+                <cell id="1">
+                    <value var="result">stay at home</value>
+                </cell>
+            </row>
+            <row id="5">
+                <cell id="0">
+                    <value var="result">30</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+        </data>
+    </table>
+    <table id="drive_inc">
+        <input>
+            <var id="road" type="String"/>
+            <var id="visibility" type="String"/>
+            <var id="tech_condition" type="String"/>
+            <var id="experience" type="String"/>
+        </input>
+        <output>
+            <var id="result" type="String"/>
+        </output>
+        <hrules>
+            <rule cond="eq" value="dry" var="road">
+                <entry id="0"/>
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="wet" var="road">
+                <entry id="2"/>
+                <entry id="3"/>
+            </rule>
+            <rule cond="eq" value="icy" var="road">
+                <entry id="4"/>
+                <entry id="5"/>
+            </rule>
+            <rule cond="!leq" value="100" var="visibility">
+                <entry id="0"/>
+                <entry id="2"/>
+            </rule>
+            <rule cond="leq" value="100" var="visibility">
+                <entry id="1"/>
+                <entry id="3"/>
+            </rule>
+        </hrules>
+        <vrules>
+            <rule cond="eq" value="good" var="tech_condition">
+                <entry id="0"/>
+            </rule>
+            <rule cond="eq" value="bad_tires" var="tech_condition">
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="beginner" var="experience">
+                <entry id="1"/>
+            </rule>
+        </vrules>
+        <data>
+            <row id="0">
+                <cell id="0">
+                    <value var="result">90</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="1">
+                <cell id="0">
+                    <value var="result">80</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="2">
+                <cell id="0">
+                    <value var="result">90</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="3">
+                <cell id="0">
+                    <value var="result">70</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+            <row id="4">
+                <cell id="0"/>
+                <cell id="1">
+                    <value var="result">stay at home</value>
+                </cell>
+            </row>
+            <row id="5">
+                <cell id="0">
+                    <value var="result">30</value>
+                </cell>
+                <cell id="1"/>
+            </row>
+        </data>
+    </table>
+    <table id="drive_constr">
+        <input>
+            <var id="road" type="String">
+                <question>What are the {0} conditions?</question>
+                <constraints>
+                    <list>
+                        <element value="dry"/>
+                        <element value="wet"/>
+                        <element value="icy"/>
+                    </list>
+                </constraints>
+            </var>
+            <var id="visibility" type="int">
+                <constraints>
+                    <range min="0"/>
+                </constraints>
+            </var>
+            <var id="tech_condition" type="String">
+                <question>In what technical condition is the car?</question>
+                <constraints>
+                    <list>
+                        <element value="good"/>
+                        <element value="bad_tires"/>
+                    </list>
+                </constraints>
+            </var>
+            <var id="experience" type="String">
+                <question>What is your driving {0}?</question>
+                <constraints>
+                    <list>
+                        <element value="beginner"/>
+                        <element value="experienced"/>
+                    </list>
+                </constraints>
+            </var>
+        </input>
+        <output>
+            <var id="result" type="String"/>
+        </output>
+        <hrules>
+            <rule cond="eq" value="dry" var="road">
+                <entry id="0"/>
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="wet" var="road">
+                <entry id="2"/>
+                <entry id="3"/>
+            </rule>
+            <rule cond="eq" value="icy" var="road">
+                <entry id="4"/>
+                <entry id="5"/>
+            </rule>
+            <rule cond="!leq" value="100" var="visibility">
+                <entry id="0"/>
+                <entry id="2"/>
+                <entry id="4"/>
+            </rule>
+            <rule cond="leq" value="100" var="visibility">
+                <entry id="1"/>
+                <entry id="3"/>
+                <entry id="5"/>
+            </rule>
+        </hrules>
+        <vrules>
+            <rule cond="eq" value="good" var="tech_condition">
+                <entry id="0"/>
+            </rule>
+            <rule cond="eq" value="bad_tires" var="tech_condition">
+                <entry id="1"/>
+            </rule>
+            <rule cond="eq" value="beginner" var="experience">
+                <entry id="1"/>
+            </rule>
+        </vrules>
+        <data>
+            <row id="0">
+                <cell id="0">
+                    <value var="result">90</value>
+                </cell>
+                <cell id="1">
+                    <value var="result">60</value>
+                </cell>
+            </row>
+            <row id="1">
+                <cell id="0">
+                    <value var="result">80</value>
+                </cell>
+                <cell id="1">
+                    <value var="result">40</value>
+                </cell>
+            </row>
+            <row id="2">
+                <cell id="0">
+                    <value var="result">90</value>
+                </cell>
+                <cell id="1">
+                    <value var="result">50</value>
+                </cell>
+            </row>
+            <row id="3">
+                <cell id="0">
+                    <value var="result">70</value>
+                </cell>
+                <cell id="1">
+                    <value var="result">30</value>
+                </cell>
+            </row>
+            <row id="4">
+                <cell id="0"/>
+                <cell id="1">
+                    <value var="result">stay at home</value>
+                </cell>
+            </row>
+            <row id="5">
+                <cell id="0">
+                    <value var="result">30</value>
+                </cell>
+                <cell id="1">
+                    <value var="result">sell your car</value>
+                </cell>
+            </row>
+        </data>
+    </table>
+</tables>
