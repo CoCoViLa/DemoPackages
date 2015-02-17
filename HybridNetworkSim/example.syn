@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="hns" superclass="Proc_0">
+<object name="Router_0" type="Router" static="true">
+<properties x="205" y="155" width="80" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="initstate" type="int" nature="input" value="0"/>
+<field name="speed" type="int" nature="input" value="45"/>
+<field name="limit" type="int" nature="input" value="500"/>
+</fields>
+</object>
+<object name="Clock_0" type="Clock" static="false">
+<properties x="439" y="245" width="98" height="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="SingleSeriesGraph_1" type="SingleSeriesGraph" static="true">
+<properties x="315" y="251" width="96" height="99" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="x" type="int"/>
+<field name="y" type="int"/>
+<field name="seriesName" type="String" nature="input" value="drop"/>
+</fields>
+</object>
+<object name="SingleSeriesGraph_0" type="SingleSeriesGraph" static="true">
+<properties x="317" y="44" width="96" height="99" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="x" type="int"/>
+<field name="y" type="int"/>
+<field name="seriesName" type="String" nature="input" value="queue"/>
+</fields>
+</object>
+<object name="TrafGen_0" type="TrafGen" static="true">
+<properties x="78" y="45" width="80" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="min" type="int" nature="input" value="0"/>
+<field name="max" type="int" nature="input" value="10"/>
+<field name="seed" type="int" nature="input" value="0"/>
+<field name="on" type="boolean" nature="input" value="true"/>
+</fields>
+</object>
+<object name="Proc_0" type="Proc" static="false">
+<properties x="78" y="360" width="50" height="50" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="time" type="int" nature="input" value="200"/>
+<field name="T" type="int" nature="input" value="1"/>
+</fields>
+</object>
+<object name="TrafGen_1" type="TrafGen" static="true">
+<properties x="78" y="151" width="80" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="min" type="int" nature="input" value="20"/>
+<field name="max" type="int" nature="input" value="50"/>
+<field name="seed" type="int" nature="input" value="0"/>
+<field name="on" type="boolean" nature="input" value="true"/>
+</fields>
+</object>
+<object name="TrafGen_2" type="TrafGen" static="true">
+<properties x="78" y="258" width="80" height="80" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="min" type="int" nature="input" value="60"/>
+<field name="max" type="int" nature="input" value="100"/>
+<field name="seed" type="int" nature="input" value="0"/>
+<field name="on" type="boolean" nature="input" value="false"/>
+</fields>
+</object>
+<connection obj1="TrafGen_0" port1="out" obj2="Router_0" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="TrafGen_1" port1="out" obj2="Router_0" port2="in">
+<breakpoints/>
+</connection>
+<connection obj1="Router_0" port1="drop" obj2="SingleSeriesGraph_1" port2="y">
+<breakpoints/>
+</connection>
+<connection obj1="Router_0" port1="state" obj2="SingleSeriesGraph_0" port2="y">
+<breakpoints/>
+</connection>
+<connection obj1="Clock_0" port1="out" obj2="SingleSeriesGraph_1" port2="x">
+<breakpoints>
+<point x="489" y="223"/>
+<point x="360" y="223"/>
+</breakpoints>
+</connection>
+<connection obj1="Clock_0" port1="out" obj2="SingleSeriesGraph_0" port2="x">
+<breakpoints/>
+</connection>
+<connection obj1="TrafGen_2" port1="out" obj2="Router_0" port2="in">
+<breakpoints/>
+</connection>
+</scheme>

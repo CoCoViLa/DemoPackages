@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>hns</name>
+<description>Hybrid Network Simulation</description>
+<class type="class" static="true">
+<name>TrafGen</name>
+<description>Traffic Generator (uniform)</description>
+<icon>trafgen.png</icon>
+<graphics>
+<bounds x="0" y="0" width="80" height="80"/>
+<rect x="0" y="0" width="80" height="80" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<text string="Gen" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
+</graphics>
+<ports>
+  <port name="out" type="int" x="80" y="40" portConnection="" strict="false"/>
+</ports>
+<fields>
+<field name="min" type="int" nature="input" description="Min">
+  <known>
+    <graphics>
+      <text string="Min:" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+      <text string="*self" colour="-16777216" x="50" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+<field name="max" type="int" nature="input" description="Max">
+  <known>
+    <graphics>
+      <text string="Max:" colour="-16777216" x="10" y="55" fontname="Arial" fontstyle="1"  fontsize="12" />
+      <text string="*self" colour="-16777216" x="50" y="55" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+<field name="seed" type="int" nature="input" description="PRNG seed" value="0"/>
+<field name="on" type="boolean" nature="input" description="Enabled" value="true">
+  <known>
+    <graphics>
+      <text string="On:" colour="-16777216" x="10" y="70" fontname="Arial" fontstyle="1"  fontsize="12" />
+      <text string="*self" colour="-16777216" x="50" y="70" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+</fields>
+</class>
+
+<class type="class" static="true">
+<name>Router</name>
+<description>Router with bounded buffer</description>
+<icon>router.png</icon>
+<graphics>
+<bounds x="0" y="0" width="80" height="80"/>
+<rect x="0" y="0" width="80" height="80" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0" transparency="255"/>
+<text string="Buf" colour="-16777216" x="10" y="15" fontname="Arial" fontstyle="1"  fontsize="12" />
+</graphics>
+<ports>
+  <port name="in" type="int[]" multi="true" x="0" y="40" portConnection="" strict="false"/>
+  <port name="state" type="int" x="80" y="40" portConnection="" strict="false"/>
+  <port name="drop" type="int" x="40" y="80" portConnection="" strict="false"/>
+</ports>
+<fields>
+<field name="initstate" type="int" nature="input" description="Initial buffer state" value="0">
+  <known>
+    <graphics>
+      <text string="Initq:" colour="-16777216" x="10" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+      <text string="*self" colour="-16777216" x="50" y="40" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+<field name="speed" type="int" nature="input" description="Packed processing speed" value="10">
+  <known>
+    <graphics>
+      <text string="Speed:" colour="-16777216" x="10" y="70" fontname="Arial" fontstyle="1"  fontsize="12" />
+      <text string="*self" colour="-16777216" x="50" y="70" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+<field name="limit" type="int" nature="input" description="Queue limit" value="100">
+  <known>
+    <graphics>
+      <text string="Limit:" colour="-16777216" x="10" y="55" fontname="Arial" fontstyle="1"  fontsize="12" />
+      <text string="*self" colour="-16777216" x="50" y="55" fontname="Arial" fontstyle="1"  fontsize="12" />
+    </graphics>
+  </known>
+</field>
+</fields>
+</class>
+
+
+<class type="class" static="true">
+	<name>SingleSeriesGraph</name>
+	<description>Single Series Graph</description>
+	<icon>SingleSeriesGraph.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="96" height="99"/>
+<line x1="7" y1="13" x2="7" y2="87" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="1" y1="83" x2="82" y2="83" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="7" y1="12" x2="4" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="7" y1="12" x2="10" y2="20" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="83" y1="83" x2="79" y2="86" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<line x1="83" y1="82" x2="78" y2="80" colour="-16777216" fixed="false" stroke="2" linetype="0" transparency="255"/>
+<text string="x" colour="16777216" x="86" y="95" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
+<text string="y" colour="16777216" x="12" y="11" fontname="Arial" fontstyle="1" fontsize="13" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="y" type="int" x="7" y="49" portConnection="" strict="false" />
+		<port name="x" type="int" x="43" y="83" portConnection="" strict="false" />
+	</ports>
+	<fields>
+		<field name="x" type="int"/>
+		<field name="y" type="int"/>
+		<field name="seriesName" type="String" nature="input" value="y"/>
+	</fields>
+</class>
+	<class type="class">
+		<name>Clock</name>
+		<description>clock</description>
+		<icon>clock.gif</icon>
+		<graphics>
+			<bounds x="0" y="0" width="98" height="103" />
+			<oval x="20" y="21" width="59" height="58"
+				colour="-16777216" filled="false" fixed="false" stroke="2"
+				linetype="0" transparency="255" />
+			<line x1="50" y1="79" x2="50" y2="71" colour="-16777216"
+				fixed="false" stroke="2" linetype="0" transparency="255" />
+			<line x1="20" y1="50" x2="28" y2="50" colour="-16777216"
+				fixed="false" stroke="2" linetype="0" transparency="255" />
+			<line x1="79" y1="51" x2="71" y2="51" colour="-16777216"
+				fixed="false" stroke="2" linetype="0" transparency="255" />
+			<oval x="45" y="46" width="10" height="9" colour="-16777216"
+				filled="true" fixed="false" stroke="2" linetype="0"
+				transparency="255" />
+			<line x1="49" y1="50" x2="44" y2="35" colour="-16777216"
+				fixed="false" stroke="4" linetype="0" transparency="255" />
+			<line x1="49" y1="51" x2="37" y2="72" colour="-16777216"
+				fixed="false" stroke="3" linetype="0" transparency="255" />
+			<line x1="50" y1="21" x2="50" y2="28" colour="-16777216"
+				fixed="false" stroke="2" linetype="0" transparency="255" />
+			<rect x="5" y="6" width="88" height="89" colour="-16777216"
+				filled="false" fixed="false" stroke="1" linetype="0"
+				transparency="255" />
+			<oval x="24" y="90" width="0" height="0" colour="-16777216"
+				filled="false" fixed="false" stroke="1" linetype="0"
+				transparency="255" />
+			<oval x="121" y="109" width="0" height="0"
+				colour="-16777216" filled="false" fixed="false" stroke="1"
+				linetype="0" transparency="255" />
+			<oval x="76" y="98" width="0" height="0" colour="-16777216"
+				filled="false" fixed="false" stroke="1" linetype="0"
+				transparency="255" />
+			<oval x="132" y="81" width="0" height="0" colour="-16777216"
+				filled="false" fixed="false" stroke="1" linetype="0"
+				transparency="255" />
+		</graphics>
+		<ports>
+			<port name="out" type="int" x="50" y="6"
+				portConnection="" strict="false" />
+		</ports>
+		<fields>
+		</fields>
+	</class>
+		<class type="class">
+		<name>Proc</name>
+		<description>Continuous process simulator</description>
+		<icon>process.png</icon>
+		<graphics>
+			<bounds x="0" y="0" width="50" height="50"/>
+			<rect x="0" y="0" width="50" height="50" colour="-16777216"
+				filled="false" fixed="false" stroke="1" linetype="0"
+				transparency="255"/>
+			<text string="Proc" colour="-16777216" x="5" y="30"
+				fontname="Courier" fontstyle="1" fontsize="16" transparency="255"/>
+		</graphics>
+		<fields>
+			<field name="time" type="int" value="200" nature="input"/>
+			<field name="T" type="int" value="1" nature="input" />
+		</fields>
+	</class>
+	
+</package>
