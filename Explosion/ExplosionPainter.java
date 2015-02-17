@@ -20,14 +20,21 @@ public class ExplosionPainter extends ClassPainter {
 	    
 		ClassField[] f = new ClassField[5];
 		int i = 0;
+        boolean drawOriginal = false;
 		for (ClassField field : vclass.getFields()) {
 			f[i++] = field;
 			if (field.getValue() == null) {
 				//System.err.println(f[i].getName() + " undefined");
-				return;
+                drawOriginal = true;
+				break;
 			}
 		}
-		
+        
+        if (drawOriginal) {
+            vclass.drawClassGraphics(graphics, scale);
+            return;
+        }
+        
 		double x = vclass.getX() + Double.valueOf(f[0].getValue());
 		double y = vclass.getY() + Double.valueOf(f[1].getValue());
 		double width = Double.valueOf(f[2].getValue());
