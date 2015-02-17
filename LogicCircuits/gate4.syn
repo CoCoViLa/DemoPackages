@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Logic" superclass="Process_0">
+<object name="NumGenerator_0" type="NumGenerator" static="false">
+<properties x="75" y="106" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Delayer_0" type="Delayer" static="false">
+<properties x="76" y="189" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Process_0" type="Process" static="false">
+<properties x="45" y="25" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="time" type="int" value="20"/>
+<field name="T" type="double"/>
+<field name="delay" type="long" value="50"/>
+<field name="debug" type="boolean" value="false"/>
+<field name="repaintImmediately" type="boolean" value="true"/>
+</fields>
+</object>
+<object name="VisualizerM_0" type="VisualizerM" static="true">
+<properties x="552" y="348" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="And_2" type="And" static="false">
+<properties x="408" y="124" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="int"/>
+<field name="in2" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="Or_0" type="Or" static="false">
+<properties x="168" y="72" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="int"/>
+<field name="in2" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="Not_0" type="Not" static="false">
+<properties x="170" y="186" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="Or_1" type="Or" static="false">
+<properties x="170" y="282" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="int"/>
+<field name="in2" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="And_3" type="And" static="false">
+<properties x="410" y="237" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="int"/>
+<field name="in2" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="NumGenerator_1" type="NumGenerator" static="false">
+<properties x="75" y="264" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<object name="Delayer_1" type="Delayer" static="false">
+<properties x="88" y="347" xsize="1.0" ysize="1.0" strict="false"/>
+<fields/>
+</object>
+<connection obj1="NumGenerator_0" port1="out" obj2="Delayer_0" port2="in" strict="false">
+<breakpoints>
+<point x="120" y="121"/>
+<point x="120" y="165"/>
+<point x="54" y="165"/>
+<point x="54" y="204"/>
+</breakpoints>
+</connection>
+<connection obj1="NumGenerator_0" port1="out" obj2="Or_0" port2="in1" strict="false">
+<breakpoints>
+<point x="151" y="121"/>
+<point x="151" y="91"/>
+</breakpoints>
+</connection>
+<connection obj1="Delayer_0" port1="out" obj2="Or_0" port2="in2" strict="false">
+<breakpoints>
+<point x="181" y="204"/>
+</breakpoints>
+</connection>
+<connection obj1="NumGenerator_1" port1="out" obj2="Delayer_1" port2="in" strict="false">
+<breakpoints>
+<point x="132" y="279"/>
+<point x="132" y="323"/>
+<point x="66" y="323"/>
+<point x="66" y="362"/>
+</breakpoints>
+</connection>
+<connection obj1="NumGenerator_1" port1="out" obj2="Or_1" port2="in1" strict="false">
+<breakpoints>
+<point x="183" y="279"/>
+</breakpoints>
+</connection>
+<connection obj1="Or_1" port1="in1" obj2="Not_0" port2="in" strict="false">
+<breakpoints/>
+</connection>
+<connection obj1="Delayer_1" port1="out" obj2="Or_1" port2="in2" strict="false">
+<breakpoints>
+<point x="183" y="362"/>
+</breakpoints>
+</connection>
+<connection obj1="Or_1" port1="out" obj2="And_3" port2="in2" strict="false">
+<breakpoints>
+<point x="360" y="296"/>
+</breakpoints>
+</connection>
+<connection obj1="Or_0" port1="out" obj2="And_2" port2="in1" strict="false">
+<breakpoints>
+<point x="401" y="111"/>
+<point x="401" y="143"/>
+</breakpoints>
+</connection>
+<connection obj1="Not_0" port1="out" obj2="And_2" port2="in2" strict="false">
+<breakpoints>
+<point x="360" y="183"/>
+</breakpoints>
+</connection>
+<connection obj1="And_2" port1="out" obj2="And_3" port2="in1" strict="false">
+<breakpoints>
+<point x="598" y="214"/>
+<point x="398" y="214"/>
+<point x="398" y="256"/>
+</breakpoints>
+</connection>
+<connection obj1="And_3" port1="out" obj2="VisualizerM_0" port2="inputs" strict="false">
+<breakpoints/>
+</connection>
+</scheme>

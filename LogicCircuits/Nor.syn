@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="Logic">
+<object name="Or" type="Or" static="false">
+<properties x="126" y="102" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in1" type="int"/>
+<field name="in2" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<object name="Not" type="Not" static="false">
+<properties x="369" y="103" xsize="1.0" ysize="1.0" strict="false"/>
+<fields>
+<field name="in" type="int"/>
+<field name="out" type="int"/>
+</fields>
+</object>
+<connection obj1="Or" port1="out" obj2="Not" port2="in" strict="false">
+<breakpoints/>
+</connection>
+</scheme>

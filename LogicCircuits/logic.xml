@@ -1,216 +1,233 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE package SYSTEM "package2.dtd">
 <package>
-  <name>Logic</name>
-  <description>Logical circuits builder</description>
-  <class>
-    <name>And</name>
-    <description>And</description>
-    <icon>and.gif</icon>
-    
-    <graphics>
-      <bounds x="0" y="0" width="50" height="50" />
-      <arc x="-50" y="0" width="100" height="50" startAngle="270" arcAngle="180" colour="16777215"
-      filled="true" />
-      <arc x="-50" y="0" width="100" height="50" startAngle="270" arcAngle="180" colour="0"
-      filled="false" />
-      <line x1="0" y1="0" x2="0" y2="50" colour="0" />
-    </graphics>
-
-    <ports>
-      <port name="in1" type="int" x="0" y="15" portConnection="area" strict="false" />
-      <port name="in2" type="int" x="0" y="35" portConnection="area" strict="false" />
-      <port name="out" type="int" x="50" y="25" portConnection="area" strict="false" />
-    </ports>
-    <fields>
-      <field name="in1" type="int" description="First input">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-      <field name="in2" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="-10" y="50" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-      <field name="out" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-    </fields>
-  </class>
-  <class>
-    <name>Not</name>
-    <description>Not</description>
-    <icon>not.gif</icon>
-    <graphics>
-      <bounds x="0" y="0" width="50" height="50" />
-
-      <polygon colour="16777215" filled="true" transparency="255">
-	<point x="0" y="0"/>
-	<point x="45" y="22"/>
-	<point x="45" y="28"/>
-	<point x="0" y="50"/>
-      </polygon>
-
-      <polygon colour="0" filled="false" transparency="255">
-	<point x="0" y="0"/>
-	<point x="45" y="22"/>
-	<point x="45" y="28"/>
-	<point x="0" y="50"/>
-      </polygon>
-      <oval x="40" y="20" width="10" height="10" colour="0" filled="true" />
-    </graphics>
-    <ports>
-      <port name="in" type="int" x="0" y="25" portConnection="area" strict="false" />
-      <port name="out" type="int" x="45" y="25" portConnection="area" strict="false" />
-    </ports>
-    <fields>
-      <field name="in" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-      <field name="out" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-    </fields>
-  </class>
-  <class>
-    <name>Or</name>
-    <description>Or</description>
-    <icon>or.gif</icon>
-    <graphics>
-      <bounds x="0" y="0" width="50" height="50" />
-      <polygon colour="16777215" filled="true" transparency="255">
-	<point x="0" y="0"/>
-	<point x="50" y="25"/>
-	<point x="0" y="50"/>
-      </polygon>
-
-      <polygon colour="0" filled="false" transparency="255">
-	<point x="0" y="0"/>
-	<point x="50" y="25"/>
-	<point x="0" y="50"/>
-      </polygon>
-
-    </graphics>
-
-    <ports>
-      <port name="in1" type="int" x="0" y="15" portConnection="area" strict="false" />
-      <port name="in2" type="int" x="0" y="35" portConnection="area" strict="false" />
-      <port name="out" type="int" x="50" y="25" portConnection="area" strict="false" />
-    </ports>
-    <fields>
-      <field name="in1" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="-10" y="8" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-      <field name="in2" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="-10" y="50" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-      <field name="out" type="int">
-        <known>
-          <graphics>
-            <text string="*self" colour="-16777216" x="60" y="25" fontname="Arial" fontstyle="1"
-            fontsize="10" />
-          </graphics>
-        </known>
-      </field>
-    </fields>
-  </class>
-  <class>
-    <name>NumGenerator</name>
-    <description>Number Generator</description>
-    <icon>numgenerator.gif</icon>
-    <graphics>
-      <bounds x="0" y="0" width="30" height="30" />
-      <rect x="0" y="0" width="30" height="30" colour="16777215" filled="true" />
-      <line x1="0" y1="0" x2="0" y2="30" colour="0" />
-      <line x1="0" y1="30" x2="30" y2="30" colour="0" />
-      <line x1="0" y1="0" x2="30" y2="0" colour="0" />
-      <line x1="30" y1="0" x2="30" y2="30" colour="0" />
-      <!--text string="", x="", y=""-->
-    </graphics>
-    <ports>
-      <port name="out" type="int" x="30" y="15" portConnection="area" strict="false" />
-    </ports>
-    <!--fields>
-                                        <field name="u" type="int" defaultVal="5"/>
-                                        <field name="v" type="float" defaultVal="0.0"/>
-                                </fields-->
-  </class>
-  <class>
-    <name>Delayer</name>
-    <description>Delayer</description>
-    <icon>delayer.gif</icon>
-    <graphics>
-      <bounds x="0" y="0" width="30" height="30" />
-      <rect x="0" y="0" width="30" height="30" colour="16777215" filled="true" />
-      <rect x="0" y="0" width="30" height="30" colour="0" filled="false" />
-      <!--text string="", x="", y=""-->
-    </graphics>
-    <ports>
-      <port name="in" type="int" x="0" y="15" portConnection="area" strict="false" />
-      <port name="out" type="int" x="30" y="15" portConnection="area" strict="false" />
-    </ports>
-    <!--fields>
-                                        <field name="u" type="int" defaultVal="5"/>
-                                        <field name="v" type="float" defaultVal="0.0"/>
-                                </fields-->
-  </class>
+    <name>Logic</name>
+    <description>Logical circuits builder</description>
 <class type="class">
-<name>Visualizer</name>
-<description>Visualizes the input</description>
-<icon>visualizer.gif</icon>
+	<name>And</name>
+	<description>And</description>
+	<icon>images/and.png</icon>
+<graphics>
+<bounds x="0" y="0" width="202" height="83"/>
+<image x="3" y="-11" width="200" height="100" path="/images/200px-AND_ANSI.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="in1" type="int" x="13" y="19" portConnection="" strict="false" />
+		<port name="in2" type="int" x="13" y="59" portConnection="" strict="false" />
+		<port name="out" type="int" x="190" y="39" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="in1" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="40" y="13" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+       <field name="in2" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="39" y="75" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+       <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="145" y="33" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
+</class>
+<class type="class">
+	<name>Not</name>
+	<description>Not</description>
+	<icon>images/not.png</icon>
+<graphics>
+<bounds x="0" y="0" width="202" height="83"/>
+<image x="3" y="-11" width="200" height="100" path="/images/200px-NOT_ANSI.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="in" type="int" x="13" y="39" portConnection="" strict="false" />
+		<port name="out" type="int" x="190" y="39" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="in" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="40" y="33" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+       <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="170" y="33" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
+</class>
+<class type="class">
+	<name>Or</name>
+	<description>Or</description>
+	<icon>images/or.png</icon>
+<graphics>
+<bounds x="0" y="0" width="202" height="83"/>
+<image x="3" y="-11" width="200" height="100" path="/images/200px-OR_ANSI.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="in1" type="int" x="13" y="19" portConnection="" strict="false" />
+		<port name="in2" type="int" x="13" y="59" portConnection="" strict="false" />
+		<port name="out" type="int" x="190" y="39" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="in1" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="40" y="13" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+       <field name="in2" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="39" y="75" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+       <field name="out" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="145" y="33" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
+</class>
+<class type="class">
+	<name>NumGenerator</name>
+	<description>Number Generator with state</description>
+	<icon>images/numgenerator.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="30"/>
+<rect x="0" y="0" width="30" height="30" colour="-1" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="0" x2="0" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="30" x2="30" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="0" x2="30" y2="0" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="30" y1="0" x2="30" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>NumGenStL</name>
+	<description>Number Generator - stateless</description>
+	<icon>images/numgenerator.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="30"/>
+<rect x="0" y="0" width="30" height="30" colour="-1" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="0" x2="0" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="30" x2="30" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="0" y1="0" x2="30" y2="0" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<line x1="30" y1="0" x2="30" y2="30" colour="-16777216" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>Delayer</name>
+	<description>Delayer</description>
+	<icon>images/delayer.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="30" height="30"/>
+<rect x="0" y="0" width="30" height="30" colour="-1" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="0" y="0" width="30" height="30" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="in" type="int" x="0" y="15" portConnection="" strict="false" />
+		<port name="out" type="int" x="30" y="15" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="class">
+	<name>VisualizerM</name>
+	<description>Visualizes the input</description>
+	<icon>images/visualizer.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="91" height="26"/>
-<rect x="0" y="0" width="92" height="26" colour="-16764007" filled="true" fixed="false" stroke="1" transparency="60"/>
+<rect x="0" y="0" width="92" height="26" colour="1006646169" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="60"/>
 </graphics>
-<ports>
-<port name="in1" type="int" x="16" y="0" portConnection="" strict="false" />
-<port name="in2" type="int" x="48" y="0" portConnection="" strict="false" />
-<port name="in3" type="int" x="79" y="0" portConnection="" strict="false" />
-</ports>
+	<ports>
+		<port name="inputs" type="alias" x="48" y="0" portConnection="" strict="false" multi="true" />
+	</ports>
 </class>
-
 <class type="class">
-<name>Midpoint</name>
-<description>Connection point</description>
-<icon>conPoint.gif</icon>
+	<name>Midpoint</name>
+	<description>Connection point</description>
+	<icon>images/conPoint.gif</icon>
 <graphics>
 <bounds x="0" y="0" width="10" height="10"/>
-<oval x="0" y="0" width="10" height="10" colour="0" filled="true" fixed="false"/>
+<oval x="0" y="0" width="10" height="10" colour="-16777216" filled="true" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
 </graphics>
-<ports>
-<port name="in1" type="int" x="5" y="5" portConnection="" strict="false" />
-</ports>
+	<ports>
+		<port name="in1" type="int" x="5" y="5" portConnection="" strict="false" />
+	</ports>
+	<fields>
+       <field name="in1" type="int">
+        <known>
+          <graphics>
+            <text string="*self" colour="-16777216" x="3" y="-3" fontname="Arial" fontstyle="1" fontsize="10" transparency="255"/>
+          </graphics>
+        </known>
+      </field>
+	</fields>
+</class>
+<class type="class">
+	<name>Process</name>
+	<description>Process for any approximation method</description>
+	<icon>images/Process.png</icon>
+<graphics>
+<bounds x="0" y="0" width="50" height="50"/>
+<rect x="0" y="0" width="50" height="50" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="Pr" colour="-16777216" x="15" y="30" fontname="Courier" fontstyle="1" fontsize="20" transparency="255"/>
+</graphics>
+	<fields>
+		<field name="time" type="int" value="200" />
+		<field name="T" type="double"/>
+		<field name="delay" type="long" value="50" />
+		<field name="debug" type="boolean" value="false" />
+		<field name="repaintImmediately" type="boolean" value="true" />
+	</fields>
+</class>
+<class type="class">
+	<name>Nand</name>
+	<description>Nand gate</description>
+	<icon>images/nand.png</icon>
+<graphics>
+<bounds x="0" y="0" width="197" height="102"/>
+<image x="-1" y="4" width="200" height="100" path="/images/200px-NAND_ANSI.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="in1" type="int" x="9" y="34" portConnection="" strict="false" />
+		<port name="in2" type="int" x="10" y="73" portConnection="" strict="false" />
+		<port name="out" type="int" x="188" y="55" portConnection="" strict="false" />
+	</ports>
+</class>
+<class type="scheme">
+	<name>Nor</name>
+	<description>Nor gate</description>
+	<icon>images/nor.png</icon>
+<graphics>
+<bounds x="0" y="0" width="197" height="102"/>
+<image x="-2" y="0" width="200" height="100" path="/images/200px-NOR_ANSI.png" fixed="false" />
+</graphics>
+	<ports>
+		<port name="Or.in1" type="int" x="8" y="29" portConnection="" strict="false" />
+		<port name="Or.in2" type="int" x="9" y="68" portConnection="" strict="false" />
+		<port name="Not.out" type="int" x="187" y="50" portConnection="" strict="false" />
+	</ports>
 </class>
 </package>

@@ -3,15 +3,11 @@
 <scheme package="Logic" superclass="Process_0">
 <object name="Midpoint_1" type="Midpoint" static="false">
 <properties x="85" y="53" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="in1" type="int"/>
-</fields>
+<fields/>
 </object>
 <object name="Midpoint_2" type="Midpoint" static="false">
 <properties x="78" y="138" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="in1" type="int"/>
-</fields>
+<fields/>
 </object>
 <object name="Not_3" type="Not" static="false">
 <properties x="230" y="180" xsize="1.0" ysize="1.0" strict="false"/>
@@ -37,9 +33,7 @@
 </object>
 <object name="Midpoint_6" type="Midpoint" static="false">
 <properties x="601" y="332" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="in1" type="int"/>
-</fields>
+<fields/>
 </object>
 <object name="And_7" type="And" static="false">
 <properties x="315" y="213" xsize="1.0" ysize="1.0" strict="false"/>
@@ -67,9 +61,7 @@
 </object>
 <object name="Midpoint_10" type="Midpoint" static="false">
 <properties x="595" y="127" xsize="1.0" ysize="1.0" strict="false"/>
-<fields>
-<field name="in1" type="int"/>
-</fields>
+<fields/>
 </object>
 <object name="NumGenerator_0" type="NumGenerator" static="false">
 <properties x="17" y="43" xsize="1.0" ysize="1.0" strict="false"/>
@@ -90,22 +82,22 @@
 </fields>
 </object>
 <object name="VisualizerM_0" type="VisualizerM" static="true">
-<properties x="633" y="275" xsize="1.0" ysize="1.0" strict="false"/>
+<properties x="777" y="364" xsize="1.0" ysize="1.0" strict="false"/>
 <fields/>
 </object>
-<connection obj1="Midpoint_1" port1="in1" obj2="And_5" port2="in1" strict="false">
+<connection obj1="Midpoint_1" port1="in1" obj2="And_5" port2="in1">
 <breakpoints>
 <point x="90" y="58"/>
 <point x="322" y="57"/>
 </breakpoints>
 </connection>
-<connection obj1="Not_4" port1="in" obj2="Midpoint_2" port2="in1" strict="false">
+<connection obj1="Not_4" port1="in" obj2="Midpoint_2" port2="in1">
 <breakpoints>
 <point x="166" y="144"/>
 <point x="83" y="143"/>
 </breakpoints>
 </connection>
-<connection obj1="And_7" port1="in2" obj2="Midpoint_2" port2="in1" strict="false">
+<connection obj1="And_7" port1="in2" obj2="Midpoint_2" port2="in1">
 <breakpoints>
 <point x="315" y="248"/>
 <point x="130" y="249"/>
@@ -113,7 +105,7 @@
 <point x="83" y="143"/>
 </breakpoints>
 </connection>
-<connection obj1="Midpoint_1" port1="in1" obj2="And_8" port2="in1" strict="false">
+<connection obj1="Midpoint_1" port1="in1" obj2="And_8" port2="in1">
 <breakpoints>
 <point x="90" y="58"/>
 <point x="144" y="57"/>
@@ -121,16 +113,15 @@
 <point x="319" y="326"/>
 </breakpoints>
 </connection>
-<connection obj1="Midpoint_2" port1="in1" obj2="And_8" port2="in2" strict="false">
+<connection obj1="Midpoint_2" port1="in1" obj2="And_8" port2="in2">
 <breakpoints>
 <point x="83" y="143"/>
 <point x="131" y="143"/>
-<point x="134" y="279"/>
 <point x="132" y="347"/>
 <point x="319" y="346"/>
 </breakpoints>
 </connection>
-<connection obj1="Not_3" port1="in" obj2="Midpoint_2" port2="in1" strict="false">
+<connection obj1="Not_3" port1="in" obj2="Midpoint_2" port2="in1">
 <breakpoints>
 <point x="230" y="205"/>
 <point x="131" y="205"/>
@@ -138,20 +129,20 @@
 <point x="83" y="143"/>
 </breakpoints>
 </connection>
-<connection obj1="And_8" port1="out" obj2="Midpoint_6" port2="in1" strict="false">
+<connection obj1="And_8" port1="out" obj2="Midpoint_6" port2="in1">
 <breakpoints>
 <point x="369" y="336"/>
 <point x="603" y="336"/>
 <point x="606" y="337"/>
 </breakpoints>
 </connection>
-<connection obj1="Or_9" port1="out" obj2="Midpoint_10" port2="in1" strict="false">
+<connection obj1="Or_9" port1="out" obj2="Midpoint_10" port2="in1">
 <breakpoints>
 <point x="541" y="132"/>
 <point x="600" y="132"/>
 </breakpoints>
 </connection>
-<connection obj1="And_5" port1="out" obj2="Or_9" port2="in1" strict="false">
+<connection obj1="And_5" port1="out" obj2="Or_9" port2="in1">
 <breakpoints>
 <point x="372" y="67"/>
 <point x="424" y="67"/>
@@ -159,7 +150,7 @@
 <point x="491" y="122"/>
 </breakpoints>
 </connection>
-<connection obj1="Or_9" port1="in2" obj2="And_7" port2="out" strict="false">
+<connection obj1="Or_9" port1="in2" obj2="And_7" port2="out">
 <breakpoints>
 <point x="491" y="142"/>
 <point x="425" y="143"/>
@@ -167,7 +158,7 @@
 <point x="365" y="238"/>
 </breakpoints>
 </connection>
-<connection obj1="Not_4" port1="out" obj2="And_5" port2="in2" strict="false">
+<connection obj1="Not_4" port1="out" obj2="And_5" port2="in2">
 <breakpoints>
 <point x="211" y="144"/>
 <point x="267" y="145"/>
@@ -175,7 +166,7 @@
 <point x="322" y="77"/>
 </breakpoints>
 </connection>
-<connection obj1="Not_3" port1="out" obj2="And_7" port2="in1" strict="false">
+<connection obj1="Not_3" port1="out" obj2="And_7" port2="in1">
 <breakpoints>
 <point x="275" y="205"/>
 <point x="297" y="205"/>
@@ -183,13 +174,13 @@
 <point x="315" y="228"/>
 </breakpoints>
 </connection>
-<connection obj1="NumGenerator_0" port1="out" obj2="Midpoint_1" port2="in1" strict="false">
+<connection obj1="NumGenerator_0" port1="out" obj2="Midpoint_1" port2="in1">
 <breakpoints>
 <point x="47" y="58"/>
 <point x="90" y="58"/>
 </breakpoints>
 </connection>
-<connection obj1="NumGenerator_0" port1="out" obj2="Delayer_1" port2="in" strict="false">
+<connection obj1="NumGenerator_0" port1="out" obj2="Delayer_1" port2="in">
 <breakpoints>
 <point x="47" y="58"/>
 <point x="73" y="59"/>
@@ -199,12 +190,31 @@
 <point x="29" y="142"/>
 </breakpoints>
 </connection>
-<connection obj1="Delayer_1" port1="out" obj2="Midpoint_2" port2="in1" strict="false">
+<connection obj1="Delayer_1" port1="out" obj2="Midpoint_2" port2="in1">
 <breakpoints>
 <point x="59" y="142"/>
+<point x="83" y="143"/>
 </breakpoints>
 </connection>
-<connection obj1="Or_9" port1="out" obj2="VisualizerM_0" port2="inputs" strict="false">
+<connection obj1="NumGenerator_0" port1="out" obj2="VisualizerM_0" port2="inputs">
+<breakpoints/>
+</connection>
+<connection obj1="Midpoint_10" port1="in1" obj2="VisualizerM_0" port2="inputs">
+<breakpoints/>
+</connection>
+<connection obj1="Midpoint_6" port1="in1" obj2="VisualizerM_0" port2="inputs">
+<breakpoints/>
+</connection>
+<connection obj1="And_5" port1="out" obj2="VisualizerM_0" port2="inputs">
+<breakpoints/>
+</connection>
+<connection obj1="And_7" port1="out" obj2="VisualizerM_0" port2="inputs">
+<breakpoints/>
+</connection>
+<connection obj1="And_8" port1="out" obj2="VisualizerM_0" port2="inputs">
+<breakpoints/>
+</connection>
+<connection obj1="Delayer_1" port1="out" obj2="VisualizerM_0" port2="inputs">
 <breakpoints/>
 </connection>
 </scheme>

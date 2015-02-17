@@ -6,8 +6,8 @@ class Visualizer extends JFrame {
 	/*@
 	specification Visualizer {
 	    int in1, in2, in3;
-		void done;
-		in1, in2, in3 -> done {draw};
+		void drawing_ready;
+		in1, in2, in3 -> drawing_ready {draw};
 	}@*/
 
 	

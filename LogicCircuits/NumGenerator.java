@@ -1,15 +1,14 @@
 class NumGenerator {
 	/*@ specification NumGenerator {
-			int  out;
-			-> out{gen};
-		}
+		int  out;
+		double initstate, state, nextstate, finalstate;
+		state -> out{gen};
+		initstate = 0;
+		nextstate = out;
+	}
 	@*/
-	int val = 0;
-	int gen() {
-		if (val==0) 
-			val = 1;
-		else 
-			val = 0;
-		return val;
+
+	int gen(double val) {
+		return (val==0) ? 1 : 0;
 	}
 }
