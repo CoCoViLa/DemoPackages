@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scheme SYSTEM "scheme.dtd">
+<scheme package="AttackTree">
+<object name="Leaf_0" type="Leaf" static="false">
+<properties x="108" y="838" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="1000000"/>
+<field name="p" type="double" value="0.1"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Bribe a programmer"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.001"/>
+<field name="Penalties" type="double" value="1000000"/>
+<field name="qC" type="double" value="0.001"/>
+<field name="PenaltiesC" type="double" value="1000000"/>
+</fields>
+</object>
+<object name="Leaf_1" type="Leaf" static="false">
+<properties x="277" y="839" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="0"/>
+<field name="p" type="double" value="0.9"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Programmer obtains the code"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.1"/>
+<field name="Penalties" type="double" value="1000000"/>
+<field name="qC" type="double" value="0.1"/>
+<field name="PenaltiesC" type="double" value="1000000"/>
+</fields>
+</object>
+<object name="Leaf_2" type="Leaf" static="false">
+<properties x="456" y="839" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="10000"/>
+<field name="p" type="double" value="0.9"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Employ a hacker"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.1"/>
+<field name="Penalties" type="double" value="10000"/>
+<field name="qC" type="double" value="0.1"/>
+<field name="PenaltiesC" type="double" value="1000"/>
+</fields>
+</object>
+<object name="Leaf_3" type="Leaf" static="false">
+<properties x="624" y="840" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="1000"/>
+<field name="p" type="double" value="0.5"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Hacker exploits a bug"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.1"/>
+<field name="Penalties" type="double" value="10"/>
+<field name="qC" type="double" value="0.1"/>
+<field name="PenaltiesC" type="double" value="10"/>
+</fields>
+</object>
+<object name="Leaf_4" type="Leaf" static="false">
+<properties x="790" y="840" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="0"/>
+<field name="p" type="double" value="0.006"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="There is a bug in the system"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0"/>
+<field name="Penalties" type="double" value="0"/>
+<field name="qC" type="double" value="0"/>
+<field name="PenaltiesC" type="double" value="0"/>
+</fields>
+</object>
+<object name="Leaf_5" type="Leaf" static="false">
+<properties x="964" y="840" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="100000"/>
+<field name="p" type="double" value="0.9"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Employ a robber"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.1"/>
+<field name="Penalties" type="double" value="100000"/>
+<field name="qC" type="double" value="0.1"/>
+<field name="PenaltiesC" type="double" value="100000"/>
+</fields>
+</object>
+<object name="Leaf_6" type="Leaf" static="false">
+<properties x="1130" y="840" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="1000"/>
+<field name="p" type="double" value="0.5"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Robber obtains the code"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.1"/>
+<field name="Penalties" type="double" value="1000000"/>
+<field name="qC" type="double" value="0.1"/>
+<field name="PenaltiesC" type="double" value="1000000"/>
+</fields>
+</object>
+<object name="And_0" type="And" static="false">
+<properties x="198" y="608" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="FR via bribing a programmer"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="And_1" type="And" static="false">
+<properties x="546" y="702" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Network attack step 1"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="And_2" type="And" static="false">
+<properties x="620" y="563" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="FR via network attack"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="And_3" type="And" static="false">
+<properties x="1046" y="696" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="FR via physical robbery"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="Or_0" type="Or" static="false">
+<properties x="389" y="424" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="The code is stolen"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="Or_1" type="Or" static="false">
+<properties x="476" y="287" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="The code is stolen"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="And_4" type="And" static="false">
+<properties x="583" y="151" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Forestalling Release (FR)"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="Root_0" type="Root" static="false">
+<properties x="583" y="6" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double" value="6000000"/>
+<field name="Costs" type="double"/>
+<field name="p" type="double"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Forestalling Release (FR)"/>
+<field name="Selected" type="String"/>
+</fields>
+</object>
+<object name="Leaf_7" type="Leaf" static="false">
+<properties x="692" y="287" width="160" height="140" xsize="1.0" ysize="1.0" strict="true"/>
+<fields>
+<field name="Gains" type="double"/>
+<field name="Costs" type="double" value="1000000"/>
+<field name="p" type="double" value="0.9"/>
+<field name="avPen" type="double"/>
+<field name="avPenC" type="double"/>
+<field name="Outcome" type="double"/>
+<field name="Description" type="String" value="Completed to product"/>
+<field name="Selected" type="String"/>
+<field name="q" type="double" value="0.1666666666"/>
+<field name="Penalties" type="double" value="6000000"/>
+<field name="qC" type="double" value="0"/>
+<field name="PenaltiesC" type="double" value="0"/>
+</fields>
+</object>
+<connection obj1="Root_0" port1="in" obj2="And_4" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="Leaf_0" port1="out" obj2="And_0" port2="a">
+<breakpoints/>
+</connection>
+<connection obj1="And_0" port1="b" obj2="Leaf_1" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="And_0" port1="out" obj2="Or_0" port2="a">
+<breakpoints/>
+</connection>
+<connection obj1="And_2" port1="out" obj2="Or_0" port2="b">
+<breakpoints/>
+</connection>
+<connection obj1="And_1" port1="out" obj2="And_2" port2="a">
+<breakpoints/>
+</connection>
+<connection obj1="Leaf_3" port1="out" obj2="And_1" port2="b">
+<breakpoints/>
+</connection>
+<connection obj1="And_1" port1="a" obj2="Leaf_2" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="Leaf_5" port1="out" obj2="And_3" port2="a">
+<breakpoints/>
+</connection>
+<connection obj1="Leaf_6" port1="out" obj2="And_3" port2="b">
+<breakpoints/>
+</connection>
+<connection obj1="Or_1" port1="a" obj2="Or_0" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="Or_1" port1="b" obj2="And_3" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="Leaf_7" port1="out" obj2="And_4" port2="b">
+<breakpoints/>
+</connection>
+<connection obj1="And_4" port1="a" obj2="Or_1" port2="out">
+<breakpoints/>
+</connection>
+<connection obj1="And_2" port1="b" obj2="Leaf_4" port2="out">
+<breakpoints/>
+</connection>
+</scheme>

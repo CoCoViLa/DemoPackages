@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE package SYSTEM "package2.dtd">
+<package>
+<name>AttackTree</name>
+<description>Attack tree package</description>
+<!-- " LEAF node of attack tree "-->
+<class type="class">
+	<name>Leaf</name>
+	<description>- Leaf node of attack tree</description>
+	<icon>leaf.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="160" height="140"/>
+<rect x="5" y="10" width="150" height="120" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="5" y="115" width="150" height="15" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="out" type="alias" x="80" y="10" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="Gains" type="double"/>
+		<field name="Costs" type="double">
+			<known>
+				<graphics>
+					<text string="Costs = " colour="-16777216" x="10" y="65" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="65" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="p" type="double">
+			<known>
+				<graphics>
+					<text string="p = " colour="-16777216" x="10" y="80" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="80" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="q" type="double"/>
+		<field name="Penalties" type="double"/>
+		<field name="avPen" type="double"/>
+		<field name="qC" type="double"/>
+		<field name="PenaltiesC" type="double"/>
+		<field name="avPenC" type="double"/>
+		<field name="Outcome" type="double">
+			<known>
+				<graphics>
+					<text string="Outcome = " colour="-16777216" x="10" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="Description" type="String" value="Enter node description please!">
+			<known>
+				<graphics>
+					<text string="*self" colour="-16777216" x="10" y="35" fontname="Arial" fontstyle="1" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>		
+		</field>
+		<field name="Selected" type="String">
+			<known>
+				<graphics>				
+					<rect x="5" y="10" width="150" height="120" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+					<rect x="5" y="115" width="150" height="15" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+	</fields>
+</class>
+<!-- " ROOT node of attack tree "-->
+<class type="class">
+	<name>Root</name>
+	<description>- Root node of attack tree</description>
+	<icon>root.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="160" height="140"/>
+<rect x="5" y="10" width="150" height="120" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="5" y="115" width="150" height="15" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="in" type="alias" x="80" y="130" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="Gains" type="double">
+			<known>
+				<graphics>
+					<text string="Gains = " colour="-16777216" x="10" y="65" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="65" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="Costs" type="double">
+			<known>
+				<graphics>
+					<text string="Costs = " colour="-16777216" x="10" y="80" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="80" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="p" type="double">
+			<known>
+				<graphics>
+					<text string="p = " colour="-16777216" x="10" y="95" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="95" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="avPen" type="double"/>
+		<field name="avPenC" type="double"/>
+		<field name="Outcome" type="double">
+			<known>
+				<graphics>
+					<text string="Outcome = " colour="-16777216" x="10" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="Description" type="String">
+			<known>
+				<graphics>
+					<text string="*self" colour="-16777216" x="10" y="35" fontname="Arial" fontstyle="1" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>		
+		</field>
+		<field name="Selected" type="String">
+			<known>
+				<graphics>				
+					<rect x="5" y="10" width="150" height="120" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+					<rect x="5" y="115" width="150" height="15" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+	</fields>
+</class>
+<!-- " AND node of attack tree "-->
+<class type="class">
+	<name>And</name>
+	<description>- And node of attack tree</description>
+	<icon>and.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="160" height="140"/>
+<rect x="5" y="10" width="150" height="120" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="5" y="115" width="150" height="15" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="AND" colour="-16777216" x="70" y="128" fontname="Arial" fontstyle="1" fontsize="12" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="a" type="alias" x="30" y="130" portConnection="" strict="true" />
+		<port name="b" type="alias" x="130" y="130" portConnection="" strict="true" />
+		<port name="out" type="alias" x="80" y="10" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="Gains" type="double"/>
+		<field name="Costs" type="double"/>
+		<field name="p" type="double"/>
+		<field name="avPen" type="double"/>
+		<field name="avPenC" type="double"/>
+		<field name="Outcome" type="double">
+			<known>
+				<graphics>
+					<text string="Outcome = " colour="-16777216" x="10" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="Description" type="String">
+			<known>
+				<graphics>
+					<text string="*self" colour="-16777216" x="10" y="35" fontname="Arial" fontstyle="1" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>		
+		</field>
+		<field name="Selected" type="String">
+			<known>
+				<graphics>				
+					<rect x="5" y="10" width="150" height="120" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+					<rect x="5" y="115" width="150" height="15" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+	</fields>
+</class>
+<!-- " OR node of attack tree "-->
+<class type="class">
+	<name>Or</name>
+	<description>- Or node of attack tree</description>
+	<icon>or.gif</icon>
+<graphics>
+<bounds x="0" y="0" width="160" height="140"/>
+<rect x="5" y="10" width="150" height="120" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<rect x="5" y="115" width="150" height="15" colour="-16777216" filled="false" fixed="false" stroke="1" linetype="0.0" transparency="255"/>
+<text string="OR" colour="-16777216" x="70" y="128" fontname="Arial" fontstyle="1" fontsize="12" transparency="255"/>
+</graphics>
+	<ports>
+		<port name="a" type="alias" x="30" y="130" portConnection="" strict="true" />
+		<port name="b" type="alias" x="130" y="130" portConnection="" strict="true" />
+		<port name="out" type="alias" x="80" y="10" portConnection="" strict="true" />
+	</ports>
+	<fields>
+		<field name="Gains" type="double"/>
+		<field name="Costs" type="double"/>
+		<field name="p" type="double"/>
+		<field name="avPen" type="double"/>
+		<field name="avPenC" type="double"/>
+		<field name="Outcome" type="double">
+			<known>
+				<graphics>
+					<text string="Outcome = " colour="-16777216" x="10" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+					<text string="*self" colour="-16777216" x="70" y="50" fontname="Arial" fontstyle="0" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+		<field name="Description" type="String">
+			<known>
+				<graphics>
+					<text string="*self" colour="-16777216" x="10" y="35" fontname="Arial" fontstyle="1" fontsize="11" transparency="255"/>
+				</graphics>
+			</known>		
+		</field>
+		<field name="Selected" type="String">
+			<known>
+				<graphics>				
+					<rect x="5" y="10" width="150" height="120" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+					<rect x="5" y="115" width="150" height="15" colour="16711680" filled="false" fixed="false" stroke="2" linetype="0.0" transparency="255"/>
+				</graphics>
+			</known>
+		</field>
+	</fields>
+</class>
+</package>
