@@ -1,3 +1,5 @@
+import ee.ioc.cs.vsle.api.*;
+
 class Adder {
 	/*@ 
 	specification Adder {

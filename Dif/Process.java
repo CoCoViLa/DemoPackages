@@ -1,3 +1,5 @@
+import ee.ioc.cs.vsle.api.*;
+
 /*
  * This Process should work with any chosen approximation method (Euler, RK2, RK4)
  */
@@ -7,6 +9,7 @@ public class Process {
 		int time, time_s;
 		double T;
 		long delay;
+		delay = 1;
 		boolean debug;
 		void done;
 		boolean repaintImmediately;

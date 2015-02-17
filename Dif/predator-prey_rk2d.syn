@@ -4,7 +4,7 @@
 <object name="Process" type="Process" static="false">
 <properties x="76" y="396" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="time" type="int" value="20000"/>
+<field name="time" type="int" value="10000"/>
 <field name="T" type="double" value="10"/>
 <field name="delay" type="long" value="1"/>
 <field name="debug" type="boolean" value="false"/>
@@ -16,21 +16,21 @@
 <properties x="248" y="118" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="T" type="double"/>
-<field name="init" type="double" value="120"/>
+<field name="init" type="double" value="1000"/>
 </fields>
 </object>
 <object name="Predators" type="Integrator2" static="false">
 <properties x="608" y="88" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
 <field name="T" type="double"/>
-<field name="init" type="double" value="40"/>
+<field name="init" type="double" value="30"/>
 </fields>
 </object>
 <object name="Adder_0" type="Adder" static="false">
 <properties x="143" y="115" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="k1" type="double" value="0.015"/>
-<field name="k2" type="double" value="-0.0001"/>
+<field name="k1" type="double" value="0.08"/>
+<field name="k2" type="double" value="-0.001"/>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
 </fields>
@@ -38,8 +38,8 @@
 <object name="Adder_1" type="Adder" static="false">
 <properties x="488" y="85" xsize="1.0" ysize="1.0" strict="false"/>
 <fields>
-<field name="k1" type="double" value="-0.025"/>
-<field name="k2" type="double" value="0.000115"/>
+<field name="k1" type="double" value="-0.02"/>
+<field name="k2" type="double" value="0.00002"/>
 <field name="in1" type="double"/>
 <field name="in2" type="double"/>
 </fields>
